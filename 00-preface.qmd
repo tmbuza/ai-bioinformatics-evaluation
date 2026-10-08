@@ -1,0 +1,26 @@
+# Preface {.unnumbered}
+
+## Purpose
+Learn to inspect an AI-assisted bioinformatics analysis, verify evidence, distinguish supported conclusions from errors or uncertainty, and communicate justified corrections.
+
+## Who this is for
+Researchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates. Participation does not assume affiliation with a particular institution, country, employer, or qualification.
+
+## Prerequisites
+You should be able to read a data table, interpret basic statistical results, describe biological replication, and read and run a short R script. Each case will introduce its domain-specific background. Learners needing preparation should first practise these skills using relevant CDI foundation guides.
+
+## Learning outcomes
+- Frame an answerable scientific question.
+- Check data provenance, study design, and analytical assumptions.
+- Verify reported results using code and supplied evidence.
+- Assess biological claims and acknowledge uncertainty.
+- Produce a reproducible evaluation report with actionable feedback.
+
+## How to use the finished practical
+Attempt each task before opening its worked explanation. Record your reasoning and evidence as you go. The planned sequence moves from a guided RNA-seq case to a partially guided microbiome case and an independent single-cell case.
+
+## Access and tools
+The core exercises will use supplied responses and small datasets; a paid AI account will not be required. R verification scripts will live in `scripts/R/`. Chapters will display code without executing it during rendering. Package versions and setup instructions will be finalized when the case workflows are implemented.
+
+## Scope
+This resource develops demonstrable skills. Completion does not guarantee recruitment, employment, project access, or income. Exercises are original teaching materials, independent of employer assessments and workshop curricula.

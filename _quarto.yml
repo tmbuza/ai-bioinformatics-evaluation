@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: docs
+book:
+  title: "Evaluating AI-Assisted Bioinformatics Analyses"
+  subtitle: "Scientific reasoning, reproducibility, and evidence-based feedback"
+  author: "Complex Data Insights"
+  chapters:
+    - index.qmd
+    - 00-preface.qmd
+    - part: "Evaluation Foundations"
+      chapters:
+        - 01-orientation.qmd
+        - 02-evaluation-framework.qmd
+        - 03-reproducible-verification.qmd
+    - part: "Original Case Studies"
+      chapters:
+        - 04-rnaseq-case.qmd
+        - 05-microbiome-case.qmd
+        - 06-singlecell-case.qmd
+    - part: "Independent Practice"
+      chapters:
+        - 07-independent-evaluation.qmd
+        - 08-next-steps.qmd
+  appendices:
+    - 99-appendix.qmd
+    - 99-references.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-copy: true
+    number-sections: true
+execute:
+  eval: false

@@ -1,0 +1,29 @@
+# Templates and evaluation rubric
+
+## Claim labels
+- **Supported:** evidence supports the claim within its stated scope.
+- **Incorrect:** evidence or a reproducible check contradicts the claim.
+- **Unsupported:** necessary evidence is absent.
+- **Uncertain:** available evidence leaves meaningful ambiguity.
+
+## Review quality rubric
+Score each dimension from 0 to 3. Use these scores for feedback, not as a validated certification threshold.
+
+| Dimension | What to inspect |
+|---|---|
+| Question and scope | Identifies the question and appropriate limits |
+| Data and design | Checks provenance, experimental units, and assumptions |
+| Verification | Provides traceable checks and consistent outputs |
+| Interpretation | Connects claims to evidence and acknowledges uncertainty |
+| Feedback | Explains consequences and gives actionable corrections |
+| Reproducibility | Records inputs, code, environment, and outputs |
+
+**0:** missing or materially incorrect. **1:** identifies a concern with little support. **2:** mostly correct with relevant evidence but incomplete checks or explanation. **3:** justified, traceable, and clear about limitations.
+
+A total out of 18 may summarize performance, but always report dimension-level feedback. A high total cannot compensate for a major uncorrected scientific error.
+
+## Issue severity
+Record separately: critical (undermines the principal conclusion), major (materially changes a result or claim), minor (limited consequence), or not applicable. Justify the level in context.
+
+## Templates
+The project includes an evaluation report, evidence log, reproducibility checklist, and case authoring specifications.

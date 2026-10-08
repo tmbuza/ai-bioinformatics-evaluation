@@ -1,0 +1,14 @@
+# Welcome {.unnumbered}
+
+**Evaluating AI-Assisted Bioinformatics Analyses**
+
+*Scientific reasoning, reproducibility, and evidence-based feedback*
+
+A self-guided CDI practical for researchers, students, practitioners, and learners preparing for scientific AI evaluation opportunities worldwide.
+
+::: {.callout-important}
+## Development scaffold
+This package defines the learning structure, case specifications, rubric, and report templates. Case datasets, executable analysis workflows, verified outputs, and worked solutions remain to be developed and scientifically reviewed. It is not yet a finished practical.
+:::
+
+Begin with the preface, then work through the chapters in order.

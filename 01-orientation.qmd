@@ -1,0 +1,23 @@
+# Questions, evidence, and scientific judgment
+
+## Learning objective
+Distinguish a question, an analytical result, and a biological claim.
+
+## Content to develop
+- Separate observable evidence from interpretation.
+- Record missing information before judging correctness.
+- Recognize that a response can contain sound reasoning, errors, and unresolved claims.
+
+## Practice task
+Break a supplied response into claims and identify the evidence each claim needs.
+
+## Checkpoint
+Can another reader trace each conclusion to evidence and understand what remains uncertain?
+
+## Deliverable
+A claim inventory with provisional judgments.
+
+::: {.callout-note}
+## Authoring status
+Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+:::

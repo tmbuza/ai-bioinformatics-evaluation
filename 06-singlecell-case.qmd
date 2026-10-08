@@ -1,0 +1,39 @@
+# Single-cell: annotation and uncertainty
+
+## Learning objective
+Evaluate the scientific reasoning, reproducibility, and interpretation of a singlecell analysis.
+
+## Case specification
+**Support level:** Independent.
+
+**Planned scenario:** A small synthetic single-cell study with donor metadata, cluster summaries, and marker evidence.
+
+**Evaluation question:** How well do the supplied evidence and design support cell labels and group comparisons?
+
+This is an original case design. Data and scientific conclusions have not yet been generated or validated.
+
+## Planned evidence package
+See `cases/singlecell/case-specification.md`. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.
+
+## Review priorities
+- Cells versus independent biological replicates
+- Quality-control decisions and potential mixed populations
+- Strength and specificity of annotation evidence
+- Uncertainty and alternative interpretations
+
+## Learner workflow
+1. Read the question and inventory the supplied evidence.
+2. Extract claims from the supplied response.
+3. Mark each claim supported, incorrect, unsupported, or uncertain.
+4. Run or inspect the relevant verification checks.
+5. Update your judgment and explain any correction.
+6. Complete the evidence log and self-assess with the rubric.
+
+## Checkpoint
+Which conclusions survive verification, and which require correction or additional evidence?
+
+## Deliverable
+A case review using `templates/evaluation-report.qmd` and `templates/evidence-log.csv`.
+
+## Worked explanation
+To be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.

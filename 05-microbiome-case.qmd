@@ -1,0 +1,39 @@
+# Microbiome: methods, evidence, and claims
+
+## Learning objective
+Evaluate the scientific reasoning, reproducibility, and interpretation of a microbiome analysis.
+
+## Case specification
+**Support level:** Partially guided.
+
+**Planned scenario:** A synthetic microbial community study with a feature table, taxonomy, sample metadata, and repeated observations.
+
+**Evaluation question:** Do the analytical choices support the reported community differences?
+
+This is an original case design. Data and scientific conclusions have not yet been generated or validated.
+
+## Planned evidence package
+See `cases/microbiome/case-specification.md`. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.
+
+## Review priorities
+- Sample alignment and filtering decisions
+- Experimental unit and repeated observations
+- Choice of transformation and comparison
+- Limits of relative-abundance and causal claims
+
+## Learner workflow
+1. Read the question and inventory the supplied evidence.
+2. Extract claims from the supplied response.
+3. Mark each claim supported, incorrect, unsupported, or uncertain.
+4. Run or inspect the relevant verification checks.
+5. Update your judgment and explain any correction.
+6. Complete the evidence log and self-assess with the rubric.
+
+## Checkpoint
+Which conclusions survive verification, and which require correction or additional evidence?
+
+## Deliverable
+A case review using `templates/evaluation-report.qmd` and `templates/evidence-log.csv`.
+
+## Worked explanation
+To be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.

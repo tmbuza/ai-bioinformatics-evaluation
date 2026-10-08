@@ -1,0 +1,24 @@
+# Independent evaluation and reporting
+
+## Learning objective
+Produce an evaluation that another analyst can inspect and reproduce.
+
+## Content to develop
+- Use the single-cell case as the final independent task.
+- Complete your first review before consulting worked explanations.
+- Link each judgment to a check, output, or authoritative source.
+- Separate verified findings from untested concerns.
+
+## Practice task
+Copy templates/evaluation-report.qmd into your working folder and complete it alongside the evidence log.
+
+## Checkpoint
+Can another reader trace each conclusion to evidence and understand what remains uncertain?
+
+## Deliverable
+A final report, evidence log, verification scripts, and relevant outputs.
+
+::: {.callout-note}
+## Authoring status
+Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+:::

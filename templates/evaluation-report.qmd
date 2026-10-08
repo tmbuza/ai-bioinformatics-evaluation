@@ -1,0 +1,33 @@
+---
+title: "Bioinformatics Analysis Evaluation"
+format: html
+execute:
+  eval: false
+---
+
+# Review context
+Case ID, reviewer, date, scope, supplied materials, and assistance used.
+
+# Scientific question and study design
+Describe the question, experimental units, groups, and limits of inference.
+
+# Overall judgment
+Summarize what is supported, what requires correction, and what remains uncertain.
+
+# Findings
+For each finding include: claim ID; original claim; judgment; evidence; verification step; severity and consequence; correction; remaining uncertainty.
+
+# Reproducibility record
+Input filenames and provenance, software versions, commands, seeds, output paths, and differences from supplied results.
+
+# Corrected interpretation
+Write a concise interpretation consistent with the verified evidence.
+
+# Limitations and further evidence
+Explain which questions could not be resolved and what would resolve them.
+
+# Self-assessment and reflection
+Score each rubric dimension and explain what you would improve.
+
+# Sources and assistance disclosure
+List sources consulted and disclose AI assistance. Identify which checks you performed independently.

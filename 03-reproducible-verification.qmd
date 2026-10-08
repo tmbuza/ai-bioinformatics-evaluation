@@ -1,0 +1,24 @@
+# Reproducible verification in R
+
+## Learning objective
+Make every verification step traceable.
+
+## Content to develop
+- Record input provenance and data dictionaries.
+- Record software versions, commands, and random seeds where relevant.
+- Compare independently obtained results with the supplied output.
+- Record discrepancies without silently modifying original evidence.
+
+## Practice task
+Plan the checks needed to reproduce a supplied result. Case-specific executable checks will be added during development.
+
+## Checkpoint
+Can another reader trace each conclusion to evidence and understand what remains uncertain?
+
+## Deliverable
+A verification plan and environment record.
+
+::: {.callout-note}
+## Authoring status
+Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+:::

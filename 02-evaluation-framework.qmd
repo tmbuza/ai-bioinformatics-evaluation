@@ -1,0 +1,25 @@
+# A structured evaluation framework
+
+## Learning objective
+Apply one framework consistently across all cases.
+
+## Content to develop
+- Inspect the question and intended scope.
+- Check data, design, methods, and assumptions.
+- Verify code, outputs, and reported quantities.
+- Assess biological interpretation and uncertainty.
+- Explain corrections and their consequences.
+
+## Practice task
+Use the rubric and evidence log to assess one claim; distinguish the quality of your review from the severity of the analytical error.
+
+## Checkpoint
+Can another reader trace each conclusion to evidence and understand what remains uncertain?
+
+## Deliverable
+A scored review supported by an evidence log.
+
+::: {.callout-note}
+## Authoring status
+Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+:::

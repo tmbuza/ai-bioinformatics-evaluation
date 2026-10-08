@@ -1,0 +1,5 @@
+# References and further reading
+
+This scaffold contains no populated bibliography. During chapter development, add verified primary methods papers, official software documentation, and authoritative guidance supporting each analytical choice. Record version-sensitive documentation and access dates where appropriate.
+
+Do not publish placeholder citations. Add a bibliography file and Quarto bibliography configuration once the first verified references are available.

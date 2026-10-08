@@ -1,0 +1,24 @@
+# Review, reflection, and next steps
+
+## Learning objective
+Identify remaining skill gaps and present your work accurately.
+
+## Content to develop
+- Revisit judgments that changed after verification.
+- Use the rubric to identify specific practice needs.
+- Label portfolio work as a synthetic educational case.
+- Disclose AI assistance and distinguish independent work from guided corrections.
+
+## Practice task
+Write a short reflection explaining one corrected judgment and one unresolved limitation.
+
+## Checkpoint
+Can another reader trace each conclusion to evidence and understand what remains uncertain?
+
+## Deliverable
+A reflection and a concise portfolio description.
+
+::: {.callout-note}
+## Authoring status
+Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+:::
