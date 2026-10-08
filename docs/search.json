@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Evaluating AI-Assisted Bioinformatics Analyses",
     "section": "",
-    "text": "Welcome\nEvaluating AI-Assisted Bioinformatics Analyses\nScientific reasoning, reproducibility, and evidence-based feedback\nA self-guided CDI practical for researchers, students, practitioners, and learners preparing for scientific AI evaluation opportunities worldwide.\n\n\n\n\n\n\nDevelopment scaffold\n\n\n\nThis package defines the learning structure, case specifications, rubric, and report templates. Case datasets, executable analysis workflows, verified outputs, and worked solutions remain to be developed and scientifically reviewed. It is not yet a finished practical.\n\n\nBegin with the preface, then work through the chapters in order.",
+    "text": "Free Guide · Updated Oct 2026",
     "crumbs": [
-      "Welcome"
+      "index.html"
     ]
   },
   {
@@ -14,67 +14,77 @@
     "href": "00-preface.html",
     "title": "Preface",
     "section": "",
-    "text": "Purpose\nLearn to inspect an AI-assisted bioinformatics analysis, verify evidence, distinguish supported conclusions from errors or uncertainty, and communicate justified corrections.",
+    "text": "Purpose\nAn AI-assisted analysis may contain convincing explanations and readable code, yet still make claims that its data or methods cannot support. Evaluating it requires scientific judgment and checks that another person can follow.\nEvaluating AI-Assisted Bioinformatics Analyses teaches you to inspect an analysis, verify its evidence, and communicate a justified assessment. You will practise recognizing sound reasoning, identifying errors, and explaining uncertainty through original examples drawn from biological data analysis.\nThis open Complex Data Insights (CDI) guide connects Omics & Bioinformatics with Artificial Intelligence. It supports research practice, independent learning, teaching, and preparation for scientific AI evaluation opportunities.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#who-this-is-for",
-    "href": "00-preface.html#who-this-is-for",
+    "objectID": "00-preface.html#who-this-guide-is-for",
+    "href": "00-preface.html#who-this-guide-is-for",
     "title": "Preface",
-    "section": "Who this is for",
-    "text": "Who this is for\nResearchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates. Participation does not assume affiliation with a particular institution, country, employer, or qualification.",
+    "section": "Who this guide is for",
+    "text": "Who this guide is for\nThe guide is intended for researchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates worldwide. No particular institutional affiliation or qualification is required.\nYou should already be able to:\n\nRead data tables and explain a biological comparison.\nRecognize biological replication and interpret basic statistical results.\nRead and run a short R script and locate its outputs.\n\nYou do not need expertise in every field represented here. For preparation, use the relevant CDI guide: Microbiome, RNA-seq, Single-Cell, Proteomics, or GWAS. The AI Systems guide provides supporting AI concepts.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#prerequisites",
-    "href": "00-preface.html#prerequisites",
+    "objectID": "00-preface.html#scientific-scope",
+    "href": "00-preface.html#scientific-scope",
     "title": "Preface",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nYou should be able to read a data table, interpret basic statistical results, describe biological replication, and read and run a short R script. Each case will introduce its domain-specific background. Learners needing preparation should first practise these skills using relevant CDI foundation guides.",
+    "section": "Scientific scope",
+    "text": "Scientific scope\nMicrobiome analysis provides a recurring source of examples, reflecting CDI’s research experience in this field. These examples will explore sample metadata, community profiles, diversity, and the strength of biological claims.\nRNA-seq is a second core area, with a guided case addressing experimental design, differential expression, and interpretation. It brings gene-expression analysis into the guide and provides a basis for discussing how evidence is assessed across omics studies. A single-cell case extends the practice to cell-level workflows and annotation.\nThe shared evaluation framework also applies to proteomics, GWAS, and other bioinformatics settings. Each application requires appropriate domain knowledge and method-specific checks. The worked cases provide depth; they do not define the limits of the guide’s scope.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#learning-outcomes",
-    "href": "00-preface.html#learning-outcomes",
+    "objectID": "00-preface.html#what-you-will-learn",
+    "href": "00-preface.html#what-you-will-learn",
     "title": "Preface",
-    "section": "Learning outcomes",
-    "text": "Learning outcomes\n\nFrame an answerable scientific question.\nCheck data provenance, study design, and analytical assumptions.\nVerify reported results using code and supplied evidence.\nAssess biological claims and acknowledge uncertainty.\nProduce a reproducible evaluation report with actionable feedback.",
+    "section": "What you will learn",
+    "text": "What you will learn\nBy completing the exercises, you should be able to:\n\nIdentify the scientific question and the evidence needed to answer it.\nCheck data provenance, study design, methods, and assumptions.\nVerify selected outputs and compare them with reported results.\nDistinguish supported claims, errors, and unresolved questions.\nWrite evidence-based feedback with justified corrections.\n\nEvery case follows the same process:\nInspect the question → check data and methods → verify results → assess claims → communicate the evaluation.\nReproducing a result does not, by itself, establish that the method or interpretation is appropriate. Your review must address both execution and scientific reasoning.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#how-to-use-the-finished-practical",
-    "href": "00-preface.html#how-to-use-the-finished-practical",
+    "objectID": "00-preface.html#learning-sequence",
+    "href": "00-preface.html#learning-sequence",
     "title": "Preface",
-    "section": "How to use the finished practical",
-    "text": "How to use the finished practical\nAttempt each task before opening its worked explanation. Record your reasoning and evidence as you go. The planned sequence moves from a guided RNA-seq case to a partially guided microbiome case and an independent single-cell case.",
+    "section": "Learning sequence",
+    "text": "Learning sequence\n\n\n\n\n\n\n\n\nStage\nFocus\nYour output\n\n\n\n\nFoundations\nEvaluation criteria and reproducible checks\nEvaluation plan and evidence log\n\n\nGuided RNA-seq case\nDesign, statistical results, and interpretation\nAnnotated review\n\n\nMicrobiome case and supporting examples\nCommunity data, analytical choices, and biological claims\nEvidence-supported evaluation\n\n\nMore independent single-cell case\nWorkflow decisions, annotation, and uncertainty\nStructured scientific review\n\n\nIndependent practice\nApply the framework and prioritize findings\nFinal evaluation report\n\n\n\nThe sequence moves from guided review toward independent judgment, with additional microbiome examples reinforcing the framework. Cases will combine correct decisions, deliberate errors, and unresolved claims; assess each against the evidence.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#access-and-tools",
-    "href": "00-preface.html#access-and-tools",
+    "objectID": "00-preface.html#how-to-use-the-guide",
+    "href": "00-preface.html#how-to-use-the-guide",
     "title": "Preface",
-    "section": "Access and tools",
-    "text": "Access and tools\nThe core exercises will use supplied responses and small datasets; a paid AI account will not be required. R verification scripts will live in scripts/R/. Chapters will display code without executing it during rendering. Package versions and setup instructions will be finalized when the case workflows are implemented.",
+    "section": "How to use the guide",
+    "text": "How to use the guide\nAttempt each exercise before consulting its worked explanation. Record the claim reviewed, the check performed, the evidence found, and your proposed action. Explain the consequence of an issue instead of simply marking it wrong.\nThe core exercises use supplied materials; a paid AI account is not required. Simulated AI responses will be labelled. Form your own initial judgment, then document and verify any optional AI assistance you use.\nR verification scripts will live in scripts/R/, with setup instructions provided alongside the completed workflows. Run these scripts separately: rendering the Quarto book displays the lessons without executing the analyses. Distinguish supplied outputs from results you reproduced yourself.\n\n\n\n\n\n\nGuide development\n\n\n\nThe guide is being completed chapter by chapter. Case datasets, scripts, outputs, and worked explanations remain under development until their chapters identify them as available.",
     "crumbs": [
       "Preface"
     ]
   },
   {
-    "objectID": "00-preface.html#scope",
-    "href": "00-preface.html#scope",
+    "objectID": "00-preface.html#your-final-deliverable",
+    "href": "00-preface.html#your-final-deliverable",
     "title": "Preface",
-    "section": "Scope",
-    "text": "Scope\nThis resource develops demonstrable skills. Completion does not guarantee recruitment, employment, project access, or income. Exercises are original teaching materials, independent of employer assessments and workshop curricula.",
+    "section": "Your final deliverable",
+    "text": "Your final deliverable\nYou will produce an evaluation report documenting your checks, findings, justified corrections, and remaining uncertainty. A reader should be able to tell what you verified and what you could not establish.\nThe report can support research training or a professional portfolio. Clearly label teaching data, acknowledge assistance, and describe your own contribution.\nThis open guide stands on its own; separate CDI practicals may provide further assignments. The materials are independent of employer assessments and institutional programmes. Completion develops demonstrable skills without guaranteeing selection, employment, or income.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#before-you-begin",
+    "href": "00-preface.html#before-you-begin",
+    "title": "Preface",
+    "section": "Before you begin",
+    "text": "Before you begin\nIdentify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to Orientation.",
     "crumbs": [
       "Preface"
     ]
@@ -82,64 +92,75 @@
   {
     "objectID": "01-orientation.html",
     "href": "01-orientation.html",
-    "title": "1  Questions, evidence, and scientific judgment",
+    "title": "Orientation",
     "section": "",
-    "text": "1.1 Learning objective\nDistinguish a question, an analytical result, and a biological claim.",
+    "text": "The reviewer’s role\nAn AI-assisted bioinformatics analysis can include code, tables, figures, and explanations. Your role is to assess whether these elements agree and whether the evidence supports the scientific conclusion.\nReview the work at three levels:\nA script running successfully answers only part of the first question. A complete review also considers analytical choices and the claims made about their outputs.\nChapter outcome: write a brief evaluation that separates a verified observation, an error, and a claim requiring more evidence.",
     "crumbs": [
       "Evaluation Foundations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Questions, evidence, and scientific judgment</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
     ]
   },
   {
-    "objectID": "01-orientation.html#content-to-develop",
-    "href": "01-orientation.html#content-to-develop",
-    "title": "1  Questions, evidence, and scientific judgment",
-    "section": "1.2 Content to develop",
-    "text": "1.2 Content to develop\n\nSeparate observable evidence from interpretation.\nRecord missing information before judging correctness.\nRecognize that a response can contain sound reasoning, errors, and unresolved claims.",
+    "objectID": "01-orientation.html#the-reviewers-role",
+    "href": "01-orientation.html#the-reviewers-role",
+    "title": "Orientation",
+    "section": "",
+    "text": "Level\nQuestion\nExample check\n\n\n\n\nExecution\nDoes the code perform the stated operation?\nCheck that a filtering condition matches its description.\n\n\nAnalysis\nIs that operation appropriate for the question and data?\nCheck whether the comparison uses the intended samples.\n\n\nInterpretation\nDoes the conclusion follow from the result?\nCheck whether a descriptive difference is presented as a demonstrated effect.",
     "crumbs": [
       "Evaluation Foundations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Questions, evidence, and scientific judgment</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
     ]
   },
   {
-    "objectID": "01-orientation.html#practice-task",
-    "href": "01-orientation.html#practice-task",
-    "title": "1  Questions, evidence, and scientific judgment",
-    "section": "1.3 Practice task",
-    "text": "1.3 Practice task\nBreak a supplied response into claims and identify the evidence each claim needs.",
+    "objectID": "01-orientation.html#start-with-the-evidence",
+    "href": "01-orientation.html#start-with-the-evidence",
+    "title": "Orientation",
+    "section": "Start with the evidence",
+    "text": "Start with the evidence\nBefore judging a response, identify the scientific question and inventory what you have. An evaluation package may contain:\n\nData and metadata: measurements, sample identifiers, group labels, and study details.\nCode and settings: scripts, parameters, and software information.\nOutputs: tables, figures, and execution records.\nResponse: the explanation or conclusions being evaluated.\n\nMissing material limits what you can establish. If only a results table is available, you can inspect its contents, but you cannot claim to have reproduced the underlying analysis.\nPay attention to AI-specific problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.",
     "crumbs": [
       "Evaluation Foundations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Questions, evidence, and scientific judgment</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#a-first-evaluation",
+    "href": "01-orientation.html#a-first-evaluation",
+    "title": "Orientation",
+    "section": "A first evaluation",
+    "text": "A first evaluation\nThe following is an original teaching example. The values are invented and do not represent a biological finding.\nQuestion: What does the supplied table establish about the difference between groups A and B?\n\n\n\nSample\nGroup\nReported measurement\n\n\n\n\nA1\nA\n10\n\n\nA2\nA\n12\n\n\nB1\nB\n14\n\n\nB2\nB\n16\n\n\n\nNo measurement units, study protocol, analysis script, or statistical test are supplied.\nSimulated AI response:\n\nThe average measurement is 11 in group A and 15 in group B. Group B is therefore 50% higher than group A. This proves that the treatment caused a biologically important increase.\n\n\nYour task\nEvaluate each sentence before opening the worked answer:\n\nCheck the two means.\nCalculate the percentage increase relative to group A: 100 × (B − A) / A.\nIdentify what additional evidence is needed to assess the final claim.\nWrite a corrected conclusion in no more than three sentences.\n\n\n\n\n\n\n\nWorked answer\n\n\n\n\n\nThe means are correct: (10 + 12) / 2 = 11 and (14 + 16) / 2 = 15.\nThe percentage increase is 100 × (15 − 11) / 11, approximately 36.4%, so the stated 50% is an arithmetic error.\nThe table alone does not establish a treatment effect or biological importance. We need information about what was measured, how groups were assigned, whether samples are independent, and the uncertainty and biological context of the comparison. We also cannot infer statistical significance from the supplied material.\nCorrected conclusion: “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 units, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#write-feedback-that-supports-action",
+    "href": "01-orientation.html#write-feedback-that-supports-action",
+    "title": "Orientation",
+    "section": "Write feedback that supports action",
+    "text": "Write feedback that supports action\nUseful feedback connects a judgment to evidence and a next step.\n\n\n\n\n\n\n\n\nFinding\nEvidence\nAction\n\n\n\n\nSupported calculation\nRecalculated means match 11 and 15.\nRetain the reported means.\n\n\nIncorrect calculation\nThe relative increase is approximately 36.4%.\nCorrect the percentage and state its reference group.\n\n\nUnsupported conclusion\nStudy design and biological context are absent.\nLimit the conclusion to description and request the missing evidence.\n\n\n\nNotice the distinction between incorrect and not established. The percentage can be corrected directly. The causal claim cannot be resolved from this table alone; that limitation does not prove that no treatment effect exists.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
     ]
   },
   {
     "objectID": "01-orientation.html#checkpoint",
     "href": "01-orientation.html#checkpoint",
-    "title": "1  Questions, evidence, and scientific judgment",
-    "section": "1.4 Checkpoint",
-    "text": "1.4 Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
+    "title": "Orientation",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCreate results/01-orientation-review.md and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.\nBefore continuing, confirm that your review:\n\nPreserves the correct calculation.\nExplains the arithmetic error with a checkable correction.\nIdentifies the unsupported claim without inventing missing evidence.\nStates what you checked and what remains unresolved.\n\nContinue to Evaluation Framework to apply consistent criteria across larger analyses.",
     "crumbs": [
       "Evaluation Foundations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Questions, evidence, and scientific judgment</span>"
-    ]
-  },
-  {
-    "objectID": "01-orientation.html#deliverable",
-    "href": "01-orientation.html#deliverable",
-    "title": "1  Questions, evidence, and scientific judgment",
-    "section": "1.5 Deliverable",
-    "text": "1.5 Deliverable\nA claim inventory with provisional judgments.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
-    "crumbs": [
-      "Evaluation Foundations",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Questions, evidence, and scientific judgment</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
     ]
   },
   {
     "objectID": "02-evaluation-framework.html",
     "href": "02-evaluation-framework.html",
-    "title": "2  A structured evaluation framework",
+    "title": "A structured evaluation framework",
     "section": "",
-    "text": "2.1 Learning objective\nApply one framework consistently across all cases.",
+    "text": "Learning objective\nApply one framework consistently across all cases.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>A structured evaluation framework</span>"
@@ -148,9 +169,9 @@
   {
     "objectID": "02-evaluation-framework.html#content-to-develop",
     "href": "02-evaluation-framework.html#content-to-develop",
-    "title": "2  A structured evaluation framework",
-    "section": "2.2 Content to develop",
-    "text": "2.2 Content to develop\n\nInspect the question and intended scope.\nCheck data, design, methods, and assumptions.\nVerify code, outputs, and reported quantities.\nAssess biological interpretation and uncertainty.\nExplain corrections and their consequences.",
+    "title": "A structured evaluation framework",
+    "section": "Content to develop",
+    "text": "Content to develop\n\nInspect the question and intended scope.\nCheck data, design, methods, and assumptions.\nVerify code, outputs, and reported quantities.\nAssess biological interpretation and uncertainty.\nExplain corrections and their consequences.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>A structured evaluation framework</span>"
@@ -159,9 +180,9 @@
   {
     "objectID": "02-evaluation-framework.html#practice-task",
     "href": "02-evaluation-framework.html#practice-task",
-    "title": "2  A structured evaluation framework",
-    "section": "2.3 Practice task",
-    "text": "2.3 Practice task\nUse the rubric and evidence log to assess one claim; distinguish the quality of your review from the severity of the analytical error.",
+    "title": "A structured evaluation framework",
+    "section": "Practice task",
+    "text": "Practice task\nUse the rubric and evidence log to assess one claim; distinguish the quality of your review from the severity of the analytical error.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>A structured evaluation framework</span>"
@@ -170,9 +191,9 @@
   {
     "objectID": "02-evaluation-framework.html#checkpoint",
     "href": "02-evaluation-framework.html#checkpoint",
-    "title": "2  A structured evaluation framework",
-    "section": "2.4 Checkpoint",
-    "text": "2.4 Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
+    "title": "A structured evaluation framework",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>A structured evaluation framework</span>"
@@ -181,9 +202,9 @@
   {
     "objectID": "02-evaluation-framework.html#deliverable",
     "href": "02-evaluation-framework.html#deliverable",
-    "title": "2  A structured evaluation framework",
-    "section": "2.5 Deliverable",
-    "text": "2.5 Deliverable\nA scored review supported by an evidence log.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
+    "title": "A structured evaluation framework",
+    "section": "Deliverable",
+    "text": "Deliverable\nA scored review supported by an evidence log.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>A structured evaluation framework</span>"
@@ -192,9 +213,9 @@
   {
     "objectID": "03-reproducible-verification.html",
     "href": "03-reproducible-verification.html",
-    "title": "3  Reproducible verification in R",
+    "title": "Reproducible verification in R",
     "section": "",
-    "text": "3.1 Learning objective\nMake every verification step traceable.",
+    "text": "Learning objective\nMake every verification step traceable.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible verification in R</span>"
@@ -203,9 +224,9 @@
   {
     "objectID": "03-reproducible-verification.html#content-to-develop",
     "href": "03-reproducible-verification.html#content-to-develop",
-    "title": "3  Reproducible verification in R",
-    "section": "3.2 Content to develop",
-    "text": "3.2 Content to develop\n\nRecord input provenance and data dictionaries.\nRecord software versions, commands, and random seeds where relevant.\nCompare independently obtained results with the supplied output.\nRecord discrepancies without silently modifying original evidence.",
+    "title": "Reproducible verification in R",
+    "section": "Content to develop",
+    "text": "Content to develop\n\nRecord input provenance and data dictionaries.\nRecord software versions, commands, and random seeds where relevant.\nCompare independently obtained results with the supplied output.\nRecord discrepancies without silently modifying original evidence.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible verification in R</span>"
@@ -214,9 +235,9 @@
   {
     "objectID": "03-reproducible-verification.html#practice-task",
     "href": "03-reproducible-verification.html#practice-task",
-    "title": "3  Reproducible verification in R",
-    "section": "3.3 Practice task",
-    "text": "3.3 Practice task\nPlan the checks needed to reproduce a supplied result. Case-specific executable checks will be added during development.",
+    "title": "Reproducible verification in R",
+    "section": "Practice task",
+    "text": "Practice task\nPlan the checks needed to reproduce a supplied result. Case-specific executable checks will be added during development.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible verification in R</span>"
@@ -225,9 +246,9 @@
   {
     "objectID": "03-reproducible-verification.html#checkpoint",
     "href": "03-reproducible-verification.html#checkpoint",
-    "title": "3  Reproducible verification in R",
-    "section": "3.4 Checkpoint",
-    "text": "3.4 Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
+    "title": "Reproducible verification in R",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible verification in R</span>"
@@ -236,9 +257,9 @@
   {
     "objectID": "03-reproducible-verification.html#deliverable",
     "href": "03-reproducible-verification.html#deliverable",
-    "title": "3  Reproducible verification in R",
-    "section": "3.5 Deliverable",
-    "text": "3.5 Deliverable\nA verification plan and environment record.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
+    "title": "Reproducible verification in R",
+    "section": "Deliverable",
+    "text": "Deliverable\nA verification plan and environment record.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
     "crumbs": [
       "Evaluation Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible verification in R</span>"
@@ -247,9 +268,9 @@
   {
     "objectID": "04-rnaseq-case.html",
     "href": "04-rnaseq-case.html",
-    "title": "4  RNA-seq: design, results, and interpretation",
+    "title": "RNA-seq: design, results, and interpretation",
     "section": "",
-    "text": "4.1 Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a rnaseq analysis.",
+    "text": "Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a rnaseq analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -258,9 +279,9 @@
   {
     "objectID": "04-rnaseq-case.html#case-specification",
     "href": "04-rnaseq-case.html#case-specification",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.2 Case specification",
-    "text": "4.2 Case specification\nSupport level: Guided.\nPlanned scenario: A synthetic two-condition expression study with sample metadata and a batch variable.\nEvaluation question: Can the supplied design support the reported expression differences and interpretation?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Case specification",
+    "text": "Case specification\nSupport level: Guided.\nPlanned scenario: A synthetic two-condition expression study with sample metadata and a batch variable.\nEvaluation question: Can the supplied design support the reported expression differences and interpretation?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -269,9 +290,9 @@
   {
     "objectID": "04-rnaseq-case.html#planned-evidence-package",
     "href": "04-rnaseq-case.html#planned-evidence-package",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.3 Planned evidence package",
-    "text": "4.3 Planned evidence package\nSee cases/rnaseq/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Planned evidence package",
+    "text": "Planned evidence package\nSee cases/rnaseq/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -280,9 +301,9 @@
   {
     "objectID": "04-rnaseq-case.html#review-priorities",
     "href": "04-rnaseq-case.html#review-priorities",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.4 Review priorities",
-    "text": "4.4 Review priorities\n\nSample-to-count alignment\nBiological replication and design structure\nEffect sizes, uncertainty, and multiple-testing interpretation\nConsistency between the results table and biological claims",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Review priorities",
+    "text": "Review priorities\n\nSample-to-count alignment\nBiological replication and design structure\nEffect sizes, uncertainty, and multiple-testing interpretation\nConsistency between the results table and biological claims",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -291,9 +312,9 @@
   {
     "objectID": "04-rnaseq-case.html#learner-workflow",
     "href": "04-rnaseq-case.html#learner-workflow",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.5 Learner workflow",
-    "text": "4.5 Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Learner workflow",
+    "text": "Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -302,9 +323,9 @@
   {
     "objectID": "04-rnaseq-case.html#checkpoint",
     "href": "04-rnaseq-case.html#checkpoint",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.6 Checkpoint",
-    "text": "4.6 Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -313,9 +334,9 @@
   {
     "objectID": "04-rnaseq-case.html#deliverable",
     "href": "04-rnaseq-case.html#deliverable",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.7 Deliverable",
-    "text": "4.7 Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Deliverable",
+    "text": "Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -324,9 +345,9 @@
   {
     "objectID": "04-rnaseq-case.html#worked-explanation",
     "href": "04-rnaseq-case.html#worked-explanation",
-    "title": "4  RNA-seq: design, results, and interpretation",
-    "section": "4.8 Worked explanation",
-    "text": "4.8 Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Worked explanation",
+    "text": "Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
@@ -335,9 +356,9 @@
   {
     "objectID": "05-microbiome-case.html",
     "href": "05-microbiome-case.html",
-    "title": "5  Microbiome: methods, evidence, and claims",
+    "title": "Microbiome: methods, evidence, and claims",
     "section": "",
-    "text": "5.1 Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a microbiome analysis.",
+    "text": "Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a microbiome analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -346,9 +367,9 @@
   {
     "objectID": "05-microbiome-case.html#case-specification",
     "href": "05-microbiome-case.html#case-specification",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.2 Case specification",
-    "text": "5.2 Case specification\nSupport level: Partially guided.\nPlanned scenario: A synthetic microbial community study with a feature table, taxonomy, sample metadata, and repeated observations.\nEvaluation question: Do the analytical choices support the reported community differences?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Case specification",
+    "text": "Case specification\nSupport level: Partially guided.\nPlanned scenario: A synthetic microbial community study with a feature table, taxonomy, sample metadata, and repeated observations.\nEvaluation question: Do the analytical choices support the reported community differences?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -357,9 +378,9 @@
   {
     "objectID": "05-microbiome-case.html#planned-evidence-package",
     "href": "05-microbiome-case.html#planned-evidence-package",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.3 Planned evidence package",
-    "text": "5.3 Planned evidence package\nSee cases/microbiome/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Planned evidence package",
+    "text": "Planned evidence package\nSee cases/microbiome/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -368,9 +389,9 @@
   {
     "objectID": "05-microbiome-case.html#review-priorities",
     "href": "05-microbiome-case.html#review-priorities",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.4 Review priorities",
-    "text": "5.4 Review priorities\n\nSample alignment and filtering decisions\nExperimental unit and repeated observations\nChoice of transformation and comparison\nLimits of relative-abundance and causal claims",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Review priorities",
+    "text": "Review priorities\n\nSample alignment and filtering decisions\nExperimental unit and repeated observations\nChoice of transformation and comparison\nLimits of relative-abundance and causal claims",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -379,9 +400,9 @@
   {
     "objectID": "05-microbiome-case.html#learner-workflow",
     "href": "05-microbiome-case.html#learner-workflow",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.5 Learner workflow",
-    "text": "5.5 Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Learner workflow",
+    "text": "Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -390,9 +411,9 @@
   {
     "objectID": "05-microbiome-case.html#checkpoint",
     "href": "05-microbiome-case.html#checkpoint",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.6 Checkpoint",
-    "text": "5.6 Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -401,9 +422,9 @@
   {
     "objectID": "05-microbiome-case.html#deliverable",
     "href": "05-microbiome-case.html#deliverable",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.7 Deliverable",
-    "text": "5.7 Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Deliverable",
+    "text": "Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -412,9 +433,9 @@
   {
     "objectID": "05-microbiome-case.html#worked-explanation",
     "href": "05-microbiome-case.html#worked-explanation",
-    "title": "5  Microbiome: methods, evidence, and claims",
-    "section": "5.8 Worked explanation",
-    "text": "5.8 Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Worked explanation",
+    "text": "Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
@@ -423,9 +444,9 @@
   {
     "objectID": "06-singlecell-case.html",
     "href": "06-singlecell-case.html",
-    "title": "6  Single-cell: annotation and uncertainty",
+    "title": "Single-cell: annotation and uncertainty",
     "section": "",
-    "text": "6.1 Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a singlecell analysis.",
+    "text": "Learning objective\nEvaluate the scientific reasoning, reproducibility, and interpretation of a singlecell analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -434,9 +455,9 @@
   {
     "objectID": "06-singlecell-case.html#case-specification",
     "href": "06-singlecell-case.html#case-specification",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.2 Case specification",
-    "text": "6.2 Case specification\nSupport level: Independent.\nPlanned scenario: A small synthetic single-cell study with donor metadata, cluster summaries, and marker evidence.\nEvaluation question: How well do the supplied evidence and design support cell labels and group comparisons?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Case specification",
+    "text": "Case specification\nSupport level: Independent.\nPlanned scenario: A small synthetic single-cell study with donor metadata, cluster summaries, and marker evidence.\nEvaluation question: How well do the supplied evidence and design support cell labels and group comparisons?\nThis is an original case design. Data and scientific conclusions have not yet been generated or validated.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -445,9 +466,9 @@
   {
     "objectID": "06-singlecell-case.html#planned-evidence-package",
     "href": "06-singlecell-case.html#planned-evidence-package",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.3 Planned evidence package",
-    "text": "6.3 Planned evidence package\nSee cases/singlecell/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Planned evidence package",
+    "text": "Planned evidence package\nSee cases/singlecell/case-specification.md. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -456,9 +477,9 @@
   {
     "objectID": "06-singlecell-case.html#review-priorities",
     "href": "06-singlecell-case.html#review-priorities",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.4 Review priorities",
-    "text": "6.4 Review priorities\n\nCells versus independent biological replicates\nQuality-control decisions and potential mixed populations\nStrength and specificity of annotation evidence\nUncertainty and alternative interpretations",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Review priorities",
+    "text": "Review priorities\n\nCells versus independent biological replicates\nQuality-control decisions and potential mixed populations\nStrength and specificity of annotation evidence\nUncertainty and alternative interpretations",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -467,9 +488,9 @@
   {
     "objectID": "06-singlecell-case.html#learner-workflow",
     "href": "06-singlecell-case.html#learner-workflow",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.5 Learner workflow",
-    "text": "6.5 Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Learner workflow",
+    "text": "Learner workflow\n\nRead the question and inventory the supplied evidence.\nExtract claims from the supplied response.\nMark each claim supported, incorrect, unsupported, or uncertain.\nRun or inspect the relevant verification checks.\nUpdate your judgment and explain any correction.\nComplete the evidence log and self-assess with the rubric.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -478,9 +499,9 @@
   {
     "objectID": "06-singlecell-case.html#checkpoint",
     "href": "06-singlecell-case.html#checkpoint",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.6 Checkpoint",
-    "text": "6.6 Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nWhich conclusions survive verification, and which require correction or additional evidence?",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -489,9 +510,9 @@
   {
     "objectID": "06-singlecell-case.html#deliverable",
     "href": "06-singlecell-case.html#deliverable",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.7 Deliverable",
-    "text": "6.7 Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Deliverable",
+    "text": "Deliverable\nA case review using templates/evaluation-report.qmd and templates/evidence-log.csv.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -500,9 +521,9 @@
   {
     "objectID": "06-singlecell-case.html#worked-explanation",
     "href": "06-singlecell-case.html#worked-explanation",
-    "title": "6  Single-cell: annotation and uncertainty",
-    "section": "6.8 Worked explanation",
-    "text": "6.8 Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
+    "title": "Single-cell: annotation and uncertainty",
+    "section": "Worked explanation",
+    "text": "Worked explanation\nTo be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.",
     "crumbs": [
       "Original Case Studies",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: annotation and uncertainty</span>"
@@ -511,9 +532,9 @@
   {
     "objectID": "07-independent-evaluation.html",
     "href": "07-independent-evaluation.html",
-    "title": "7  Independent evaluation and reporting",
+    "title": "Independent evaluation and reporting",
     "section": "",
-    "text": "7.1 Learning objective\nProduce an evaluation that another analyst can inspect and reproduce.",
+    "text": "Learning objective\nProduce an evaluation that another analyst can inspect and reproduce.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Independent evaluation and reporting</span>"
@@ -522,9 +543,9 @@
   {
     "objectID": "07-independent-evaluation.html#content-to-develop",
     "href": "07-independent-evaluation.html#content-to-develop",
-    "title": "7  Independent evaluation and reporting",
-    "section": "7.2 Content to develop",
-    "text": "7.2 Content to develop\n\nUse the single-cell case as the final independent task.\nComplete your first review before consulting worked explanations.\nLink each judgment to a check, output, or authoritative source.\nSeparate verified findings from untested concerns.",
+    "title": "Independent evaluation and reporting",
+    "section": "Content to develop",
+    "text": "Content to develop\n\nUse the single-cell case as the final independent task.\nComplete your first review before consulting worked explanations.\nLink each judgment to a check, output, or authoritative source.\nSeparate verified findings from untested concerns.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Independent evaluation and reporting</span>"
@@ -533,9 +554,9 @@
   {
     "objectID": "07-independent-evaluation.html#practice-task",
     "href": "07-independent-evaluation.html#practice-task",
-    "title": "7  Independent evaluation and reporting",
-    "section": "7.3 Practice task",
-    "text": "7.3 Practice task\nCopy templates/evaluation-report.qmd into your working folder and complete it alongside the evidence log.",
+    "title": "Independent evaluation and reporting",
+    "section": "Practice task",
+    "text": "Practice task\nCopy templates/evaluation-report.qmd into your working folder and complete it alongside the evidence log.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Independent evaluation and reporting</span>"
@@ -544,9 +565,9 @@
   {
     "objectID": "07-independent-evaluation.html#checkpoint",
     "href": "07-independent-evaluation.html#checkpoint",
-    "title": "7  Independent evaluation and reporting",
-    "section": "7.4 Checkpoint",
-    "text": "7.4 Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
+    "title": "Independent evaluation and reporting",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Independent evaluation and reporting</span>"
@@ -555,9 +576,9 @@
   {
     "objectID": "07-independent-evaluation.html#deliverable",
     "href": "07-independent-evaluation.html#deliverable",
-    "title": "7  Independent evaluation and reporting",
-    "section": "7.5 Deliverable",
-    "text": "7.5 Deliverable\nA final report, evidence log, verification scripts, and relevant outputs.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
+    "title": "Independent evaluation and reporting",
+    "section": "Deliverable",
+    "text": "Deliverable\nA final report, evidence log, verification scripts, and relevant outputs.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Independent evaluation and reporting</span>"
@@ -566,9 +587,9 @@
   {
     "objectID": "08-next-steps.html",
     "href": "08-next-steps.html",
-    "title": "8  Review, reflection, and next steps",
+    "title": "Review, reflection, and next steps",
     "section": "",
-    "text": "8.1 Learning objective\nIdentify remaining skill gaps and present your work accurately.",
+    "text": "Learning objective\nIdentify remaining skill gaps and present your work accurately.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review, reflection, and next steps</span>"
@@ -577,9 +598,9 @@
   {
     "objectID": "08-next-steps.html#content-to-develop",
     "href": "08-next-steps.html#content-to-develop",
-    "title": "8  Review, reflection, and next steps",
-    "section": "8.2 Content to develop",
-    "text": "8.2 Content to develop\n\nRevisit judgments that changed after verification.\nUse the rubric to identify specific practice needs.\nLabel portfolio work as a synthetic educational case.\nDisclose AI assistance and distinguish independent work from guided corrections.",
+    "title": "Review, reflection, and next steps",
+    "section": "Content to develop",
+    "text": "Content to develop\n\nRevisit judgments that changed after verification.\nUse the rubric to identify specific practice needs.\nLabel portfolio work as a synthetic educational case.\nDisclose AI assistance and distinguish independent work from guided corrections.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review, reflection, and next steps</span>"
@@ -588,9 +609,9 @@
   {
     "objectID": "08-next-steps.html#practice-task",
     "href": "08-next-steps.html#practice-task",
-    "title": "8  Review, reflection, and next steps",
-    "section": "8.3 Practice task",
-    "text": "8.3 Practice task\nWrite a short reflection explaining one corrected judgment and one unresolved limitation.",
+    "title": "Review, reflection, and next steps",
+    "section": "Practice task",
+    "text": "Practice task\nWrite a short reflection explaining one corrected judgment and one unresolved limitation.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review, reflection, and next steps</span>"
@@ -599,9 +620,9 @@
   {
     "objectID": "08-next-steps.html#checkpoint",
     "href": "08-next-steps.html#checkpoint",
-    "title": "8  Review, reflection, and next steps",
-    "section": "8.4 Checkpoint",
-    "text": "8.4 Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
+    "title": "Review, reflection, and next steps",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCan another reader trace each conclusion to evidence and understand what remains uncertain?",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review, reflection, and next steps</span>"
@@ -610,9 +631,9 @@
   {
     "objectID": "08-next-steps.html#deliverable",
     "href": "08-next-steps.html#deliverable",
-    "title": "8  Review, reflection, and next steps",
-    "section": "8.5 Deliverable",
-    "text": "8.5 Deliverable\nA reflection and a concise portfolio description.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
+    "title": "Review, reflection, and next steps",
+    "section": "Deliverable",
+    "text": "Deliverable\nA reflection and a concise portfolio description.\n\n\n\n\n\n\nAuthoring status\n\n\n\nChapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Review, reflection, and next steps</span>"
@@ -623,7 +644,7 @@
     "href": "99-appendix.html",
     "title": "Appendix A — Templates and evaluation rubric",
     "section": "",
-    "text": "A.1 Claim labels",
+    "text": "Claim labels",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates and evaluation rubric</span>"
@@ -644,8 +665,8 @@
     "objectID": "99-appendix.html#review-quality-rubric",
     "href": "99-appendix.html#review-quality-rubric",
     "title": "Appendix A — Templates and evaluation rubric",
-    "section": "A.2 Review quality rubric",
-    "text": "A.2 Review quality rubric\nScore each dimension from 0 to 3. Use these scores for feedback, not as a validated certification threshold.\n\n\n\n\n\n\n\nDimension\nWhat to inspect\n\n\n\n\nQuestion and scope\nIdentifies the question and appropriate limits\n\n\nData and design\nChecks provenance, experimental units, and assumptions\n\n\nVerification\nProvides traceable checks and consistent outputs\n\n\nInterpretation\nConnects claims to evidence and acknowledges uncertainty\n\n\nFeedback\nExplains consequences and gives actionable corrections\n\n\nReproducibility\nRecords inputs, code, environment, and outputs\n\n\n\n0: missing or materially incorrect. 1: identifies a concern with little support. 2: mostly correct with relevant evidence but incomplete checks or explanation. 3: justified, traceable, and clear about limitations.\nA total out of 18 may summarize performance, but always report dimension-level feedback. A high total cannot compensate for a major uncorrected scientific error.",
+    "section": "Review quality rubric",
+    "text": "Review quality rubric\nScore each dimension from 0 to 3. Use these scores for feedback, not as a validated certification threshold.\n\n\n\n\n\n\n\nDimension\nWhat to inspect\n\n\n\n\nQuestion and scope\nIdentifies the question and appropriate limits\n\n\nData and design\nChecks provenance, experimental units, and assumptions\n\n\nVerification\nProvides traceable checks and consistent outputs\n\n\nInterpretation\nConnects claims to evidence and acknowledges uncertainty\n\n\nFeedback\nExplains consequences and gives actionable corrections\n\n\nReproducibility\nRecords inputs, code, environment, and outputs\n\n\n\n0: missing or materially incorrect. 1: identifies a concern with little support. 2: mostly correct with relevant evidence but incomplete checks or explanation. 3: justified, traceable, and clear about limitations.\nA total out of 18 may summarize performance, but always report dimension-level feedback. A high total cannot compensate for a major uncorrected scientific error.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates and evaluation rubric</span>"
@@ -655,8 +676,8 @@
     "objectID": "99-appendix.html#issue-severity",
     "href": "99-appendix.html#issue-severity",
     "title": "Appendix A — Templates and evaluation rubric",
-    "section": "A.3 Issue severity",
-    "text": "A.3 Issue severity\nRecord separately: critical (undermines the principal conclusion), major (materially changes a result or claim), minor (limited consequence), or not applicable. Justify the level in context.",
+    "section": "Issue severity",
+    "text": "Issue severity\nRecord separately: critical (undermines the principal conclusion), major (materially changes a result or claim), minor (limited consequence), or not applicable. Justify the level in context.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates and evaluation rubric</span>"
@@ -666,8 +687,8 @@
     "objectID": "99-appendix.html#templates",
     "href": "99-appendix.html#templates",
     "title": "Appendix A — Templates and evaluation rubric",
-    "section": "A.4 Templates",
-    "text": "A.4 Templates\nThe project includes an evaluation report, evidence log, reproducibility checklist, and case authoring specifications.",
+    "section": "Templates",
+    "text": "Templates\nThe project includes an evaluation report, evidence log, reproducibility checklist, and case authoring specifications.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Templates and evaluation rubric</span>"

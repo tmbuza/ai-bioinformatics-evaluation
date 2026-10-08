@@ -1,26 +1,88 @@
-# Preface {.unnumbered}
+# Preface {#sec-preface .unnumbered}
+
+::: {.cdi-message}
+- **ID:** ABE-00
+- **Type:** Guide preface
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Scientific reasoning, reproducibility, and evidence-based AI evaluation
+:::
 
 ## Purpose
-Learn to inspect an AI-assisted bioinformatics analysis, verify evidence, distinguish supported conclusions from errors or uncertainty, and communicate justified corrections.
 
-## Who this is for
-Researchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates. Participation does not assume affiliation with a particular institution, country, employer, or qualification.
+An AI-assisted analysis may contain convincing explanations and readable code, yet still make claims that its data or methods cannot support. Evaluating it requires scientific judgment and checks that another person can follow.
 
-## Prerequisites
-You should be able to read a data table, interpret basic statistical results, describe biological replication, and read and run a short R script. Each case will introduce its domain-specific background. Learners needing preparation should first practise these skills using relevant CDI foundation guides.
+**Evaluating AI-Assisted Bioinformatics Analyses** teaches you to inspect an analysis, verify its evidence, and communicate a justified assessment. You will practise recognizing sound reasoning, identifying errors, and explaining uncertainty through original examples drawn from biological data analysis.
 
-## Learning outcomes
-- Frame an answerable scientific question.
-- Check data provenance, study design, and analytical assumptions.
-- Verify reported results using code and supplied evidence.
-- Assess biological claims and acknowledge uncertainty.
-- Produce a reproducible evaluation report with actionable feedback.
+This open Complex Data Insights (CDI) guide connects **Omics & Bioinformatics** with **Artificial Intelligence**. It supports research practice, independent learning, teaching, and preparation for scientific AI evaluation opportunities.
 
-## How to use the finished practical
-Attempt each task before opening its worked explanation. Record your reasoning and evidence as you go. The planned sequence moves from a guided RNA-seq case to a partially guided microbiome case and an independent single-cell case.
+## Who this guide is for
 
-## Access and tools
-The core exercises will use supplied responses and small datasets; a paid AI account will not be required. R verification scripts will live in `scripts/R/`. Chapters will display code without executing it during rendering. Package versions and setup instructions will be finalized when the case workflows are implemented.
+The guide is intended for researchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates worldwide. No particular institutional affiliation or qualification is required.
 
-## Scope
-This resource develops demonstrable skills. Completion does not guarantee recruitment, employment, project access, or income. Exercises are original teaching materials, independent of employer assessments and workshop curricula.
+You should already be able to:
+
+- Read data tables and explain a biological comparison.
+- Recognize biological replication and interpret basic statistical results.
+- Read and run a short R script and locate its outputs.
+
+You do not need expertise in every field represented here. For preparation, use the relevant CDI guide: [Microbiome](https://microbiome.complexdatainsights.com/), [RNA-seq](https://rnaseq.complexdatainsights.com/), [Single-Cell](https://singlecell.complexdatainsights.com/), [Proteomics](https://proteomics.complexdatainsights.com/), or [GWAS](https://gwas.complexdatainsights.com/). The [AI Systems guide](https://ai.complexdatainsights.com/) provides supporting AI concepts.
+
+## Scientific scope
+
+Microbiome analysis provides a recurring source of examples, reflecting CDI’s research experience in this field. These examples will explore sample metadata, community profiles, diversity, and the strength of biological claims.
+
+RNA-seq is a second core area, with a guided case addressing experimental design, differential expression, and interpretation. It brings gene-expression analysis into the guide and provides a basis for discussing how evidence is assessed across omics studies. A single-cell case extends the practice to cell-level workflows and annotation.
+
+The shared evaluation framework also applies to proteomics, GWAS, and other bioinformatics settings. Each application requires appropriate domain knowledge and method-specific checks. The worked cases provide depth; they do not define the limits of the guide’s scope.
+
+## What you will learn
+
+By completing the exercises, you should be able to:
+
+1. Identify the scientific question and the evidence needed to answer it.
+2. Check data provenance, study design, methods, and assumptions.
+3. Verify selected outputs and compare them with reported results.
+4. Distinguish supported claims, errors, and unresolved questions.
+5. Write evidence-based feedback with justified corrections.
+
+Every case follows the same process:
+
+**Inspect the question → check data and methods → verify results → assess claims → communicate the evaluation.**
+
+Reproducing a result does not, by itself, establish that the method or interpretation is appropriate. Your review must address both execution and scientific reasoning.
+
+## Learning sequence
+
+| Stage | Focus | Your output |
+|---|---|---|
+| Foundations | Evaluation criteria and reproducible checks | Evaluation plan and evidence log |
+| Guided RNA-seq case | Design, statistical results, and interpretation | Annotated review |
+| Microbiome case and supporting examples | Community data, analytical choices, and biological claims | Evidence-supported evaluation |
+| More independent single-cell case | Workflow decisions, annotation, and uncertainty | Structured scientific review |
+| Independent practice | Apply the framework and prioritize findings | Final evaluation report |
+
+The sequence moves from guided review toward independent judgment, with additional microbiome examples reinforcing the framework. Cases will combine correct decisions, deliberate errors, and unresolved claims; assess each against the evidence.
+
+## How to use the guide
+
+Attempt each exercise before consulting its worked explanation. Record the claim reviewed, the check performed, the evidence found, and your proposed action. Explain the consequence of an issue instead of simply marking it wrong.
+
+The core exercises use supplied materials; **a paid AI account is not required**. Simulated AI responses will be labelled. Form your own initial judgment, then document and verify any optional AI assistance you use.
+
+R verification scripts will live in `scripts/R/`, with setup instructions provided alongside the completed workflows. Run these scripts separately: rendering the Quarto book displays the lessons without executing the analyses. Distinguish supplied outputs from results you reproduced yourself.
+
+::: {.callout-note title="Guide development"}
+The guide is being completed chapter by chapter. Case datasets, scripts, outputs, and worked explanations remain under development until their chapters identify them as available.
+:::
+
+## Your final deliverable
+
+You will produce an evaluation report documenting your checks, findings, justified corrections, and remaining uncertainty. A reader should be able to tell what you verified and what you could not establish.
+
+The report can support research training or a professional portfolio. Clearly label teaching data, acknowledge assistance, and describe your own contribution.
+
+This open guide stands on its own; separate CDI practicals may provide further assignments. The materials are independent of employer assessments and institutional programmes. Completion develops demonstrable skills without guaranteeing selection, employment, or income.
+
+## Before you begin
+
+Identify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to **Orientation**.

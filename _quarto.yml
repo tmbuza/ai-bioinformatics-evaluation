@@ -1,10 +1,17 @@
 project:
   type: book
   output-dir: docs
+
+bibliography: library/references.bib
+date: 2026-10-08
+date-format: "MMM YYYY"
+
 book:
   title: "Evaluating AI-Assisted Bioinformatics Analyses"
   subtitle: "Scientific reasoning, reproducibility, and evidence-based feedback"
   author: "Complex Data Insights"
+  site-url: https://ai-bioinformatics.complexdatainsights.com/
+
   chapters:
     - index.qmd
     - 00-preface.qmd
@@ -25,12 +32,26 @@ book:
   appendices:
     - 99-appendix.qmd
     - 99-references.qmd
+
+
 format:
   html:
-    theme: cosmo
-    css: styles.css
     toc: true
-    code-copy: true
-    number-sections: true
+    toc-depth: 3
+    number-sections: false
+    number-depth: 2
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-icon: true
+    css: assets/css/cdi.css
+    code-fold: true
+    mermaid:
+      theme: forest
+
 execute:
-  eval: false
+  echo: true
+  warning: false
+  message: false
+  freeze: auto
+  working-dir: .
+

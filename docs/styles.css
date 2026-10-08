@@ -1,4 +1,0 @@
-:root { --cdi-teal: #036281; --cdi-yellow: #f7c546; --cdi-ink: #0f172a; }
-body { color: var(--cdi-ink); }
-h1, h2, h3, a { color: var(--cdi-teal); }
-.callout { border-left-color: var(--cdi-yellow); }
