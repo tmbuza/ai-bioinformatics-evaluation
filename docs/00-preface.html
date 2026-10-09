@@ -171,6 +171,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-proteomics-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proteomics: missing values and interpretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gwas-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GWAS: population structure and association</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -184,12 +194,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
+  <a href="./09-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
+  <a href="./10-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -293,9 +303,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="scientific-scope" class="level2">
 <h2 class="anchored" data-anchor-id="scientific-scope">Scientific scope</h2>
-<p>Microbiome analysis provides a recurring source of examples, reflecting CDI’s research experience in this field. These examples will explore sample metadata, community profiles, diversity, and the strength of biological claims.</p>
-<p>RNA-seq is a second core area, with a guided case addressing experimental design, differential expression, and interpretation. It brings gene-expression analysis into the guide and provides a basis for discussing how evidence is assessed across omics studies. A single-cell case extends the practice to cell-level workflows and annotation.</p>
-<p>The shared evaluation framework also applies to proteomics, GWAS, and other bioinformatics settings. Each application requires appropriate domain knowledge and method-specific checks. The worked cases provide depth; they do not define the limits of the guide’s scope.</p>
+<p>Microbiome analysis provides recurring examples grounded in CDI’s research experience, covering sample metadata, community profiles, diversity, and biological interpretation.</p>
+<p>RNA-seq is another core area, connecting gene-expression analysis with experimental design, differential expression, and evidence-based interpretation. A guided RNA-seq case introduces these checks; a single-cell case extends the practice to cell-level workflows and annotation.</p>
+<p>Proteomics and GWAS cases add practice with missing measurements and population structure. Together, the five cases cover major areas of omics analysis while keeping domain knowledge and method-specific checks central to each review.</p>
 </section>
 <section id="what-you-will-learn" class="level2">
 <h2 class="anchored" data-anchor-id="what-you-will-learn">What you will learn</h2>
@@ -360,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="how-to-use-the-guide">How to use the guide</h2>
 <p>Attempt each exercise before consulting its worked explanation. Record the claim reviewed, the check performed, the evidence found, and your proposed action. Explain the consequence of an issue instead of simply marking it wrong.</p>
 <p>The core exercises use supplied materials; <strong>a paid AI account is not required</strong>. Simulated AI responses will be labelled. Form your own initial judgment, then document and verify any optional AI assistance you use.</p>
-<p>R verification scripts will live in <code>scripts/R/</code>, with setup instructions provided alongside the completed workflows. Run these scripts separately: rendering the Quarto book displays the lessons without executing the analyses. Distinguish supplied outputs from results you reproduced yourself.</p>
+<p>R verification scripts will live in <code>scripts/R/</code>, with setup instructions alongside each completed workflow. Run the scripts as instructed and inspect their outputs. Rendering the book is a publishing step, not evidence that you have independently verified an analysis. Distinguish supplied outputs from results you reproduced yourself.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Guide development">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -383,7 +393,7 @@ Guide development
 </section>
 <section id="before-you-begin" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-begin">Before you begin</h2>
-<p>Identify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to <strong>Orientation</strong>.</p>
+<p>Identify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to <a href="./01-orientation.html">Orientation</a>.</p>
 
 
 </section>

@@ -1,0 +1,7 @@
+protein_id	condition	observed	missing
+P1	control	3	0
+P2	control	3	0
+P3	control	3	0
+P1	treated	1	2
+P2	treated	3	0
+P3	treated	3	0

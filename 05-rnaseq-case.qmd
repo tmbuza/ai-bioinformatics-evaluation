@@ -95,4 +95,22 @@ Write `results/ch05/evaluation-report.md`, linking your evidence log and outputs
 
 Your report should distinguish a calculation error, a design limitation, and a missing-evidence problem. Explain why a small adjusted p-value cannot resolve the latter two.
 
+## Read the visual evidence
+
+![All controls are in B1 and all treated samples are in B2. Condition and batch cannot be estimated separately in this design.](results/figures/05-rnaseq-design.png){#fig-abe-05 fig-alt="All controls are in B1 and all treated samples are in B2. Condition and batch cannot be estimated separately in this design." width=100%}
+
+The empty cells show the missing within-batch comparisons.
+
+::: {.callout-note collapse="true" title="Recreate the figures"}
+Run from the repository root:
+
+```bash
+Rscript scripts/R/plot-evaluation-cases.R
+```
+
+[View or download the base-R plotting code](scripts/R/plot-evaluation-cases.R). It reads the supplied case data and regenerates all five figures in `results/figures/`. Existing images are overwritten; book rendering does not run this script.
+
+The bundled PNGs were generated with the [Python plotting code](scripts/python/plot-evaluation-cases.py). The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.
+:::
+
 Continue to the [Single-Cell Case](06-singlecell-case.qmd) for more independent evaluation.

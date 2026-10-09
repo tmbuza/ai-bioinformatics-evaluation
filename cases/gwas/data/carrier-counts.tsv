@@ -1,0 +1,5 @@
+stratum	status	carriers	noncarriers
+A	case	128	32
+A	control	32	8
+B	case	8	32
+B	control	32	128

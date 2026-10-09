@@ -1,0 +1,5 @@
+stratum	status	total	within_status_proportion
+A	case	160	0.8
+A	control	40	0.2
+B	case	40	0.2
+B	control	160	0.8

@@ -206,6 +206,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-proteomics-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proteomics: missing values and interpretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gwas-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GWAS: population structure and association</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -219,12 +229,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
+  <a href="./09-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
+  <a href="./10-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -268,6 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#verify-the-descriptive-results" id="toc-verify-the-descriptive-results" class="nav-link" data-scroll-target="#verify-the-descriptive-results">Verify the descriptive results</a></li>
   <li><a href="#interpret-what-changed" id="toc-interpret-what-changed" class="nav-link" data-scroll-target="#interpret-what-changed">Interpret what changed</a></li>
   <li><a href="#deliverable-and-checkpoint" id="toc-deliverable-and-checkpoint" class="nav-link" data-scroll-target="#deliverable-and-checkpoint">Deliverable and checkpoint</a></li>
+  <li><a href="#read-the-visual-evidence" id="toc-read-the-visual-evidence" class="nav-link" data-scroll-target="#read-the-visual-evidence">Read the visual evidence</a></li>
   </ul>
 </nav>
     </div>
@@ -422,6 +433,39 @@ Worked interpretation
 <h2 class="anchored" data-anchor-id="deliverable-and-checkpoint">Deliverable and checkpoint</h2>
 <p>Write <code>results/ch04/evaluation-report.md</code> with the question, checks performed, prioritized findings, corrected conclusion, and remaining limitations. Link to your evidence log and output files.</p>
 <p>Before continuing, confirm that you preserved supported results, accounted for paired observations, used the correct percentage language, and removed claims requiring evidence that is absent.</p>
+</section>
+<section id="read-the-visual-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-visual-evidence">Read the visual evidence</h2>
+<div id="fig-abe-04" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-abe-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="results/figures/04-microbiome-paired.png" class="img-fluid figure-img" style="width:100.0%" alt="Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-abe-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes.
+</figcaption>
+</figure>
+</div>
+<p>Each line represents one participant measured before and after.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Recreate the figures">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recreate the figures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Run from the repository root:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/plot-evaluation-cases.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="scripts/R/plot-evaluation-cases.R">View or download the base-R plotting code</a>. It reads the supplied case data and regenerates all five figures in <code>results/figures/</code>. Existing images are overwritten; book rendering does not run this script.</p>
+<p>The bundled PNGs were generated with the <a href="scripts/python/plot-evaluation-cases.py">Python plotting code</a>. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.</p>
+</div>
+</div>
+</div>
 <p>Continue to the <a href="./05-rnaseq-case.html">RNA-seq Case</a>, where you will apply the framework with less guidance.</p>
 
 

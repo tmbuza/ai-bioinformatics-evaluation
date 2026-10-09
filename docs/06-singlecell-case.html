@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./07-independent-evaluation.html" rel="next">
+<link href="./07-proteomics-case.html" rel="next">
 <link href="./05-rnaseq-case.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -206,6 +206,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-proteomics-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Proteomics: missing values and interpretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gwas-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GWAS: population structure and association</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -219,12 +229,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
+  <a href="./09-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
+  <a href="./10-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -268,6 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#verify-selected-properties" id="toc-verify-selected-properties" class="nav-link" data-scroll-target="#verify-selected-properties">Verify selected properties</a></li>
   <li><a href="#distinguish-the-questions-being-answered" id="toc-distinguish-the-questions-being-answered" class="nav-link" data-scroll-target="#distinguish-the-questions-being-answered">Distinguish the questions being answered</a></li>
   <li><a href="#submit-your-evaluation" id="toc-submit-your-evaluation" class="nav-link" data-scroll-target="#submit-your-evaluation">Submit your evaluation</a></li>
+  <li><a href="#read-the-visual-evidence" id="toc-read-the-visual-evidence" class="nav-link" data-scroll-target="#read-the-visual-evidence">Read the visual evidence</a></li>
   </ul>
 </nav>
     </div>
@@ -441,7 +452,40 @@ Self-check after completing your report
 </div>
 </div>
 </div>
-<p>Continue to <a href="./07-independent-evaluation.html">Independent Evaluation</a> to bring the framework and reporting skills together.</p>
+</section>
+<section id="read-the-visual-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-visual-evidence">Read the visual evidence</h2>
+<div id="fig-abe-06" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-abe-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="results/figures/06-singlecell-weighting.png" class="img-fluid figure-img" style="width:100.0%" alt="Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-abe-06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%.
+</figcaption>
+</figure>
+</div>
+<p>The left panel shows donor proportions and retained cell counts; the right compares two ways of summarizing them. Neither establishes a treatment effect.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Recreate the figures">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recreate the figures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Run from the repository root:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/plot-evaluation-cases.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="scripts/R/plot-evaluation-cases.R">View or download the base-R plotting code</a>. It reads the supplied case data and regenerates all five figures in <code>results/figures/</code>. Existing images are overwritten; book rendering does not run this script.</p>
+<p>The bundled PNGs were generated with the <a href="scripts/python/plot-evaluation-cases.py">Python plotting code</a>. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.</p>
+</div>
+</div>
+</div>
+<p>Continue to <a href="./07-proteomics-case.html">Proteomics</a> to examine missing measurements and sensitivity to analytical choices.</p>
 
 
 </section>
@@ -855,8 +899,8 @@ Self-check after completing your report
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07-independent-evaluation.html" class="pagination-link" aria-label="Independent Evaluation">
-        <span class="nav-page-text"><span class="chapter-title">Independent Evaluation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07-proteomics-case.html" class="pagination-link" aria-label="Proteomics: missing values and interpretation">
+        <span class="nav-page-text"><span class="chapter-title">Proteomics: missing values and interpretation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

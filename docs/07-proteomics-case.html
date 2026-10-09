@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Independent Evaluation – Evaluating AI-Assisted Bioinformatics Analyses</title>
+<title>Proteomics: missing values and interpretation – Evaluating AI-Assisted Bioinformatics Analyses</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./08-next-steps.html" rel="next">
+<link href="./08-gwas-case.html" rel="next">
 <link href="./06-singlecell-case.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -84,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-independent-evaluation.html">Independent Practice</a></li><li class="breadcrumb-item"><a href="./07-independent-evaluation.html"><span class="chapter-title">Independent Evaluation</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./07-proteomics-case.html"><span class="chapter-title">Proteomics: missing values and interpretation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,6 +226,16 @@ ul.task-list li input[type="checkbox"] {
   <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-proteomics-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Proteomics: missing values and interpretation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-gwas-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">GWAS: population structure and association</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -184,12 +249,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Independent Evaluation</span></a>
+  <a href="./09-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
+  <a href="./10-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -227,22 +292,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#your-assignment" id="toc-your-assignment" class="nav-link active" data-scroll-target="#your-assignment">Your assignment</a></li>
-  <li><a href="#start-with-the-brief" id="toc-start-with-the-brief" class="nav-link" data-scroll-target="#start-with-the-brief">Start with the brief</a></li>
-  <li><a href="#prepare-your-review-files" id="toc-prepare-your-review-files" class="nav-link" data-scroll-target="#prepare-your-review-files">Prepare your review files</a></li>
-  <li><a href="#carry-out-the-evaluation" id="toc-carry-out-the-evaluation" class="nav-link" data-scroll-target="#carry-out-the-evaluation">Carry out the evaluation</a></li>
-  <li><a href="#keep-the-report-focused" id="toc-keep-the-report-focused" class="nav-link" data-scroll-target="#keep-the-report-focused">Keep the report focused</a></li>
-  <li><a href="#review-and-revise" id="toc-review-and-revise" class="nav-link" data-scroll-target="#review-and-revise">Review and revise</a></li>
-  <li><a href="#final-checkpoint" id="toc-final-checkpoint" class="nav-link" data-scroll-target="#final-checkpoint">Final checkpoint</a></li>
+  <li><a href="#your-evaluation-brief" id="toc-your-evaluation-brief" class="nav-link active" data-scroll-target="#your-evaluation-brief">Your evaluation brief</a></li>
+  <li><a href="#plan-your-review" id="toc-plan-your-review" class="nav-link" data-scroll-target="#plan-your-review">Plan your review</a></li>
+  <li><a href="#verify-selected-properties" id="toc-verify-selected-properties" class="nav-link" data-scroll-target="#verify-selected-properties">Verify selected properties</a></li>
+  <li><a href="#write-your-evaluation" id="toc-write-your-evaluation" class="nav-link" data-scroll-target="#write-your-evaluation">Write your evaluation</a></li>
+  <li><a href="#read-the-visual-evidence" id="toc-read-the-visual-evidence" class="nav-link" data-scroll-target="#read-the-visual-evidence">Read the visual evidence</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07-independent-evaluation.html">Independent Practice</a></li><li class="breadcrumb-item"><a href="./07-independent-evaluation.html"><span class="chapter-title">Independent Evaluation</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./07-proteomics-case.html"><span class="chapter-title">Proteomics: missing values and interpretation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-independent-evaluation" class="quarto-section-identifier"><span class="chapter-title">Independent Evaluation</span></span></h1>
+<h1 class="title"><span id="sec-proteomics-case" class="quarto-section-identifier"><span class="chapter-title">Proteomics: missing values and interpretation</span></span></h1>
 </div>
 
 
@@ -268,26 +331,26 @@ ul.task-list li input[type="checkbox"] {
 <div class="cdi-message">
 <ul>
 <li><strong>ID:</strong> ABE-007</li>
-<li><strong>Type:</strong> Independent assignment and self-assessment</li>
+<li><strong>Type:</strong> Case evaluation</li>
 <li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
-<li><strong>Theme:</strong> An evidence-based review from question to final report</li>
+<li><strong>Theme:</strong> Missing measurements and sensitivity to imputation</li>
 </ul>
 </div>
-<section id="your-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="your-assignment">Your assignment</h2>
-<p>Complete a review of an unfamiliar simulated AI response using the framework developed in this guide. You will choose the checks, prioritize the findings, and write a corrected scientific conclusion.</p>
-<p>The supplied assignment uses a new synthetic microbiome example. Its purpose is to test transferable evaluation skills: checking denominators, identifying replication, separating measurements from claims, and documenting uncertainty.</p>
-<p><strong>Outcome:</strong> a concise evaluation report supported by an evidence log and repeatable checks.</p>
+<section id="your-evaluation-brief" class="level2">
+<h2 class="anchored" data-anchor-id="your-evaluation-brief">Your evaluation brief</h2>
+<p><strong>Does an apparent protein increase survive a change in missing-value assumptions?</strong> This original synthetic case contains six independent biological samples, three per condition, and three fictional protein groups. Values are supplied log2 intensities; <code>NA</code> means not quantified. No raw spectra, peptide evidence, normalization record, or statistical analysis is provided.</p>
+<p>Read <code>cases/proteomics/README.md</code> and <code>cases/proteomics/simulated-response.md</code>. The data folder contains <code>sample-metadata.tsv</code> and <code>log2-intensities.tsv</code>. Protein groups are teaching identifiers, not validated biological entities.</p>
 </section>
-<section id="start-with-the-brief" class="level2">
-<h2 class="anchored" data-anchor-id="start-with-the-brief">Start with the brief</h2>
-<p>Read <code>cases/independent/brief.md</code>. It contains the scenario, complete six-sample table, six response statements, and submission requirements. No external dataset or paid AI account is needed.</p>
-<p>Do not open <code>cases/independent/self-review.md</code> until you have saved your initial report. A calculator, spreadsheet, or short script is sufficient. Choose the tool you can use reliably and retain enough detail for another person to repeat your calculations.</p>
-<p>This is an independent practice task, not a formal assessment of eligibility for employment or specialist projects.</p>
+<section id="plan-your-review" class="level2">
+<h2 class="anchored" data-anchor-id="plan-your-review">Plan your review</h2>
+<p>Create <code>results/ch07/evidence-log.tsv</code>. Evaluate each of the six claims before opening the worked review. Identify the biological replicates, count missing measurements by condition, and distinguish an observed difference from an assumption-dependent result.</p>
+<p>Imputation depends on assumptions about why values are missing; a missing measurement does not identify its own mechanism <span class="citation" data-cites="abe-lazar2016">(<a href="99-references.html#ref-abe-lazar2016" role="doc-biblioref">Lazar et al. 2016</a>)</span>. Here, replacing missing values with 18 or 22 is a deliberately simplified sensitivity exercise, not a recommended analysis method.</p>
 </section>
-<section id="prepare-your-review-files" class="level2">
-<h2 class="anchored" data-anchor-id="prepare-your-review-files">Prepare your review files</h2>
-<p>Create <code>results/ch07/</code> and copy these templates into it:</p>
+<section id="verify-selected-properties" class="level2">
+<h2 class="anchored" data-anchor-id="verify-selected-properties">Verify selected properties</h2>
+<p>Run from the repository root:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/07-verify-proteomics.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The base-R script checks identifiers and numeric inputs, then writes:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -295,64 +358,90 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Supplied template</th>
-<th>Save your working copy as</th>
+<th>Output in <code>results/ch07/</code></th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>templates/independent-evaluation-report.qmd</code></td>
-<td><code>results/ch07/evaluation-report.qmd</code></td>
+<td><code>missingness.tsv</code></td>
+<td>Count observed and missing values per protein and condition.</td>
 </tr>
 <tr class="even">
-<td><code>templates/independent-evidence-log.tsv</code></td>
-<td><code>results/ch07/evidence-log.tsv</code></td>
+<td><code>sensitivity.tsv</code></td>
+<td>Compare observed-only means with two fixed-value replacements.</td>
 </tr>
 <tr class="odd">
-<td><code>templates/independent-self-assessment.md</code></td>
-<td><code>results/ch07/self-assessment.md</code></td>
+<td><code>input-checksums.tsv</code>, <code>session-info.txt</code></td>
+<td>Record input fingerprints and software details.</td>
 </tr>
 </tbody>
 </table>
-<p>The templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.</p>
+<p>The reported difference is mean log2 intensity in treated samples minus mean log2 intensity in controls. Its exponent, <code>2^difference</code>, is a ratio of geometric means on the original scale, not a ratio of arithmetic means. Observed-only summaries may use different numbers of samples and do not remove missing-data bias.</p>
+<p>The script overwrites its named outputs. It performs no normalization, differential-abundance test, or protein-identification validation.</p>
 </section>
-<section id="carry-out-the-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="carry-out-the-evaluation">Carry out the evaluation</h2>
-<p>Work through the task without relying on a prewritten verification script:</p>
-<ol type="1">
-<li><strong>Define the scope.</strong> State the question and identify what the supplied evidence can address.</li>
-<li><strong>Extract claims.</strong> Separate observations, calculations, analytical decisions, and biological conclusions.</li>
-<li><strong>Verify.</strong> Complete at least two quantitative checks and record formulas, commands, or calculation notes.</li>
-<li><strong>Judge.</strong> Apply the ABE-002 labels and justify priorities by scientific consequence.</li>
-<li><strong>Communicate.</strong> Retain supported statements, explain corrections, and specify the evidence needed for unresolved claims.</li>
-</ol>
-<p>Write your initial judgment before using optional AI assistance. If you use assistance later, record its role and verify any suggestions adopted. Do not represent assisted work as an unaided assessment.</p>
+<section id="write-your-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="write-your-evaluation">Write your evaluation</h2>
+<p>Save a concise report to <code>results/ch07/evaluation-report.md</code>. Retain valid arithmetic, identify conclusions that depend on replacement values, and request the evidence needed to assess normalization, identification, and uncertainty. Do not substitute an arbitrary replacement rule for a justified missing-data strategy.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Self-check after your initial review">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Self-check after your initial review
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>P1 has three observed controls and one observed treated value. Its treated-minus-control difference is 2 using observed values, approximately -3.333 when missing values are replaced with 18, and -0.667 when replaced with 22. These correspond to geometric-mean ratios of 4, approximately 0.099, and approximately 0.630.</p>
+<p>P2 has complete measurements and a descriptive difference of 1; P3 has complete measurements and a difference of 0. Neither supplies a significance test. Compare your six judgments with <code>cases/proteomics/worked-review.md</code>.</p>
+</div>
+</div>
+</div>
+<p>Reference tables were calculated independently with Python. The R script has not been executed in the authoring environment; compare your run with <code>cases/proteomics/reference/</code> and record discrepancies.</p>
 </section>
-<section id="keep-the-report-focused" class="level2">
-<h2 class="anchored" data-anchor-id="keep-the-report-focused">Keep the report focused</h2>
-<p>Aim for approximately <strong>500–800 words</strong>, excluding the evidence table and calculation records. Include the scope, main findings, corrected conclusion, and limitations. A longer report is useful only when it adds necessary evidence or explanation.</p>
-<p>Every consequential finding should identify a claim, point to evidence, explain its scientific impact, and recommend a specific action. Avoid repeating the same limitation in several sections.</p>
-<p>Your corrected conclusion should be understandable without opening the full evidence log. Your supporting files should allow a reviewer to verify how you reached it.</p>
-</section>
-<section id="review-and-revise" class="level2">
-<h2 class="anchored" data-anchor-id="review-and-revise">Review and revise</h2>
-<p>Save an initial copy, such as <code>evaluation-report-initial.qmd</code>, before opening the self-review. Compare your reasoning and calculations, then complete the self-assessment rubric.</p>
-<p>Use <strong>Ready</strong> when the criterion is supported by your work and <strong>Revise</strong> when it needs attention. These labels are formative; they do not certify competence. Resolve numerical errors and issues that could change the central conclusion before finalizing the report.</p>
-<p>If your judgment differs from the worked review, return to the evidence and explain the difference. Reasonable wording or priority choices can vary; unsupported conclusions still require correction.</p>
-</section>
-<section id="final-checkpoint" class="level2">
-<h2 class="anchored" data-anchor-id="final-checkpoint">Final checkpoint</h2>
-<p>Your completed submission should contain:</p>
-<ul>
-<li>An initial report and a revised final report.</li>
-<li>An evidence log covering all six response statements.</li>
-<li>Calculation records or scripts for your quantitative checks.</li>
-<li>A self-assessment and a short explanation of revisions.</li>
-</ul>
-<p>Label the work as a synthetic CDI teaching exercise if you share it in a portfolio. Describe your own contribution and retain relevant attribution.</p>
-<p>Continue to <a href="./08-next-steps.html">Next Steps</a> to plan further practice and present your evaluation work professionally.</p>
+<section id="read-the-visual-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="read-the-visual-evidence">Read the visual evidence</h2>
+<div id="fig-abe-07" class="quarto-float quarto-figure quarto-figure-center anchored" alt="P1 has two missing treated measurements. Its descriptive log2 difference changes from 2 with observed values to approximately -3.333 or -0.667 under the two replacement assumptions.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-abe-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="results/figures/07-proteomics-missingness.png" class="img-fluid figure-img" style="width:100.0%" alt="P1 has two missing treated measurements. Its descriptive log2 difference changes from 2 with observed values to approximately -3.333 or -0.667 under the two replacement assumptions.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-abe-07-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: P1 has two missing treated measurements. Its descriptive log2 difference changes from 2 with observed values to approximately -3.333 or -0.667 under the two replacement assumptions.
+</figcaption>
+</figure>
+</div>
+<p>Teal cells are observed log2 intensities; yellow cells are missing. Replacement values illustrate sensitivity and are not recommended imputation methods.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Recreate the figures">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recreate the figures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Run from the repository root:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/plot-evaluation-cases.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><a href="scripts/R/plot-evaluation-cases.R">View or download the base-R plotting code</a>. It reads the supplied case data and regenerates all five figures in <code>results/figures/</code>. Existing images are overwritten; book rendering does not run this script.</p>
+<p>The bundled PNGs were generated with the <a href="scripts/python/plot-evaluation-cases.py">Python plotting code</a>. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.</p>
+</div>
+</div>
+</div>
+<p>Continue to <a href="./08-gwas-case.html">GWAS</a> to examine population structure and association claims.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-abe-lazar2016" class="csl-entry" role="listitem">
+Lazar, Cosmin, Laurent Gatto, Myriam Ferro, Christophe Bruley, and Thomas Burger. 2016. <span>“Accounting for the Multiple Natures of Missing Values in Label-Free Quantitative Proteomics Data Sets to Compare Imputation Strategies.”</span> <em>Journal of Proteome Research</em> 15 (4): 1116–25. <a href="https://doi.org/10.1021/acs.jproteome.5b00981">https://doi.org/10.1021/acs.jproteome.5b00981</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -764,8 +853,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./08-next-steps.html" class="pagination-link" aria-label="Next Steps">
-        <span class="nav-page-text"><span class="chapter-title">Next Steps</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./08-gwas-case.html" class="pagination-link" aria-label="GWAS: population structure and association">
+        <span class="nav-page-text"><span class="chapter-title">GWAS: population structure and association</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

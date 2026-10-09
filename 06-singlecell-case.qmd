@@ -94,4 +94,22 @@ M1 is shared by both fictional candidates. The combined pattern favors a provisi
 Compare all seven judgments with `cases/singlecell/worked-review.md`. Revise your report where evidence warrants it and explain your changes.
 :::
 
-Continue to [Independent Evaluation](07-independent-evaluation.qmd) to bring the framework and reporting skills together.
+## Read the visual evidence
+
+![Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%.](results/figures/06-singlecell-weighting.png){#fig-abe-06 fig-alt="Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%." width=100%}
+
+The left panel shows donor proportions and retained cell counts; the right compares two ways of summarizing them. Neither establishes a treatment effect.
+
+::: {.callout-note collapse="true" title="Recreate the figures"}
+Run from the repository root:
+
+```bash
+Rscript scripts/R/plot-evaluation-cases.R
+```
+
+[View or download the base-R plotting code](scripts/R/plot-evaluation-cases.R). It reads the supplied case data and regenerates all five figures in `results/figures/`. Existing images are overwritten; book rendering does not run this script.
+
+The bundled PNGs were generated with the [Python plotting code](scripts/python/plot-evaluation-cases.py). The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.
+:::
+
+Continue to [Proteomics](07-proteomics-case.qmd) to examine missing measurements and sensitivity to analytical choices.

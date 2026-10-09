@@ -1,4 +1,4 @@
-# ABE-007 independent assignment
+# ABE-009 independent assignment
 
 Original synthetic CDI teaching scenario. All measurements and labels are invented. This assignment requires arithmetic and evidence review; no R script is supplied so that you can choose and document your own verification approach. A calculator or spreadsheet is sufficient.
 

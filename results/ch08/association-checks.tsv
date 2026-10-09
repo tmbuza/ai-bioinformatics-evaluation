@@ -1,0 +1,4 @@
+comparison	case_n	control_n	case_carrier_proportion	control_carrier_proportion	odds_ratio
+A	160	40	0.8	0.8	1
+B	40	160	0.2	0.2	1
+pooled	200	200	0.68	0.32	4.515625

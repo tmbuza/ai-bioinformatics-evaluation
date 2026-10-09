@@ -1,4 +1,4 @@
-# microbiome: authoring specification
+# Microbiome: authoring specification
 
 Status: planned; no dataset or verified analysis supplied yet.
 

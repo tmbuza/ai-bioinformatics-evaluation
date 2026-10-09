@@ -1,7 +1,7 @@
 # Next Steps {#sec-next-steps}
 
 ::: {.cdi-message}
-- **ID:** ABE-008
+- **ID:** ABE-010
 - **Type:** Reflection and professional development
 - **Audience:** Researchers, learners, educators, and bioinformatics practitioners
 - **Theme:** Continued practice and demonstrable evaluation skills
@@ -11,7 +11,7 @@
 
 You have practised inspecting claims, performing targeted checks, and communicating scientific judgments. The next step is to identify which skills your completed work demonstrates and which need further practice.
 
-Review your ABE-007 report and self-assessment. Select one finding you handled well and one you revised substantially. Explain what made the first defensible and what changed your reasoning in the second.
+Review your ABE-009 report and self-assessment. Select one finding you handled well and one you revised substantially. Explain what made the first defensible and what changed your reasoning in the second.
 
 **Chapter outcome:** prepare a clear description of your evaluation work and a focused development plan.
 
@@ -73,7 +73,7 @@ For an external assessment or project, follow its specific rules on independent 
 
 ## Make a short development plan
 
-Create `results/08-development-plan.md` and answer:
+Create `results/10-development-plan.md` and answer:
 
 1. Which evaluation skill can I now demonstrate, and where is the evidence?
 2. Which limitation in my work matters most?

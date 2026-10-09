@@ -1,7 +1,7 @@
 # Appendix {.unnumbered #sec-appendix}
 
 ::: {.cdi-message}
-- **ID:** ABE-009
+- **ID:** ABE-011
 - **Type:** Practical reference
 - **Audience:** Researchers, learners, educators, and bioinformatics practitioners
 - **Theme:** Verification commands, evidence records, and troubleshooting
@@ -16,6 +16,8 @@ Rscript scripts/R/03-verify-sample-matching.R
 Rscript scripts/R/04-verify-microbiome.R
 Rscript scripts/R/05-verify-rnaseq.R
 Rscript scripts/R/06-verify-singlecell.R
+Rscript scripts/R/07-verify-proteomics.R
+Rscript scripts/R/08-verify-gwas.R
 ```
 
 Run one script at a time and inspect its outputs before continuing. These are targeted verification exercises, not complete omics pipelines.
@@ -26,9 +28,11 @@ Run one script at a time and inspect its outputs before continuing. These are ta
 | ABE-004 | `results/ch04/` | Per-sample summaries and paired changes |
 | ABE-005 | `results/ch05/` | Design rank and illustrative result checks |
 | ABE-006 | `results/ch06/` | Donor proportions, pooled summaries, and fictional marker checks |
-| ABE-007 | `results/ch07/` | Independent report, evidence log, and calculation records |
+| ABE-007 | `results/ch07/` | Missingness and imputation sensitivity |
+| ABE-008 | `results/ch08/` | Pooled and within-group carrier odds ratios |
+| ABE-009 | `results/ch09/` | Independent report, evidence log, and calculation records |
 
-ABE-007 has no supplied verification script: choose your own tool and retain the calculations. ABE-008 records your development plan in `results/08-development-plan.md`.
+ABE-009 has no supplied verification script: choose your own tool and retain the calculations. ABE-010 records your development plan in `results/10-development-plan.md`.
 
 ## Understand the outputs
 
@@ -36,7 +40,7 @@ A script completing successfully means its instructions ran. Some exercises deli
 
 The scripts overwrite their named outputs on rerun. Preserve previous results before changing inputs. Keep original teaching files separate from experimental copies, and document any modification.
 
-Reference tables for ABE-004 through ABE-006 were calculated independently with Python. The R scripts were not executed in the authoring environment. Record your own observed results and software details; expected tables are comparison aids, not proof of an R execution.
+Reference tables for ABE-004 through ABE-008 were calculated independently with Python. The R scripts were not executed in the authoring environment. Record your own observed results and software details; expected tables are comparison aids, not proof of an R execution.
 
 ## Evaluation labels
 
@@ -64,7 +68,7 @@ A genuine error may be in the input, environment, or supplied script. Document i
 
 ## Reusable templates
 
-The ABE-007 package provides:
+The ABE-009 package provides:
 
 - `templates/independent-evaluation-report.qmd`
 - `templates/independent-evidence-log.tsv`
@@ -88,3 +92,6 @@ Include input versions or fingerprints, software details where relevant, and unr
 - **Microbiome interpretation:** Relative abundance describes composition and does not directly establish absolute microbial quantities [@abe-gloor2017].
 - **RNA-seq study design:** Complete confounding prevents separate estimation of batch and condition effects [@abe-deseq2-vignette].
 - **Single-cell replication:** Comparisons across conditions must account for biological replication rather than treating cells from the same donor as independent biological replicates [@abe-squair2021].
+
+- **Proteomics missingness:** Interpretation depends on the missing-data mechanism and assumptions used for imputation [@abe-lazar2016].
+- **GWAS population structure:** Genetic structure can confound association estimates and requires appropriate assessment and adjustment [@abe-price2006].

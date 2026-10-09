@@ -1,4 +1,4 @@
-# singlecell: authoring specification
+# Single-cell: authoring specification
 
 Status: planned; no dataset or verified analysis supplied yet.
 

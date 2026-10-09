@@ -1,7 +1,7 @@
 # Independent Evaluation {#sec-independent-evaluation}
 
 ::: {.cdi-message}
-- **ID:** ABE-007
+- **ID:** ABE-009
 - **Type:** Independent assignment and self-assessment
 - **Audience:** Researchers, learners, educators, and bioinformatics practitioners
 - **Theme:** An evidence-based review from question to final report
@@ -25,13 +25,13 @@ This is an independent practice task, not a formal assessment of eligibility for
 
 ## Prepare your review files
 
-Create `results/ch07/` and copy these templates into it:
+Create `results/ch09/` and copy these templates into it:
 
 | Supplied template | Save your working copy as |
 |---|---|
-| `templates/independent-evaluation-report.qmd` | `results/ch07/evaluation-report.qmd` |
-| `templates/independent-evidence-log.tsv` | `results/ch07/evidence-log.tsv` |
-| `templates/independent-self-assessment.md` | `results/ch07/self-assessment.md` |
+| `templates/independent-evaluation-report.qmd` | `results/ch09/evaluation-report.qmd` |
+| `templates/independent-evidence-log.tsv` | `results/ch09/evidence-log.tsv` |
+| `templates/independent-self-assessment.md` | `results/ch09/self-assessment.md` |
 
 The templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.
 
@@ -74,4 +74,4 @@ Your completed submission should contain:
 
 Label the work as a synthetic CDI teaching exercise if you share it in a portfolio. Describe your own contribution and retain relevant attribution.
 
-Continue to [Next Steps](08-next-steps.qmd) to plan further practice and present your evaluation work professionally.
+Continue to [Next Steps](10-next-steps.qmd) to plan further practice and present your evaluation work professionally.

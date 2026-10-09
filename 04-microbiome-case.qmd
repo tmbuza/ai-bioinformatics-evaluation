@@ -90,4 +90,22 @@ Write `results/ch04/evaluation-report.md` with the question, checks performed, p
 
 Before continuing, confirm that you preserved supported results, accounted for paired observations, used the correct percentage language, and removed claims requiring evidence that is absent.
 
+## Read the visual evidence
+
+![Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes.](results/figures/04-microbiome-paired.png){#fig-abe-04 fig-alt="Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes." width=100%}
+
+Each line represents one participant measured before and after.
+
+::: {.callout-note collapse="true" title="Recreate the figures"}
+Run from the repository root:
+
+```bash
+Rscript scripts/R/plot-evaluation-cases.R
+```
+
+[View or download the base-R plotting code](scripts/R/plot-evaluation-cases.R). It reads the supplied case data and regenerates all five figures in `results/figures/`. Existing images are overwritten; book rendering does not run this script.
+
+The bundled PNGs were generated with the [Python plotting code](scripts/python/plot-evaluation-cases.py). The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.
+:::
+
 Continue to the [RNA-seq Case](05-rnaseq-case.qmd), where you will apply the framework with less guidance.

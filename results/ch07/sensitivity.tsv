@@ -1,0 +1,10 @@
+protein_id	method	control_mean_log2	treated_mean_log2	difference	geometric_mean_ratio
+P1	observed_only	24	26	2	4
+P2	observed_only	20	21	1	2
+P3	observed_only	22	22	0	1
+P1	fill_18	24	20.6666666666667	-3.33333333333333	0.0992125657480125
+P2	fill_18	20	21	1	2
+P3	fill_18	22	22	0	1
+P1	fill_22	24	23.3333333333333	-0.666666666666668	0.629960524947436
+P2	fill_22	20	21	1	2
+P3	fill_22	22	22	0	1

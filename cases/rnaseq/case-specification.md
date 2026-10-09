@@ -1,4 +1,4 @@
-# rnaseq: authoring specification
+# RNA-seq: authoring specification
 
 Status: planned; no dataset or verified analysis supplied yet.
 

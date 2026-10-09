@@ -29,11 +29,11 @@ You do not need expertise in every field represented here. For preparation, use 
 
 ## Scientific scope
 
-Microbiome analysis provides a recurring source of examples, reflecting CDI’s research experience in this field. These examples will explore sample metadata, community profiles, diversity, and the strength of biological claims.
+Microbiome analysis provides recurring examples grounded in CDI’s research experience, covering sample metadata, community profiles, diversity, and biological interpretation.
 
-RNA-seq is a second core area, with a guided case addressing experimental design, differential expression, and interpretation. It brings gene-expression analysis into the guide and provides a basis for discussing how evidence is assessed across omics studies. A single-cell case extends the practice to cell-level workflows and annotation.
+RNA-seq is another core area, connecting gene-expression analysis with experimental design, differential expression, and evidence-based interpretation. A guided RNA-seq case introduces these checks; a single-cell case extends the practice to cell-level workflows and annotation.
 
-The shared evaluation framework also applies to proteomics, GWAS, and other bioinformatics settings. Each application requires appropriate domain knowledge and method-specific checks. The worked cases provide depth; they do not define the limits of the guide’s scope.
+Proteomics and GWAS cases add practice with missing measurements and population structure. Together, the five cases cover major areas of omics analysis while keeping domain knowledge and method-specific checks central to each review.
 
 ## What you will learn
 
@@ -69,7 +69,7 @@ Attempt each exercise before consulting its worked explanation. Record the claim
 
 The core exercises use supplied materials; **a paid AI account is not required**. Simulated AI responses will be labelled. Form your own initial judgment, then document and verify any optional AI assistance you use.
 
-R verification scripts will live in `scripts/R/`, with setup instructions provided alongside the completed workflows. Run these scripts separately: rendering the Quarto book displays the lessons without executing the analyses. Distinguish supplied outputs from results you reproduced yourself.
+R verification scripts will live in `scripts/R/`, with setup instructions alongside each completed workflow. Run the scripts as instructed and inspect their outputs. Rendering the book is a publishing step, not evidence that you have independently verified an analysis. Distinguish supplied outputs from results you reproduced yourself.
 
 ::: {.callout-note title="Guide development"}
 The guide is being completed chapter by chapter. Case datasets, scripts, outputs, and worked explanations remain under development until their chapters identify them as available.
@@ -85,4 +85,4 @@ This open guide stands on its own; separate CDI practicals may provide further a
 
 ## Before you begin
 
-Identify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to **Orientation**.
+Identify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to [Orientation](01-orientation.qmd).
