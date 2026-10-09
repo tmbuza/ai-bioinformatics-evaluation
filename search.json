@@ -1,0 +1,895 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Evaluating AI-Assisted Bioinformatics Analyses",
+    "section": "",
+    "text": "Free Guide · Updated Oct 2026",
+    "crumbs": [
+      "index.html"
+    ]
+  },
+  {
+    "objectID": "00-preface.html",
+    "href": "00-preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Purpose\nAn AI-assisted analysis may contain convincing explanations and readable code, yet still make claims that its data or methods cannot support. Evaluating it requires scientific judgment and checks that another person can follow.\nEvaluating AI-Assisted Bioinformatics Analyses teaches you to inspect an analysis, verify its evidence, and communicate a justified assessment. You will practise recognizing sound reasoning, identifying errors, and explaining uncertainty through original examples drawn from biological data analysis.\nThis open Complex Data Insights (CDI) guide connects Omics & Bioinformatics with Artificial Intelligence. It supports research practice, independent learning, teaching, and preparation for scientific AI evaluation opportunities.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#who-this-guide-is-for",
+    "href": "00-preface.html#who-this-guide-is-for",
+    "title": "Preface",
+    "section": "Who this guide is for",
+    "text": "Who this guide is for\nThe guide is intended for researchers, postgraduate students, bioinformatics practitioners, educators, and scientific AI evaluation candidates worldwide. No particular institutional affiliation or qualification is required.\nYou should already be able to:\n\nRead data tables and explain a biological comparison.\nRecognize biological replication and interpret basic statistical results.\nRead and run a short R script and locate its outputs.\n\nYou do not need expertise in every field represented here. For preparation, use the relevant CDI guide: Microbiome, RNA-seq, Single-Cell, Proteomics, or GWAS. The AI Systems guide provides supporting AI concepts.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#scientific-scope",
+    "href": "00-preface.html#scientific-scope",
+    "title": "Preface",
+    "section": "Scientific scope",
+    "text": "Scientific scope\nMicrobiome analysis provides recurring examples grounded in CDI’s research experience, covering sample metadata, community profiles, diversity, and biological interpretation.\nRNA-seq is another core area, connecting gene-expression analysis with experimental design, differential expression, and evidence-based interpretation. A guided RNA-seq case introduces these checks; a single-cell case extends the practice to cell-level workflows and annotation.\nProteomics and GWAS cases add practice with missing measurements and population structure. Together, the five cases cover major areas of omics analysis while keeping domain knowledge and method-specific checks central to each review.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#what-you-will-learn",
+    "href": "00-preface.html#what-you-will-learn",
+    "title": "Preface",
+    "section": "What you will learn",
+    "text": "What you will learn\nBy completing the exercises, you should be able to:\n\nIdentify the scientific question and the evidence needed to answer it.\nCheck data provenance, study design, methods, and assumptions.\nVerify selected outputs and compare them with reported results.\nDistinguish supported claims, errors, and unresolved questions.\nWrite evidence-based feedback with justified corrections.\n\nEvery case follows the same process:\nInspect the question → check data and methods → verify results → assess claims → communicate the evaluation.\nReproducing a result does not, by itself, establish that the method or interpretation is appropriate. Your review must address both execution and scientific reasoning.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#learning-sequence",
+    "href": "00-preface.html#learning-sequence",
+    "title": "Preface",
+    "section": "Learning sequence",
+    "text": "Learning sequence\n\n\n\n\n\n\n\n\nStage\nFocus\nYour output\n\n\n\n\nFoundations\nEvaluation criteria and reproducible checks\nEvaluation plan and evidence log\n\n\nGuided RNA-seq case\nDesign, statistical results, and interpretation\nAnnotated review\n\n\nMicrobiome case and supporting examples\nCommunity data, analytical choices, and biological claims\nEvidence-supported evaluation\n\n\nMore independent single-cell case\nWorkflow decisions, annotation, and uncertainty\nStructured scientific review\n\n\nIndependent practice\nApply the framework and prioritize findings\nFinal evaluation report\n\n\n\nThe sequence moves from guided review toward independent judgment, with additional microbiome examples reinforcing the framework. Cases will combine correct decisions, deliberate errors, and unresolved claims; assess each against the evidence.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#how-to-use-the-guide",
+    "href": "00-preface.html#how-to-use-the-guide",
+    "title": "Preface",
+    "section": "How to use the guide",
+    "text": "How to use the guide\nAttempt each exercise before consulting its worked explanation. Record the claim reviewed, the check performed, the evidence found, and your proposed action. Explain the consequence of an issue instead of simply marking it wrong.\nThe core exercises use supplied materials; a paid AI account is not required. Simulated AI responses will be labelled. Form your own initial judgment, then document and verify any optional AI assistance you use.\nR verification scripts will live in scripts/R/, with setup instructions alongside each completed workflow. Run the scripts as instructed and inspect their outputs. Rendering the book is a publishing step, not evidence that you have independently verified an analysis. Distinguish supplied outputs from results you reproduced yourself.\n\n\n\n\n\n\nGuide development\n\n\n\nThe guide is being completed chapter by chapter. Case datasets, scripts, outputs, and worked explanations remain under development until their chapters identify them as available.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#your-final-deliverable",
+    "href": "00-preface.html#your-final-deliverable",
+    "title": "Preface",
+    "section": "Your final deliverable",
+    "text": "Your final deliverable\nYou will produce an evaluation report documenting your checks, findings, justified corrections, and remaining uncertainty. A reader should be able to tell what you verified and what you could not establish.\nThe report can support research training or a professional portfolio. Clearly label teaching data, acknowledge assistance, and describe your own contribution.\nThis open guide stands on its own; separate CDI practicals may provide further assignments. The materials are independent of employer assessments and institutional programmes. Completion develops demonstrable skills without guaranteeing selection, employment, or income.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "00-preface.html#before-you-begin",
+    "href": "00-preface.html#before-you-begin",
+    "title": "Preface",
+    "section": "Before you begin",
+    "text": "Before you begin\nIdentify your strongest biological domain and one skill you need to strengthen. Confirm that you can run a short R script and find its output, then continue to Orientation.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html",
+    "href": "01-orientation.html",
+    "title": "Orientation",
+    "section": "",
+    "text": "The reviewer’s role\nAn AI-assisted bioinformatics analysis can include code, tables, figures, and explanations. Your role is to assess whether these elements agree and whether the evidence supports the scientific conclusion.\nThese checks apply across microbiome, RNA-seq, single-cell, proteomics, and GWAS analyses, with the methods assessed in their specific context. Review the work at three levels:\nA script running successfully answers only part of the first question. A complete review also considers analytical choices and the claims made about their outputs.\nChapter outcome: write a brief evaluation that separates a verified observation, an error, and a claim requiring more evidence.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#the-reviewers-role",
+    "href": "01-orientation.html#the-reviewers-role",
+    "title": "Orientation",
+    "section": "",
+    "text": "Level\nQuestion\nExample check\n\n\n\n\nExecution\nDoes the code perform the stated operation?\nCheck that a filtering condition matches its description.\n\n\nAnalysis\nIs that operation appropriate for the question and data?\nCheck whether the comparison uses the intended samples.\n\n\nInterpretation\nDoes the conclusion follow from the result?\nCheck whether a descriptive difference is presented as a demonstrated effect.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#start-with-the-evidence",
+    "href": "01-orientation.html#start-with-the-evidence",
+    "title": "Orientation",
+    "section": "Start with the evidence",
+    "text": "Start with the evidence\nBefore judging a response, identify the scientific question and inventory what you have. An evaluation package may contain:\n\nData and metadata: measurements, sample identifiers, group labels, and study details.\nCode and settings: scripts, parameters, and software information.\nOutputs: tables, figures, and execution records.\nResponse: the explanation or conclusions being evaluated.\n\nMissing material limits what you can establish. If only a results table is available, you can inspect its contents, but you cannot claim to have reproduced the underlying analysis.\nWhen reviewing AI-assisted work, look for problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#a-first-evaluation",
+    "href": "01-orientation.html#a-first-evaluation",
+    "title": "Orientation",
+    "section": "A first evaluation",
+    "text": "A first evaluation\nThe following is an original teaching example. The values are invented and do not represent a biological finding.\nQuestion: What does the supplied table establish about the difference between groups A and B?\n\n\n\nSample\nGroup\nReported measurement\n\n\n\n\nA1\nA\n10\n\n\nA2\nA\n12\n\n\nB1\nB\n14\n\n\nB2\nB\n16\n\n\n\nNo measurement units, study protocol, analysis script, or statistical test are supplied.\nSimulated AI response:\n\nThe average measurement is 11 in group A and 15 in group B. Group B is therefore 50% higher than group A. This proves that the treatment caused a biologically important increase.\n\n\nYour task\nEvaluate each sentence before opening the worked answer:\n\nCheck the two means.\nCalculate the percentage increase relative to group A: 100 × (B − A) / A.\nIdentify what additional evidence is needed to assess the final claim.\nWrite a corrected conclusion in no more than three sentences.\n\n\n\n\n\n\n\nWorked answer\n\n\n\n\n\nThe means are correct: (10 + 12) / 2 = 11 and (14 + 16) / 2 = 15.\nThe percentage increase is 100 × (15 − 11) / 11, approximately 36.4%, so the stated 50% is an arithmetic error.\nThe table alone does not establish a treatment effect or biological importance. We need information about what was measured, how groups were assigned, whether samples are independent, and the uncertainty and biological context of the comparison. We also cannot infer statistical significance from the supplied material.\nCorrected conclusion: “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 on the reported measurement scale, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#write-feedback-that-supports-action",
+    "href": "01-orientation.html#write-feedback-that-supports-action",
+    "title": "Orientation",
+    "section": "Write feedback that supports action",
+    "text": "Write feedback that supports action\nUseful feedback connects a judgment to evidence and a next step.\n\n\n\n\n\n\n\n\nFinding\nEvidence\nAction\n\n\n\n\nSupported calculation\nRecalculated means match 11 and 15.\nRetain the reported means.\n\n\nIncorrect calculation\nThe relative increase is approximately 36.4%.\nCorrect the percentage and state its reference group.\n\n\nUnsupported conclusion\nStudy design and biological context are absent.\nLimit the conclusion to description and request the missing evidence.\n\n\n\nNotice the distinction between incorrect and not established. The percentage can be corrected directly. The causal claim cannot be resolved from this table alone; that limitation does not prove that no treatment effect exists.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "01-orientation.html#checkpoint",
+    "href": "01-orientation.html#checkpoint",
+    "title": "Orientation",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nCreate the results/ folder if needed, then create results/01-orientation-review.md and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.\nBefore continuing, confirm that your review:\n\nPreserves the correct calculation.\nExplains the arithmetic error with a checkable correction.\nIdentifies the unsupported claim without inventing missing evidence.\nStates what you checked and what remains unresolved.\n\nContinue to Evaluation Framework to apply consistent criteria across larger analyses.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Orientation</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html",
+    "href": "02-evaluation-framework.html",
+    "title": "Evaluation Framework",
+    "section": "",
+    "text": "Use consistent criteria\nA useful evaluation explains both what you concluded and how the evidence supports that judgment. Apply this framework across bioinformatics, adapting each check to the question, data, and method.\nChapter outcome: build an evidence log and prioritize findings using a shared rubric.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#the-evaluation-rubric",
+    "href": "02-evaluation-framework.html#the-evaluation-rubric",
+    "title": "Evaluation Framework",
+    "section": "The evaluation rubric",
+    "text": "The evaluation rubric\nBegin by stating the question under review in one sentence. Then examine these six areas.\n\n\n\n\n\n\n\n\nArea\nReview question\nEvidence to inspect\n\n\n\n\nQuestion and scope\nDoes the analysis address the stated question?\nTask description, comparison, and intended outcome\n\n\nData and provenance\nAre the inputs identifiable and suitable?\nData source, sample identifiers, metadata, and exclusions\n\n\nDesign and methods\nDo the design and analytical choices support the comparison?\nBiological replication, model specification, assumptions, and parameters\n\n\nCode and results\nDo the implemented steps and outputs match the explanation?\nScripts, execution records, tables, and figures\n\n\nInterpretation\nAre claims proportional to the evidence?\nEffect estimates, uncertainty, limitations, and biological context\n\n\nReporting\nCan another reviewer trace and repeat the relevant checks?\nFile paths, commands, versions, references, and decision records\n\n\n\nRecord distinct findings separately: a correct calculation and a misreported value need different judgments.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#assign-a-judgment",
+    "href": "02-evaluation-framework.html#assign-a-judgment",
+    "title": "Evaluation Framework",
+    "section": "Assign a judgment",
+    "text": "Assign a judgment\nLabel each claim or decision according to the evidence inspected.\n\n\n\n\n\n\n\n\nJudgment\nMeaning\nAppropriate response\n\n\n\n\nSupported\nThe inspected evidence supports the statement within its stated scope.\nRetain it and identify the supporting evidence.\n\n\nIncorrect\nA check demonstrates an error or contradiction.\nExplain the error and provide a justified correction.\n\n\nNot established\nThe evidence is missing or insufficient to decide.\nState what is unresolved and request a specific check or source.\n\n\nNot applicable\nThe criterion falls outside the defined task.\nExplain briefly why it does not apply.\n\n\n\n“Supported” does not mean universally true. A description may be supported for a supplied teaching dataset without establishing a general biological conclusion.\nAvoid combining these labels into an average score. Several correct details cannot compensate for an error that undermines the main conclusion.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#prioritize-issues-by-consequence",
+    "href": "02-evaluation-framework.html#prioritize-issues-by-consequence",
+    "title": "Evaluation Framework",
+    "section": "Prioritize issues by consequence",
+    "text": "Prioritize issues by consequence\nAssign a priority to findings that need action. Keep this separate from the judgment label: missing evidence can be as consequential as a demonstrated error.\n\n\n\n\n\n\n\n\nPriority\nConsequence\nSuggested action\n\n\n\n\nBlocking\nThe central result or conclusion cannot currently be relied on.\nResolve before using the conclusion.\n\n\nMajor\nA substantial part of the analysis or interpretation needs revision.\nCorrect or investigate before final reporting.\n\n\nMinor\nClarity or reporting needs improvement without changing the supported conclusion.\nAmend the relevant detail.\n\n\n\nThese priorities are defined for this guide. Justify them by explaining how each issue affects the analysis or conclusion.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#keep-an-evidence-log",
+    "href": "02-evaluation-framework.html#keep-an-evidence-log",
+    "title": "Evaluation Framework",
+    "section": "Keep an evidence log",
+    "text": "Keep an evidence log\nCreate the results/ folder if needed, then create results/02-evidence-log.tsv with the following column names. You can use a spreadsheet editor or a plain-text editor; separate columns with tabs when saving as TSV.\nfinding_id  area    claim_or_decision   evidence    check_performed observation judgment    priority    recommended_action\nGive evidence a precise location, such as a filename, table row, figure panel, or code section. Describe the check you actually performed. Use none for priority when no corrective action is needed.\nA concise entry might read:\n\nF01 — Code and results: The response reports a 50% increase. Recalculation from the supplied means gives approximately 36.4%. Judgment: incorrect. Priority: major because it changes the reported magnitude. Action: correct the percentage and identify group A as the reference.\n\nIf you have not run a script, write “inspected code” rather than “reproduced result.” This distinction keeps your review auditable.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#practice-matching-samples",
+    "href": "02-evaluation-framework.html#practice-matching-samples",
+    "title": "Evaluation Framework",
+    "section": "Practice: matching samples",
+    "text": "Practice: matching samples\nIn this original microbiome teaching example, the intended workflow uses all four samples. The following identifiers are supplied as excerpts; no separate data files are needed for this exercise.\n\nThe microbial feature-count table has sample columns S01, S02, S03, and S04.\nThe metadata contains S01, S02, S03, and S05.\nNo mapping between S04 and S05 is supplied.\nA simulated AI response states: “All four sample identifiers match, so the files are ready for analysis.”\n\nAdd two findings to your evidence log:\n\nEvaluate the statement that all identifiers match.\nEvaluate whether it would be justified to rename S05 to S04 immediately.\n\nFor each, record a judgment, priority, and recommended action before opening the explanation.\n\n\n\n\n\n\nWorked explanation\n\n\n\n\n\nFinding 1: The matching claim is incorrect. Only S01, S02, and S03 occur in both lists. Treat this as blocking for the intended four-sample workflow because the supplied information cannot establish the identity of the remaining sample. Request the sample manifest or another authoritative mapping.\nFinding 2: Renaming S05 to S04 is not established as a valid correction. This is also blocking for the intended four-sample workflow. A typographical error is possible, but the identifiers could represent different samples. Resolve their identities before modifying metadata or selecting samples for analysis.\nThe key distinction is between detecting a mismatch, which the evidence permits, and deciding its cause, which requires more information.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "02-evaluation-framework.html#checkpoint",
+    "href": "02-evaluation-framework.html#checkpoint",
+    "title": "Evaluation Framework",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nYour completed log should let another reviewer locate the evidence, understand each judgment, and carry out the recommended action. Check that you have:\n\nSeparated demonstrated errors from unresolved questions.\nAssigned priorities based on scientific consequences.\nProposed corrections without inventing missing information.\n\nContinue to Reproducible Verification to document and run checks systematically.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation Framework</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html",
+    "href": "03-reproducible-verification.html",
+    "title": "Reproducible Verification",
+    "section": "",
+    "text": "Turn a judgment into a check\nA reproducible evaluation records enough detail for another reviewer to repeat a check and compare results. Start with a specific claim, identify the required inputs, and decide what result would support or contradict it.\nChapter outcome: run a sample-matching check, inspect its outputs, and document a finding without changing the original evidence.\nThis chapter extends the microbiome example from ABE-002. The same identifier checks are useful whenever measurements must be matched to sample metadata, including RNA-seq and other omics workflows.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#define-the-verification-boundary",
+    "href": "03-reproducible-verification.html#define-the-verification-boundary",
+    "title": "Reproducible Verification",
+    "section": "Define the verification boundary",
+    "text": "Define the verification boundary\nDistinguish three activities in your report:\n\n\n\n\n\n\n\nActivity\nWhat you can claim\n\n\n\n\nInspect supplied files\nYou reviewed their contents.\n\n\nRun a targeted check\nYou independently checked a specified property or calculation.\n\n\nRerun an analysis\nYou reproduced the stated workflow using the recorded inputs and settings.\n\n\n\nNone of these alone establishes biological validity. A sample-matching check cannot establish that the samples were collected appropriately or that the chosen statistical model is suitable.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#prepare-the-exercise",
+    "href": "03-reproducible-verification.html#prepare-the-exercise",
+    "title": "Reproducible Verification",
+    "section": "Prepare the exercise",
+    "text": "Prepare the exercise\nPlace scripts/R/03-verify-sample-matching.R in your repository. It uses base R and requires no additional packages or downloads. The synthetic identifiers are defined inside the script; no separate dataset is needed.\nThe feature table identifiers are S01, S02, S03, and S04. The metadata identifiers are S03, S01, S02, and S05. Their order differs, and one identifier differs between the sets.\nSimulated AI response:\n\nBoth files contain four samples. Their rows can therefore be paired in the current order, and all samples are ready for analysis.\n\nBefore running the script, predict which checks will pass. Read the script and identify where it defines inputs, checks identifiers, and writes evidence.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#run-the-verification",
+    "href": "03-reproducible-verification.html#run-the-verification",
+    "title": "Reproducible Verification",
+    "section": "Run the verification",
+    "text": "Run the verification\nOpen a terminal in the repository root and run:\nRscript scripts/R/03-verify-sample-matching.R\nIf Rscript is unavailable in your terminal but R is installed, open an R session, set its working directory to the repository root, and run:\nsource(\"scripts/R/03-verify-sample-matching.R\")\nThe script creates results/ch03/ and writes:\n\n\n\n\n\n\n\nOutput\nPurpose\n\n\n\n\ninput-identifiers.tsv\nRecords the identifiers and order checked.\n\n\nchecks.tsv\nRecords the result of each check.\n\n\nsample-membership.tsv\nShows which identifiers occur in each source.\n\n\nsession-info.txt\nRecords the R environment used.\n\n\n\nThese files are overwritten on each run. Preserve a copy in a separately named folder before changing inputs. Keep the supplied script unchanged and save any experimental version under a different filename.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#interpret-the-evidence",
+    "href": "03-reproducible-verification.html#interpret-the-evidence",
+    "title": "Reproducible Verification",
+    "section": "Interpret the evidence",
+    "text": "Interpret the evidence\nOpen checks.tsv and sample-membership.tsv. A normal script completion means the checks ran; it does not mean that the data passed them.\n\n\n\n\n\n\nExpected results and interpretation\n\n\n\n\n\nThe identifiers are present and unique, so the first check passes. The identifier-set and order checks fail.\nS04 occurs only in the feature table; S05 occurs only in the metadata. Equal sample counts therefore do not establish matching identities. Reordering alone cannot resolve this mismatch, and renaming an identifier requires an authoritative mapping.\nThe current-order pairing claim is incorrect. Record the mismatch as blocking for the intended four-sample analysis and request the sample manifest. The check identifies the discrepancy without establishing its cause.\n\n\n\nMatching sets and matching order are separate properties. When identifiers are unique and sets match, metadata can be reordered by identifier. This establishes alignment of labels, not proof that the labels describe the correct biological samples.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#record-your-verification",
+    "href": "03-reproducible-verification.html#record-your-verification",
+    "title": "Reproducible Verification",
+    "section": "Record your verification",
+    "text": "Record your verification\nCreate results/ch03/verification-note.md with these headings:\n# ABE-003 verification note\n## Claim reviewed\n## Script and command used\n## Input identifiers and evidence files\n## Observed result\n## Judgment, priority, and recommended action\n## Limits of this check\nRecord the script version or Git commit when available. Link your finding to the output filenames and state that the exercise uses synthetic identifiers. If execution fails, record the error and what remains unchecked; do not substitute the expected answer for an observed result.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "03-reproducible-verification.html#checkpoint",
+    "href": "03-reproducible-verification.html#checkpoint",
+    "title": "Reproducible Verification",
+    "section": "Checkpoint",
+    "text": "Checkpoint\nYou are ready to continue when you can explain:\n\nWhy equal sample counts do not establish sample matching.\nWhy matching identifiers and matching order require separate checks.\nWhich outputs support your finding and which questions remain unresolved.\n\nRetain your note and generated evidence. Continue to the Microbiome Case to apply the framework to a scientific analysis.",
+    "crumbs": [
+      "Evaluation Foundations",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproducible Verification</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html",
+    "href": "04-microbiome-case.html",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "",
+    "text": "The evaluation question\nDo the supplied data support the AI response’s claims about a change in the microbiome?\nYou will review a synthetic study with four participants, each sampled before and after a dietary change. There is no untreated comparison group, absolute microbial-load measurement, or health outcome. All counts and taxonomic labels are invented teaching materials.\nYour task is to verify descriptive results and identify the limits of the conclusions. This is a focused evaluation exercise, not a complete microbiome analysis pipeline.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#inspect-the-evidence-package",
+    "href": "04-microbiome-case.html#inspect-the-evidence-package",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Inspect the evidence package",
+    "text": "Inspect the evidence package\nRead cases/microbiome/README.md, then inspect:\n\n\n\n\n\n\n\nFile under cases/microbiome/\nRole\n\n\n\n\ndata/feature-counts.tsv\nRead counts for three features across eight samples\n\n\ndata/sample-metadata.tsv\nSample identity, participant identity, and visit\n\n\ndata/taxonomy.tsv\nFictional genus labels\n\n\nsimulated-response.md\nSix claims to evaluate\n\n\nreference/\nIndependently calculated expected tables\n\n\nworked-review.md\nWorked judgments and corrected interpretation\n\n\n\nThe verification script is scripts/R/04-verify-microbiome.R. Keep original inputs unchanged. Metadata rows are intentionally arranged differently from count columns, so alignment must use identifiers.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#make-an-initial-judgment",
+    "href": "04-microbiome-case.html#make-an-initial-judgment",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Make an initial judgment",
+    "text": "Make an initial judgment\nRead the simulated response before opening the reference tables or worked review. It claims that the samples are independent, reports changes in F1, and concludes that the dietary change improved health.\nCreate results/ch04/evidence-log.tsv using the ABE-002 fields. Split statements that combine a valid calculation with an unsupported interpretation into separate findings.\nFor each claim, ask:\n\nWhat evidence would establish it?\nCan the supplied files answer the question?\nWhat can I check directly, and what remains unresolved?",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#verify-the-descriptive-results",
+    "href": "04-microbiome-case.html#verify-the-descriptive-results",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Verify the descriptive results",
+    "text": "Verify the descriptive results\nFrom the repository root, run:\nRscript scripts/R/04-verify-microbiome.R\nAlternatively, from an R session whose working directory is the repository root:\nsource(\"scripts/R/04-verify-microbiome.R\")\nThe script needs base R only. It validates identifiers and counts, aligns metadata, checks that each participant has one observation per visit, and calculates per-sample percentages and paired changes. It performs no significance test.\nInspect these files in results/ch04/:\n\nsample-summary.tsv: total reads, F1 reads, and F1 percentage by sample.\npaired-changes.tsv: before and after percentages for each participant.\ninput-checksums.tsv and session-info.txt: input fingerprints and software details.\n\nOutputs are overwritten on rerun. Preserve earlier outputs before experimenting. Compare numeric values and identifiers with the expected tables; harmless formatting differences do not imply different results.\n\n\n\n\n\n\nVerification status\n\n\n\nThe supplied reference tables were independently calculated with Python from the input files. The R script has not been executed in the authoring environment. Record your own execution results; if a check fails, investigate it before accepting the expected answer.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#interpret-what-changed",
+    "href": "04-microbiome-case.html#interpret-what-changed",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Interpret what changed",
+    "text": "Interpret what changed\nRead counts and relative abundance answer different questions. A relative abundance is a feature’s share of the measured community; it does not establish its absolute quantity. See Gloor et al. (2017) for the compositional nature of microbiome data.\nCheck the denominator used in every percentage. Also distinguish the number of samples from the number of participants: two visits from one participant do not create two independent participants.\n\n\n\n\n\n\nWorked interpretation\n\n\n\n\n\nThere are eight samples from four participants. Sample identifiers match, but row order differs.\nMean F1 read count rises from 22.5 to 65 while total reads per sample rise from 100 to 200. Mean F1 relative abundance rises from 22.5% to 32.5%: 10 percentage points, or approximately 44.4% relative to the before mean. Every participant has a 10-percentage-point increase.\nThese are descriptive results for synthetic data. They do not establish an absolute microbial increase, a causal dietary effect, statistical significance, or improved health. Consult cases/microbiome/worked-review.md for judgments on all six claims.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#deliverable-and-checkpoint",
+    "href": "04-microbiome-case.html#deliverable-and-checkpoint",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Deliverable and checkpoint",
+    "text": "Deliverable and checkpoint\nWrite results/ch04/evaluation-report.md with the question, checks performed, prioritized findings, corrected conclusion, and remaining limitations. Link to your evidence log and output files.\nBefore continuing, confirm that you preserved supported results, accounted for paired observations, used the correct percentage language, and removed claims requiring evidence that is absent.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "04-microbiome-case.html#read-the-visual-evidence",
+    "href": "04-microbiome-case.html#read-the-visual-evidence",
+    "title": "Microbiome: methods, evidence, and claims",
+    "section": "Read the visual evidence",
+    "text": "Read the visual evidence\n\n\n\n\n\n\nFigure 4.1: Paired F1 relative abundances rise by 10 percentage points for each participant. These sequencing proportions do not establish absolute microbial changes.\n\n\n\nEach line represents one participant measured before and after.\n\n\n\n\n\n\nRecreate the figures\n\n\n\n\n\nRun from the repository root:\nRscript scripts/R/plot-evaluation-cases.R\nView or download the base-R plotting code. It reads the supplied case data and regenerates all five figures in results/figures/. Existing images are overwritten; book rendering does not run this script.\nThe bundled PNGs were generated with the Python plotting code. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.\n\n\n\nContinue to the RNA-seq Case, where you will apply the framework with less guidance.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Microbiome: methods, evidence, and claims</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html",
+    "href": "05-rnaseq-case.html",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "",
+    "text": "The evaluation question\nCan the supplied evidence establish a treatment effect independently of batch?\nThis case asks you to distinguish a study-design problem from errors in interpreting a results table. Apply the ABE-002 framework with less prompting than in the microbiome case.\nOutcome: produce a review that separates estimable comparisons, correct arithmetic, and unsupported biological conclusions.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#inspect-the-case",
+    "href": "05-rnaseq-case.html#inspect-the-case",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Inspect the case",
+    "text": "Inspect the case\nRead cases/rnaseq/README.md and cases/rnaseq/simulated-response.md. Two evidence components are supplied:\n\n\n\n\n\n\n\n\nComponent\nContents\nWhat it can establish\n\n\n\n\ndata/sample-metadata.tsv\nSix distinct biological samples: three controls in batch B1 and three treated samples in B2\nReplication and overlap between batch and condition\n\n\ndata/illustrative-results.tsv\nSix invented gene IDs, log2 fold changes, and p-values\nArithmetic and interpretation checks only\n\n\n\nPaths in this table are relative to cases/rnaseq/.\nThe results table was not generated from these samples or by DESeq2. No count matrix is supplied. Do not infer that the reported numbers validate the intended model, ~ batch + condition.\nFor the arithmetic exercise, the six rows are the complete testing family. There are no missing p-values or excluded hypotheses. The specified decision rule is Benjamini–Hochberg (BH) adjusted p-value &lt; 0.05.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#plan-your-checks",
+    "href": "05-rnaseq-case.html#plan-your-checks",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Plan your checks",
+    "text": "Plan your checks\nCreate results/ch05/evidence-log.tsv, using the fields from ABE-002. Before running code, identify evidence for each of the seven claims in the simulated response.\nYour review should address:\n\nWhether batch and condition can be separated in this design.\nWhether changing the formula resolves the scientific limitation.\nWhich rows satisfy the raw and adjusted p-value rules.\nWhat positive and negative log2 fold changes mean.\nWhether any supplied number supports a biological treatment claim.\n\nPreserve supported statements and separate mixed claims into individual findings.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#run-targeted-verification",
+    "href": "05-rnaseq-case.html#run-targeted-verification",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Run targeted verification",
+    "text": "Run targeted verification\nFrom the repository root:\nRscript scripts/R/05-verify-rnaseq.R\nAlternatively, from an R session with the repository root as its working directory:\nsource(\"scripts/R/05-verify-rnaseq.R\")\nThe script requires base R only. It constructs the design matrix, checks its rank, calculates BH-adjusted values with p.adjust(), and converts log2 fold changes with 2^log2FoldChange. It does not fit a differential-expression model.\n\n\n\n\n\n\n\nOutput under results/ch05/\nUse\n\n\n\n\nbatch-condition-table.tsv\nInspect overlap between conditions and batches.\n\n\ndesign-matrix.tsv, design-check.tsv\nInspect the model columns and rank.\n\n\nresult-checks.tsv\nInspect adjusted values, threshold decisions, and fold changes.\n\n\ninput-checksums.tsv, session-info.txt\nRecord input fingerprints and software details.\n\n\n\nOutputs are overwritten on rerun. Preserve earlier runs before changing inputs. A completed script can report a failed design check: completion is not approval of the analysis.\n\n\n\n\n\n\nVerification status\n\n\n\nThe reference tables in cases/rnaseq/reference/ were calculated independently with Python. The R script has not been executed in the authoring environment. Compare your observed results with the references; do not report expected values as an execution you performed.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#interpret-the-design-before-the-claims",
+    "href": "05-rnaseq-case.html#interpret-the-design-before-the-claims",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Interpret the design before the claims",
+    "text": "Interpret the design before the claims\nA full-rank design matrix is required to estimate its coefficients separately. Here, the treated-condition indicator and batch-B2 indicator are identical. Adding both terms cannot distinguish their effects. Dropping batch does not make the condition comparison unconfounded. The DESeq2 documentation explains this under “Model matrix not full rank.”\nFor the separate arithmetic task, check all six p-values together. A correct multiple-testing calculation cannot repair an unsuitable design or establish the provenance of invented results.\n\n\n\n\n\n\nVerification checkpoints\n\n\n\n\n\nThe design has six rows, three columns, and rank two. Separate batch and condition effects are not estimable.\nFour raw p-values are below 0.05. The BH-adjusted values are 0.006, 0.03, 0.06, 0.06, 0.24, and 0.8; only G1 and G2 meet the adjusted threshold.\nA log2 fold change of 1 corresponds to a ratio of 2. A value of -1 corresponds to 0.5, not negative expression.\nThese statements establish design properties and arithmetic only. Compare your complete review with cases/rnaseq/worked-review.md after finishing your first attempt.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#deliverable-and-checkpoint",
+    "href": "05-rnaseq-case.html#deliverable-and-checkpoint",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Deliverable and checkpoint",
+    "text": "Deliverable and checkpoint\nWrite results/ch05/evaluation-report.md, linking your evidence log and outputs. Include a corrected conclusion and a precise request for the evidence or design changes needed before making treatment-specific claims.\nYour report should distinguish a calculation error, a design limitation, and a missing-evidence problem. Explain why a small adjusted p-value cannot resolve the latter two.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "05-rnaseq-case.html#read-the-visual-evidence",
+    "href": "05-rnaseq-case.html#read-the-visual-evidence",
+    "title": "RNA-seq: design, results, and interpretation",
+    "section": "Read the visual evidence",
+    "text": "Read the visual evidence\n\n\n\n\n\n\nFigure 5.1: All controls are in B1 and all treated samples are in B2. Condition and batch cannot be estimated separately in this design.\n\n\n\nThe empty cells show the missing within-batch comparisons.\n\n\n\n\n\n\nRecreate the figures\n\n\n\n\n\nRun from the repository root:\nRscript scripts/R/plot-evaluation-cases.R\nView or download the base-R plotting code. It reads the supplied case data and regenerates all five figures in results/figures/. Existing images are overwritten; book rendering does not run this script.\nThe bundled PNGs were generated with the Python plotting code. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.\n\n\n\nContinue to the Single-Cell Case for more independent evaluation.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>RNA-seq: design, results, and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html",
+    "href": "06-singlecell-case.html",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "",
+    "text": "Your evaluation brief\nDoes the supplied single-cell evidence support the response’s claims about treatment, cell identity, and analysis quality?\nThis original synthetic case contains 2,000 retained cells from four donors, with two donors per condition. Cell assignments and marker summaries are invented. No clinical outcome, randomization, raw expression matrix, or full analysis workflow is supplied.\nYour task is to decide which statements are supported, incorrect, or not established. Choose and justify your own checks before consulting the worked review.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#inventory-the-evidence",
+    "href": "06-singlecell-case.html#inventory-the-evidence",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Inventory the evidence",
+    "text": "Inventory the evidence\nStart with cases/singlecell/README.md and cases/singlecell/simulated-response.md.\n\n\n\n\n\n\n\nFile in cases/singlecell/data/\nContents\n\n\n\n\ndonors.tsv\nDonor identity and condition\n\n\ncells.tsv\nCell identity, donor identity, and assigned cluster\n\n\nmarker-evidence.tsv\nSupplied detection percentages for three fictional markers in C1\n\n\nteaching-marker-reference.tsv\nExpected marker combinations for two fictional candidate types\n\n\n\nThe marker summaries are separate supplied evidence: they cannot be recalculated from a table containing only cell labels. The marker names and candidate types are teaching devices, not real biological annotations.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#plan-an-independent-review",
+    "href": "06-singlecell-case.html#plan-an-independent-review",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Plan an independent review",
+    "text": "Plan an independent review\nCreate results/ch06/evidence-log.tsv using the ABE-002 fields. For each of the seven claims, specify the relevant evidence, your intended check, and the consequence if the claim is wrong.\nConsider the biological unit of replication, how unequal cell contributions affect summaries, whether annotation evidence distinguishes candidates, and which workflow claims require missing records.\nWrite an initial conclusion before running code. Do not assume that every statement in the simulated response is wrong.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#verify-selected-properties",
+    "href": "06-singlecell-case.html#verify-selected-properties",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Verify selected properties",
+    "text": "Verify selected properties\nRun from the repository root:\nRscript scripts/R/06-verify-singlecell.R\nOr use an R session with the repository root as its working directory:\nsource(\"scripts/R/06-verify-singlecell.R\")\nThe script requires base R only. It validates cell-to-donor mappings, summarizes C1 proportions by donor and condition, and compares marker patterns under the exercise’s fictional reference. It performs no clustering, differential-expression test, or biological annotation validation.\nInspect these outputs under results/ch06/:\n\n\n\n\n\n\n\nOutput\nReview purpose\n\n\n\n\ndonor-summary.tsv\nCompare the number of cells and C1 proportion contributed by each donor.\n\n\ncondition-summary.tsv\nContrast pooled proportions with unweighted donor means.\n\n\nteaching-marker-check.tsv\nCompare observed high-detection markers with each candidate pattern.\n\n\ninput-checksums.tsv, session-info.txt\nRecord input fingerprints and software details.\n\n\n\nOutputs are overwritten on rerun. Preserve prior results before changing inputs. In this exercise, “high detection” means at least 50%; this is a teaching convention, not a recommended universal annotation threshold.\n\n\n\n\n\n\nVerification status\n\n\n\nReference tables were calculated independently with Python. The R script has not been executed in the authoring environment. Record your actual results and investigate discrepancies before accepting the expected values.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#distinguish-the-questions-being-answered",
+    "href": "06-singlecell-case.html#distinguish-the-questions-being-answered",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Distinguish the questions being answered",
+    "text": "Distinguish the questions being answered\nA pooled proportion describes all retained cells combined. An unweighted donor mean gives each donor equal weight. Neither summary alone establishes a population-level treatment effect.\nFor comparisons across donors, cells from one donor must not be treated as independent donor replicates. Squair et al. (2021) demonstrate why accounting for biological replication matters in single-cell differential-expression analysis. This case checks replication and descriptive proportions; it does not implement a differential-expression method.\nSimilarly, a marker shared by two candidates does not distinguish them. Evaluate the full supplied pattern and state the limits of a provisional label. Missing QC records leave quality claims unverified; they do not prove that QC failed.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#submit-your-evaluation",
+    "href": "06-singlecell-case.html#submit-your-evaluation",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Submit your evaluation",
+    "text": "Submit your evaluation\nWrite results/ch06/evaluation-report.md with:\n\nThe question and scope of your review.\nChecks performed, evidence locations, and prioritized findings.\nA corrected interpretation of proportions and annotation evidence.\nSpecific requests for missing information and remaining uncertainty.\n\nExplain whether the pooled and donor-level summaries answer the same question. Identify at least one statement worth retaining.\n\n\n\n\n\n\nSelf-check after completing your report\n\n\n\n\n\nC1 proportions by donor are 20%, 80%, 80%, and 20%. Each condition has an unweighted donor mean of 50%, but pooled proportions are 74% for controls and 26% for treated cells because donors contribute unequal numbers of cells. Equal means here do not demonstrate biological equivalence.\nM1 is shared by both fictional candidates. The combined pattern favors a provisional Type_B-like label within the exercise. It does not establish a real cell identity.\nCompare all seven judgments with cases/singlecell/worked-review.md. Revise your report where evidence warrants it and explain your changes.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "06-singlecell-case.html#read-the-visual-evidence",
+    "href": "06-singlecell-case.html#read-the-visual-evidence",
+    "title": "Single-cell: replication, annotation, and uncertainty",
+    "section": "Read the visual evidence",
+    "text": "Read the visual evidence\n\n\n\n\n\n\nFigure 6.1: Unequal donor contributions produce pooled C1 proportions of 74% and 26%, although both unweighted donor means are 50%.\n\n\n\nThe left panel shows donor proportions and retained cell counts; the right compares two ways of summarizing them. Neither establishes a treatment effect.\n\n\n\n\n\n\nRecreate the figures\n\n\n\n\n\nRun from the repository root:\nRscript scripts/R/plot-evaluation-cases.R\nView or download the base-R plotting code. It reads the supplied case data and regenerates all five figures in results/figures/. Existing images are overwritten; book rendering does not run this script.\nThe bundled PNGs were generated with the Python plotting code. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.\n\n\n\nContinue to Proteomics to examine missing measurements and sensitivity to analytical choices.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Single-cell: replication, annotation, and uncertainty</span>"
+    ]
+  },
+  {
+    "objectID": "07-proteomics-case.html",
+    "href": "07-proteomics-case.html",
+    "title": "Proteomics: missing values and interpretation",
+    "section": "",
+    "text": "Your evaluation brief\nDoes an apparent protein increase survive a change in missing-value assumptions? This original synthetic case contains six independent biological samples, three per condition, and three fictional protein groups. Values are supplied log2 intensities; NA means not quantified. No raw spectra, peptide evidence, normalization record, or statistical analysis is provided.\nRead cases/proteomics/README.md and cases/proteomics/simulated-response.md. The data folder contains sample-metadata.tsv and log2-intensities.tsv. Protein groups are teaching identifiers, not validated biological entities.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proteomics: missing values and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "07-proteomics-case.html#plan-your-review",
+    "href": "07-proteomics-case.html#plan-your-review",
+    "title": "Proteomics: missing values and interpretation",
+    "section": "Plan your review",
+    "text": "Plan your review\nCreate results/ch07/evidence-log.tsv. Evaluate each of the six claims before opening the worked review. Identify the biological replicates, count missing measurements by condition, and distinguish an observed difference from an assumption-dependent result.\nImputation depends on assumptions about why values are missing; a missing measurement does not identify its own mechanism (Lazar et al. 2016). Here, replacing missing values with 18 or 22 is a deliberately simplified sensitivity exercise, not a recommended analysis method.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proteomics: missing values and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "07-proteomics-case.html#verify-selected-properties",
+    "href": "07-proteomics-case.html#verify-selected-properties",
+    "title": "Proteomics: missing values and interpretation",
+    "section": "Verify selected properties",
+    "text": "Verify selected properties\nRun from the repository root:\nRscript scripts/R/07-verify-proteomics.R\nThe base-R script checks identifiers and numeric inputs, then writes:\n\n\n\n\n\n\n\nOutput in results/ch07/\nPurpose\n\n\n\n\nmissingness.tsv\nCount observed and missing values per protein and condition.\n\n\nsensitivity.tsv\nCompare observed-only means with two fixed-value replacements.\n\n\ninput-checksums.tsv, session-info.txt\nRecord input fingerprints and software details.\n\n\n\nThe reported difference is mean log2 intensity in treated samples minus mean log2 intensity in controls. Its exponent, 2^difference, is a ratio of geometric means on the original scale, not a ratio of arithmetic means. Observed-only summaries may use different numbers of samples and do not remove missing-data bias.\nThe script overwrites its named outputs. It performs no normalization, differential-abundance test, or protein-identification validation.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proteomics: missing values and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "07-proteomics-case.html#write-your-evaluation",
+    "href": "07-proteomics-case.html#write-your-evaluation",
+    "title": "Proteomics: missing values and interpretation",
+    "section": "Write your evaluation",
+    "text": "Write your evaluation\nSave a concise report to results/ch07/evaluation-report.md. Retain valid arithmetic, identify conclusions that depend on replacement values, and request the evidence needed to assess normalization, identification, and uncertainty. Do not substitute an arbitrary replacement rule for a justified missing-data strategy.\n\n\n\n\n\n\nSelf-check after your initial review\n\n\n\n\n\nP1 has three observed controls and one observed treated value. Its treated-minus-control difference is 2 using observed values, approximately -3.333 when missing values are replaced with 18, and -0.667 when replaced with 22. These correspond to geometric-mean ratios of 4, approximately 0.099, and approximately 0.630.\nP2 has complete measurements and a descriptive difference of 1; P3 has complete measurements and a difference of 0. Neither supplies a significance test. Compare your six judgments with cases/proteomics/worked-review.md.\n\n\n\nReference tables were calculated independently with Python. The R script has not been executed in the authoring environment; compare your run with cases/proteomics/reference/ and record discrepancies.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proteomics: missing values and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "07-proteomics-case.html#read-the-visual-evidence",
+    "href": "07-proteomics-case.html#read-the-visual-evidence",
+    "title": "Proteomics: missing values and interpretation",
+    "section": "Read the visual evidence",
+    "text": "Read the visual evidence\n\n\n\n\n\n\nFigure 7.1: P1 has two missing treated measurements. Its descriptive log2 difference changes from 2 with observed values to approximately -3.333 or -0.667 under the two replacement assumptions.\n\n\n\nTeal cells are observed log2 intensities; yellow cells are missing. Replacement values illustrate sensitivity and are not recommended imputation methods.\n\n\n\n\n\n\nRecreate the figures\n\n\n\n\n\nRun from the repository root:\nRscript scripts/R/plot-evaluation-cases.R\nView or download the base-R plotting code. It reads the supplied case data and regenerates all five figures in results/figures/. Existing images are overwritten; book rendering does not run this script.\nThe bundled PNGs were generated with the Python plotting code. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.\n\n\n\nContinue to GWAS to examine population structure and association claims.\n\n\n\n\nLazar, Cosmin, Laurent Gatto, Myriam Ferro, Christophe Bruley, and Thomas Burger. 2016. “Accounting for the Multiple Natures of Missing Values in Label-Free Quantitative Proteomics Data Sets to Compare Imputation Strategies.” Journal of Proteome Research 15 (4): 1116–25. https://doi.org/10.1021/acs.jproteome.5b00981.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Proteomics: missing values and interpretation</span>"
+    ]
+  },
+  {
+    "objectID": "08-gwas-case.html",
+    "href": "08-gwas-case.html",
+    "title": "GWAS: population structure and association",
+    "section": "",
+    "text": "Your evaluation brief\nDoes a pooled association establish a variant effect when group composition differs between cases and controls? This original synthetic example supplies carrier counts for one fictional autosomal variant in two fictional genetic-background strata, A and B. The strata are teaching labels, not demographic or racial categories.\nRead cases/gwas/README.md and cases/gwas/simulated-response.md. The table cases/gwas/data/carrier-counts.tsv summarizes 400 distinct unrelated participants. A carrier has at least one copy of the designated allele. Counts are people, not alleles; this is a carrier-based comparison, not an additive dosage GWAS.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>GWAS: population structure and association</span>"
+    ]
+  },
+  {
+    "objectID": "08-gwas-case.html#plan-your-review",
+    "href": "08-gwas-case.html#plan-your-review",
+    "title": "GWAS: population structure and association",
+    "section": "Plan your review",
+    "text": "Plan your review\nCreate results/ch08/evidence-log.tsv and evaluate each of the six claims. Check totals, compare group composition, and calculate carrier odds ratios within each stratum before pooling.\nPopulation structure can confound genetic associations; appropriate analyses assess and account for it (Price et al. 2006). This case uses known strata to illustrate the problem. It does not calculate principal components or implement a full GWAS correction.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>GWAS: population structure and association</span>"
+    ]
+  },
+  {
+    "objectID": "08-gwas-case.html#verify-selected-properties",
+    "href": "08-gwas-case.html#verify-selected-properties",
+    "title": "GWAS: population structure and association",
+    "section": "Verify selected properties",
+    "text": "Verify selected properties\nRscript scripts/R/08-verify-gwas.R\nRun from the repository root. The base-R script validates the count table and writes:\n\n\n\n\n\n\n\nOutput in results/ch08/\nPurpose\n\n\n\n\nassociation-checks.tsv\nCompare carrier proportions and odds ratios within strata and pooled.\n\n\ncomposition.tsv\nCheck the proportion from each stratum among cases and controls.\n\n\ninput-checksums.tsv, session-info.txt\nRecord inputs and software details.\n\n\n\nFor each comparison, calculate (case carriers × control noncarriers) / (case noncarriers × control carriers). Odds ratios are not risk ratios. All cells are positive in this exercise; the script stops on zero cells rather than silently choosing a correction.\nOutputs are overwritten on rerun. The script produces no p-values, confidence intervals, ancestry estimates, or adjusted genome-wide analysis.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>GWAS: population structure and association</span>"
+    ]
+  },
+  {
+    "objectID": "08-gwas-case.html#write-your-evaluation",
+    "href": "08-gwas-case.html#write-your-evaluation",
+    "title": "GWAS: population structure and association",
+    "section": "Write your evaluation",
+    "text": "Write your evaluation\nSave results/ch08/evaluation-report.md. Explain why pooled and within-stratum results differ and what can be concluded from this table. Identify the missing evidence needed to evaluate a real GWAS: genotype and sample QC, relatedness, population structure, the association model, multiple-testing control, and replication.\nGenome-wide significance cannot be established from a single descriptive table. A marker association alone also does not identify a causal variant or causal gene; linked variants and functional evidence require further investigation.\n\n\n\n\n\n\nSelf-check after your initial review\n\n\n\n\n\nThere are 200 cases and 200 controls. Within A, carrier proportions are 80% for both; within B, they are 20% for both. Each within-stratum odds ratio is 1. Pooled proportions are 68% and 32%, producing an odds ratio of 4.515625.\nCases are 80% stratum A, whereas controls are 20% stratum A. The pooled association reflects the different group mixtures in this constructed example. The within-stratum point estimates do not establish equivalence or exclude small effects in a population.\nCompare your judgments with cases/gwas/worked-review.md.\n\n\n\nReference values were calculated independently with Python. The R script has not been executed in the authoring environment. Record your actual run and compare it with cases/gwas/reference/.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>GWAS: population structure and association</span>"
+    ]
+  },
+  {
+    "objectID": "08-gwas-case.html#read-the-visual-evidence",
+    "href": "08-gwas-case.html#read-the-visual-evidence",
+    "title": "GWAS: population structure and association",
+    "section": "Read the visual evidence",
+    "text": "Read the visual evidence\n\n\n\n\n\n\nFigure 8.1: Carrier odds ratios are 1 within each stratum and approximately 4.52 when pooled. The pooled association reflects unequal stratum composition in this synthetic example.\n\n\n\nPoints are descriptive estimates on a logarithmic axis. No confidence intervals, significance tests, or causal conclusions are supplied.\n\n\n\n\n\n\nRecreate the figures\n\n\n\n\n\nRun from the repository root:\nRscript scripts/R/plot-evaluation-cases.R\nView or download the base-R plotting code. It reads the supplied case data and regenerates all five figures in results/figures/. Existing images are overwritten; book rendering does not run this script.\nThe bundled PNGs were generated with the Python plotting code. The R alternative uses the same inputs and calculations but has not been executed in the authoring environment. Layout may differ slightly.\n\n\n\nContinue to Independent Evaluation to bring the review process together.\n\n\n\n\nPrice, Alkes L., Nick J. Patterson, Robert M. Plenge, Michael E. Weinblatt, Nancy A. Shadick, and David Reich. 2006. “Principal Components Analysis Corrects for Stratification in Genome-Wide Association Studies.” Nature Genetics 38: 904–9. https://doi.org/10.1038/ng1847.",
+    "crumbs": [
+      "Original Case Studies",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>GWAS: population structure and association</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html",
+    "href": "09-independent-evaluation.html",
+    "title": "Independent Evaluation",
+    "section": "",
+    "text": "Your assignment\nComplete a review of an unfamiliar simulated AI response using the framework developed in this guide. You will choose the checks, prioritize the findings, and write a corrected scientific conclusion.\nThe supplied assignment uses a new synthetic microbiome example. Its purpose is to test transferable evaluation skills: checking denominators, identifying replication, separating measurements from claims, and documenting uncertainty.\nOutcome: a concise evaluation report supported by an evidence log and repeatable checks.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#start-with-the-brief",
+    "href": "09-independent-evaluation.html#start-with-the-brief",
+    "title": "Independent Evaluation",
+    "section": "Start with the brief",
+    "text": "Start with the brief\nRead cases/independent/brief.md. It contains the scenario, complete six-sample table, six response statements, and submission requirements. No external dataset or paid AI account is needed.\nDo not open cases/independent/self-review.md until you have saved your initial report. A calculator, spreadsheet, or short script is sufficient. Choose the tool you can use reliably and retain enough detail for another person to repeat your calculations.\nThis is an independent practice task, not a formal assessment of eligibility for employment or specialist projects.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#prepare-your-review-files",
+    "href": "09-independent-evaluation.html#prepare-your-review-files",
+    "title": "Independent Evaluation",
+    "section": "Prepare your review files",
+    "text": "Prepare your review files\nCreate results/ch07/ and copy these templates into it:\n\n\n\n\n\n\n\nSupplied template\nSave your working copy as\n\n\n\n\ntemplates/independent-evaluation-report.qmd\nresults/ch07/evaluation-report.qmd\n\n\ntemplates/independent-evidence-log.tsv\nresults/ch07/evidence-log.tsv\n\n\ntemplates/independent-self-assessment.md\nresults/ch07/self-assessment.md\n\n\n\nThe templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#carry-out-the-evaluation",
+    "href": "09-independent-evaluation.html#carry-out-the-evaluation",
+    "title": "Independent Evaluation",
+    "section": "Carry out the evaluation",
+    "text": "Carry out the evaluation\nWork through the task without relying on a prewritten verification script:\n\nDefine the scope. State the question and identify what the supplied evidence can address.\nExtract claims. Separate observations, calculations, analytical decisions, and biological conclusions.\nVerify. Complete at least two quantitative checks and record formulas, commands, or calculation notes.\nJudge. Apply the ABE-002 labels and justify priorities by scientific consequence.\nCommunicate. Retain supported statements, explain corrections, and specify the evidence needed for unresolved claims.\n\nWrite your initial judgment before using optional AI assistance. If you use assistance later, record its role and verify any suggestions adopted. Do not represent assisted work as an unaided assessment.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#keep-the-report-focused",
+    "href": "09-independent-evaluation.html#keep-the-report-focused",
+    "title": "Independent Evaluation",
+    "section": "Keep the report focused",
+    "text": "Keep the report focused\nAim for approximately 500–800 words, excluding the evidence table and calculation records. Include the scope, main findings, corrected conclusion, and limitations. A longer report is useful only when it adds necessary evidence or explanation.\nEvery consequential finding should identify a claim, point to evidence, explain its scientific impact, and recommend a specific action. Avoid repeating the same limitation in several sections.\nYour corrected conclusion should be understandable without opening the full evidence log. Your supporting files should allow a reviewer to verify how you reached it.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#review-and-revise",
+    "href": "09-independent-evaluation.html#review-and-revise",
+    "title": "Independent Evaluation",
+    "section": "Review and revise",
+    "text": "Review and revise\nSave an initial copy, such as evaluation-report-initial.qmd, before opening the self-review. Compare your reasoning and calculations, then complete the self-assessment rubric.\nUse Ready when the criterion is supported by your work and Revise when it needs attention. These labels are formative; they do not certify competence. Resolve numerical errors and issues that could change the central conclusion before finalizing the report.\nIf your judgment differs from the worked review, return to the evidence and explain the difference. Reasonable wording or priority choices can vary; unsupported conclusions still require correction.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "09-independent-evaluation.html#final-checkpoint",
+    "href": "09-independent-evaluation.html#final-checkpoint",
+    "title": "Independent Evaluation",
+    "section": "Final checkpoint",
+    "text": "Final checkpoint\nYour completed submission should contain:\n\nAn initial report and a revised final report.\nAn evidence log covering all six response statements.\nCalculation records or scripts for your quantitative checks.\nA self-assessment and a short explanation of revisions.\n\nLabel the work as a synthetic CDI teaching exercise if you share it in a portfolio. Describe your own contribution and retain relevant attribution.\nContinue to Next Steps to plan further practice and present your evaluation work professionally.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html",
+    "href": "10-next-steps.html",
+    "title": "Next Steps",
+    "section": "",
+    "text": "Take stock of your evidence\nYou have practised inspecting claims, performing targeted checks, and communicating scientific judgments. The next step is to identify which skills your completed work demonstrates and which need further practice.\nReview your ABE-009 report and self-assessment. Select one finding you handled well and one you revised substantially. Explain what made the first defensible and what changed your reasoning in the second.\nChapter outcome: prepare a clear description of your evaluation work and a focused development plan.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html#choose-your-next-learning-need",
+    "href": "10-next-steps.html#choose-your-next-learning-need",
+    "title": "Next Steps",
+    "section": "Choose your next learning need",
+    "text": "Choose your next learning need\nUse difficulties encountered during the exercises to choose your next task.\n\n\n\n\n\n\n\n\nIf you struggled with…\nPractise next\nEvidence of progress\n\n\n\n\nIdentifying samples and replication\nReconstruct a sample-to-participant map and check repeated observations.\nA verified metadata summary and explanation of the experimental unit.\n\n\nStudy design and statistical interpretation\nReview a comparison, its assumptions, and the conclusions it permits.\nA justified design critique with appropriate limitations.\n\n\nRunning verification code\nRepeat a small check from a clean session and document inputs and commands.\nReproducible outputs and an execution record.\n\n\nBiological interpretation\nCompare a claim with its supporting results and domain references.\nA corrected claim that states uncertainty.\n\n\nCommunicating findings\nRewrite a long review around its most consequential issues.\nA concise report with traceable evidence and specific actions.\n\n\n\nChoose one priority at a time. Completing another exercise is most useful when you can explain what improved.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html#extend-the-scientific-scope",
+    "href": "10-next-steps.html#extend-the-scientific-scope",
+    "title": "Next Steps",
+    "section": "Extend the scientific scope",
+    "text": "Extend the scientific scope\nMicrobiome and RNA-seq provide substantial opportunities for deeper practice. You can also apply the framework to single-cell analysis, proteomics, GWAS, or another field in which you have suitable preparation.\nUse the relevant CDI guide to strengthen the underlying analysis skills:\n\nMicrobiome Analysis System\nRNA-Seq Analysis System\nSingle-Cell Analysis System\nProteomics Analysis System\nGWAS Analysis System\n\nStart with one bounded question, such as whether metadata support a comparison or whether a reported result matches its code. Expand your review as your domain knowledge grows. The framework provides consistent questions; each method still requires its own scientific checks.\nFor practice beyond this guide, use original teaching materials or openly available data and code with suitable permissions. Record provenance and distinguish the original analysis from any errors you introduce for an exercise.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html#present-a-portfolio-example",
+    "href": "10-next-steps.html#present-a-portfolio-example",
+    "title": "Next Steps",
+    "section": "Present a portfolio example",
+    "text": "Present a portfolio example\nSelect one completed evaluation and package it so another person can understand the question, inspect your checks, and assess your judgment.\n\n\n\n\n\n\n\nPortfolio component\nWhat to include\n\n\n\n\nShort overview\nThe question, teaching context, and your contribution.\n\n\nEvaluation report\nSupported findings, corrections, priorities, and limitations.\n\n\nEvidence\nInputs or permitted source links, verification code or calculations, and outputs.\n\n\nReproduction notes\nCommands, software details, and input versions where available.\n\n\nReflection\nChanges made after review and remaining learning needs.\n\n\n\nLabel synthetic data and simulated AI responses clearly. Distinguish a targeted verification exercise from a complete analytical pipeline. State whether you inspected supplied results, independently recalculated them, or reran a workflow.\nA credible description might be:\n\nEvaluated a synthetic AI-assisted microbiome analysis by checking sample structure, recalculating relative abundances, and reviewing the biological claims. Produced an evidence log and corrected interpretation, with documented limitations and disclosure of assistance.\n\nAdapt this description to work you actually completed. Preserve CDI attribution and disclose any assistance used. Check permissions before sharing externally sourced data or code.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html#apply-the-skills-in-different-settings",
+    "href": "10-next-steps.html#apply-the-skills-in-different-settings",
+    "title": "Next Steps",
+    "section": "Apply the skills in different settings",
+    "text": "Apply the skills in different settings\nThe same evidence-based review process can support research discussions, teaching, peer feedback, and scientific AI evaluation tasks. Tailor your report to the reader’s question while keeping its evidence and limitations explicit.\nFor an external assessment or project, follow its specific rules on independent work, AI assistance, confidentiality, and reporting. This guide is an independent learning resource; completion does not establish employer approval, certification, project access, or income.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "10-next-steps.html#make-a-short-development-plan",
+    "href": "10-next-steps.html#make-a-short-development-plan",
+    "title": "Next Steps",
+    "section": "Make a short development plan",
+    "text": "Make a short development plan\nCreate results/10-development-plan.md and answer:\n\nWhich evaluation skill can I now demonstrate, and where is the evidence?\nWhich limitation in my work matters most?\nWhat specific practice task will address it?\nWhat output will show improvement, and when will I review it?\n\nKeep the plan to one page. Return to your evidence after the next task and revise the plan based on what you can demonstrate.\nUse the Appendix for supporting reference material and the References for the guide’s bibliography.",
+    "crumbs": [
+      "Independent Practice",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Next Steps</span>"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html",
+    "href": "99-appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "Run the verification scripts\nRun these commands from the repository root. The supplied scripts use base R; no additional R packages are required for these exercises.\nRun one script at a time and inspect its outputs before continuing. These are targeted verification exercises, not complete omics pipelines.\nABE-009 has no supplied verification script: choose your own tool and retain the calculations. ABE-010 records your development plan in results/10-development-plan.md.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#run-the-verification-scripts",
+    "href": "99-appendix.html#run-the-verification-scripts",
+    "title": "Appendix",
+    "section": "",
+    "text": "Rscript scripts/R/03-verify-sample-matching.R\nRscript scripts/R/04-verify-microbiome.R\nRscript scripts/R/05-verify-rnaseq.R\nRscript scripts/R/06-verify-singlecell.R\nRscript scripts/R/07-verify-proteomics.R\nRscript scripts/R/08-verify-gwas.R\n\n\n\n\n\n\n\n\n\nChapter\nOutput folder\nMain evidence\n\n\n\n\nABE-003\nresults/ch03/\nIdentifier checks and sample membership\n\n\nABE-004\nresults/ch04/\nPer-sample summaries and paired changes\n\n\nABE-005\nresults/ch05/\nDesign rank and illustrative result checks\n\n\nABE-006\nresults/ch06/\nDonor proportions, pooled summaries, and fictional marker checks\n\n\nABE-007\nresults/ch07/\nMissingness and imputation sensitivity\n\n\nABE-008\nresults/ch08/\nPooled and within-group carrier odds ratios\n\n\nABE-009\nresults/ch09/\nIndependent report, evidence log, and calculation records",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#understand-the-outputs",
+    "href": "99-appendix.html#understand-the-outputs",
+    "title": "Appendix",
+    "section": "Understand the outputs",
+    "text": "Understand the outputs\nA script completing successfully means its instructions ran. Some exercises deliberately report failed checks, such as mismatched identifiers or a rank-deficient design. Read the findings before deciding whether an analysis is usable.\nThe scripts overwrite their named outputs on rerun. Preserve previous results before changing inputs. Keep original teaching files separate from experimental copies, and document any modification.\nReference tables for ABE-004 through ABE-008 were calculated independently with Python. The R scripts were not executed in the authoring environment. Record your own observed results and software details; expected tables are comparison aids, not proof of an R execution.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#evaluation-labels",
+    "href": "99-appendix.html#evaluation-labels",
+    "title": "Appendix",
+    "section": "Evaluation labels",
+    "text": "Evaluation labels\n\n\n\n\n\n\n\nLabel\nUse when…\n\n\n\n\nSupported\nInspected evidence supports the claim within its stated scope.\n\n\nIncorrect\nA check demonstrates an error or contradiction.\n\n\nNot established\nEvidence is insufficient to decide.\n\n\nNot applicable\nA criterion falls outside the task; give a reason.\n\n\n\nFor issues requiring action, assign Blocking, Major, or Minor according to scientific consequence. Use none when no correction is needed. Split statements that combine correct calculations with unsupported conclusions.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#troubleshooting",
+    "href": "99-appendix.html#troubleshooting",
+    "title": "Appendix",
+    "section": "Troubleshooting",
+    "text": "Troubleshooting\n\n\n\n\n\n\n\nProblem\nFirst check or action\n\n\n\n\nRscript is not found\nCheck whether R is installed and accessible from the terminal. Alternatively, use source(\"scripts/R/&lt;script-name&gt;.R\") in an R session opened at the repository root, replacing the placeholder with the actual filename.\n\n\nAn input file cannot be opened\nCheck your working directory and the extracted folder structure. In R, getwd() shows the current directory.\n\n\nAn assertion fails\nInspect the message and corresponding input. Do not remove the check merely to let the script continue.\n\n\nResults differ from a reference\nCompare input versions, identifiers, denominators, and numeric precision. Save the discrepancy before editing anything.\n\n\nA chapter link cannot be resolved\nConfirm that both the link and _quarto.yml use the current filename. Microbiome is 04-microbiome-case.qmd; RNA-seq is 05-rnaseq-case.qmd.\n\n\nRendering produces no analysis outputs\nRun the verification scripts separately. Display-only code fences and eval: false keep analysis execution separate from book rendering.\n\n\n\nA genuine error may be in the input, environment, or supplied script. Document it before proposing a correction.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#reusable-templates",
+    "href": "99-appendix.html#reusable-templates",
+    "title": "Appendix",
+    "section": "Reusable templates",
+    "text": "Reusable templates\nThe ABE-009 package provides:\n\ntemplates/independent-evaluation-report.qmd\ntemplates/independent-evidence-log.tsv\ntemplates/independent-self-assessment.md\n\nCopy them into your exercise output folder before editing. An evidence record should identify the claim, source location, check, observed result, judgment, consequence, and recommended action.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#sharing-checklist",
+    "href": "99-appendix.html#sharing-checklist",
+    "title": "Appendix",
+    "section": "Sharing checklist",
+    "text": "Sharing checklist\nBefore sharing an evaluation, confirm that another reader can locate its evidence and distinguish:\n\nSynthetic teaching materials from research data.\nSupplied outputs from independently reproduced results.\nConfirmed errors from missing evidence.\nYour own work from assistance received.\n\nInclude input versions or fingerprints, software details where relevant, and unresolved limitations. Consult References for sources supporting the case-study concepts.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-appendix.html#scientific-foundations",
+    "href": "99-appendix.html#scientific-foundations",
+    "title": "Appendix",
+    "section": "Scientific foundations",
+    "text": "Scientific foundations\n\nMicrobiome interpretation: Relative abundance describes composition and does not directly establish absolute microbial quantities (Gloor et al. 2017).\nRNA-seq study design: Complete confounding prevents separate estimation of batch and condition effects (Analyzing RNA-seq Data with DESeq2 n.d.).\nSingle-cell replication: Comparisons across conditions must account for biological replication rather than treating cells from the same donor as independent biological replicates (Squair et al. 2021).\nProteomics missingness: Interpretation depends on the missing-data mechanism and assumptions used for imputation (Lazar et al. 2016).\nGWAS population structure: Genetic structure can confound association estimates and requires appropriate assessment and adjustment (Price et al. 2006).\n\n\n\n\n\nAnalyzing RNA-seq Data with DESeq2. n.d. Bioconductor. Accessed October 9, 2026. https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.\n\n\nGloor, Gregory B., Jean M. Macklaim, Vera Pawlowsky-Glahn, and Juan J. Egozcue. 2017. “Microbiome Datasets Are Compositional: And This Is Not Optional.” Frontiers in Microbiology 8: 2224. https://doi.org/10.3389/fmicb.2017.02224.\n\n\nLazar, Cosmin, Laurent Gatto, Myriam Ferro, Christophe Bruley, and Thomas Burger. 2016. “Accounting for the Multiple Natures of Missing Values in Label-Free Quantitative Proteomics Data Sets to Compare Imputation Strategies.” Journal of Proteome Research 15 (4): 1116–25. https://doi.org/10.1021/acs.jproteome.5b00981.\n\n\nPrice, Alkes L., Nick J. Patterson, Robert M. Plenge, Michael E. Weinblatt, Nancy A. Shadick, and David Reich. 2006. “Principal Components Analysis Corrects for Stratification in Genome-Wide Association Studies.” Nature Genetics 38: 904–9. https://doi.org/10.1038/ng1847.\n\n\nSquair, Jordan W., Matthieu Gautier, Claudia Kathe, Mark A. Anderson, Nicholas D. James, Thomas H. Hutson, Remi Hudelle, et al. 2021. “Confronting False Discoveries in Single-Cell Differential Expression.” Nature Communications 12: 5692. https://doi.org/10.1038/s41467-021-25960-2.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "99-references.html",
+    "href": "99-references.html",
+    "title": "References",
+    "section": "",
+    "text": "ID: ABE-012\nType: References\nAudience: Researchers, learners, educators, and bioinformatics practitioners\nTheme: Scientific sources supporting the evaluation cases\n\n\nThese sources support the case-study concepts. The synthetic datasets, simulated responses, and evaluation exercises are original teaching materials; they are not datasets from these publications.\n\n\nAnalyzing RNA-seq Data with\nDESeq2. n.d. Bioconductor. Accessed October 9, 2026.\nhttps://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.\n\n\nGloor, Gregory B., Jean M. Macklaim, Vera Pawlowsky-Glahn, and Juan J.\nEgozcue. 2017. “Microbiome Datasets Are Compositional: And This Is\nNot Optional.” Frontiers in Microbiology 8: 2224. https://doi.org/10.3389/fmicb.2017.02224.\n\n\nLazar, Cosmin, Laurent Gatto, Myriam Ferro, Christophe Bruley, and\nThomas Burger. 2016. “Accounting for the Multiple Natures of\nMissing Values in Label-Free Quantitative Proteomics Data Sets to\nCompare Imputation Strategies.” Journal of Proteome\nResearch 15 (4): 1116–25. https://doi.org/10.1021/acs.jproteome.5b00981.\n\n\nPrice, Alkes L., Nick J. Patterson, Robert M. Plenge, Michael E.\nWeinblatt, Nancy A. Shadick, and David Reich. 2006. “Principal\nComponents Analysis Corrects for Stratification in Genome-Wide\nAssociation Studies.” Nature Genetics 38: 904–9. https://doi.org/10.1038/ng1847.\n\n\nSquair, Jordan W., Matthieu Gautier, Claudia Kathe, Mark A. Anderson,\nNicholas D. James, Thomas H. Hutson, Remi Hudelle, et al. 2021.\n“Confronting False Discoveries in Single-Cell Differential\nExpression.” Nature Communications 12: 5692. https://doi.org/10.1038/s41467-021-25960-2.",
+    "crumbs": [
+      "Appendices",
+      "References"
+    ]
+  }
+]
