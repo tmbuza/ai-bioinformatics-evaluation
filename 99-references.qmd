@@ -1,5 +1,19 @@
-# References and further reading
+---
+bibliography: library/abe-references.bib
+nocite: |
+  @abe-gloor2017, @abe-deseq2-vignette, @abe-squair2021
+---
 
-This scaffold contains no populated bibliography. During chapter development, add verified primary methods papers, official software documentation, and authoritative guidance supporting each analytical choice. Record version-sensitive documentation and access dates where appropriate.
+# References {.unnumbered #sec-references}
 
-Do not publish placeholder citations. Add a bibliography file and Quarto bibliography configuration once the first verified references are available.
+::: {.cdi-message}
+- **ID:** ABE-010
+- **Type:** References
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Scientific sources supporting the evaluation cases
+:::
+
+These sources support the case-study concepts. The synthetic datasets, simulated responses, and evaluation exercises are original teaching materials; they are not datasets from these publications.
+
+::: {#refs}
+:::

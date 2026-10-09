@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — Templates and evaluation rubric – Evaluating AI-Assisted Bioinformatics Analyses</title>
+<title>Appendix – Evaluating AI-Assisted Bioinformatics Analyses</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-appendix.html"><span class="chapter-title">Templates and evaluation rubric</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-appendix.html">Appendix</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,12 +172,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">A structured evaluation framework</span></a>
+  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluation Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible verification in R</span></a>
+  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible Verification</span></a>
   </div>
 </li>
       </ul>
@@ -158,17 +193,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
+  <a href="./04-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
+  <a href="./05-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a>
+  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
       </ul>
@@ -184,12 +219,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent evaluation and reporting</span></a>
+  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Review, reflection, and next steps</span></a>
+  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -205,12 +240,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Templates and evaluation rubric</span></a>
+  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Appendix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References and further reading</span></a>
+  <a href="./99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
@@ -225,19 +262,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#claim-labels" id="toc-claim-labels" class="nav-link active" data-scroll-target="#claim-labels">Claim labels</a></li>
-  <li><a href="#review-quality-rubric" id="toc-review-quality-rubric" class="nav-link" data-scroll-target="#review-quality-rubric">Review quality rubric</a></li>
-  <li><a href="#issue-severity" id="toc-issue-severity" class="nav-link" data-scroll-target="#issue-severity">Issue severity</a></li>
-  <li><a href="#templates" id="toc-templates" class="nav-link" data-scroll-target="#templates">Templates</a></li>
+  <li><a href="#run-the-verification-scripts" id="toc-run-the-verification-scripts" class="nav-link active" data-scroll-target="#run-the-verification-scripts">Run the verification scripts</a></li>
+  <li><a href="#understand-the-outputs" id="toc-understand-the-outputs" class="nav-link" data-scroll-target="#understand-the-outputs">Understand the outputs</a></li>
+  <li><a href="#evaluation-labels" id="toc-evaluation-labels" class="nav-link" data-scroll-target="#evaluation-labels">Evaluation labels</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  <li><a href="#reusable-templates" id="toc-reusable-templates" class="nav-link" data-scroll-target="#reusable-templates">Reusable templates</a></li>
+  <li><a href="#sharing-checklist" id="toc-sharing-checklist" class="nav-link" data-scroll-target="#sharing-checklist">Sharing checklist</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-appendix.html"><span class="chapter-title">Templates and evaluation rubric</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./99-appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="./99-appendix.html">Appendix</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix A — Templates and evaluation rubric</h1>
+<h1 class="title"><span id="sec-appendix" class="quarto-section-identifier">Appendix</span></h1>
 </div>
 
 
@@ -260,18 +299,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="claim-labels" class="level2">
-<h2 class="anchored" data-anchor-id="claim-labels">Claim labels</h2>
+<div class="cdi-message">
 <ul>
-<li><strong>Supported:</strong> evidence supports the claim within its stated scope.</li>
-<li><strong>Incorrect:</strong> evidence or a reproducible check contradicts the claim.</li>
-<li><strong>Unsupported:</strong> necessary evidence is absent.</li>
-<li><strong>Uncertain:</strong> available evidence leaves meaningful ambiguity.</li>
+<li><strong>ID:</strong> ABE-009</li>
+<li><strong>Type:</strong> Practical reference</li>
+<li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
+<li><strong>Theme:</strong> Verification commands, evidence records, and troubleshooting</li>
 </ul>
+</div>
+<section id="run-the-verification-scripts" class="level2">
+<h2 class="anchored" data-anchor-id="run-the-verification-scripts">Run the verification scripts</h2>
+<p>Run these commands from the repository root. The supplied scripts use base R; no additional R packages are required for these exercises.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/03-verify-sample-matching.R</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/04-verify-microbiome.R</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/05-verify-rnaseq.R</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/06-verify-singlecell.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run one script at a time and inspect its outputs before continuing. These are targeted verification exercises, not complete omics pipelines.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Chapter</th>
+<th>Output folder</th>
+<th>Main evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ABE-003</td>
+<td><code>results/ch03/</code></td>
+<td>Identifier checks and sample membership</td>
+</tr>
+<tr class="even">
+<td>ABE-004</td>
+<td><code>results/ch04/</code></td>
+<td>Per-sample summaries and paired changes</td>
+</tr>
+<tr class="odd">
+<td>ABE-005</td>
+<td><code>results/ch05/</code></td>
+<td>Design rank and illustrative result checks</td>
+</tr>
+<tr class="even">
+<td>ABE-006</td>
+<td><code>results/ch06/</code></td>
+<td>Donor proportions, pooled summaries, and fictional marker checks</td>
+</tr>
+<tr class="odd">
+<td>ABE-007</td>
+<td><code>results/ch07/</code></td>
+<td>Independent report, evidence log, and calculation records</td>
+</tr>
+</tbody>
+</table>
+<p>ABE-007 has no supplied verification script: choose your own tool and retain the calculations. ABE-008 records your development plan in <code>results/08-development-plan.md</code>.</p>
 </section>
-<section id="review-quality-rubric" class="level2">
-<h2 class="anchored" data-anchor-id="review-quality-rubric">Review quality rubric</h2>
-<p>Score each dimension from 0 to 3. Use these scores for feedback, not as a validated certification threshold.</p>
+<section id="understand-the-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="understand-the-outputs">Understand the outputs</h2>
+<p>A script completing successfully means its instructions ran. Some exercises deliberately report failed checks, such as mismatched identifiers or a rank-deficient design. Read the findings before deciding whether an analysis is usable.</p>
+<p>The scripts overwrite their named outputs on rerun. Preserve previous results before changing inputs. Keep original teaching files separate from experimental copies, and document any modification.</p>
+<p>Reference tables for ABE-004 through ABE-006 were calculated independently with Python. The R scripts were not executed in the authoring environment. Record your own observed results and software details; expected tables are comparison aids, not proof of an R execution.</p>
+</section>
+<section id="evaluation-labels" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation-labels">Evaluation labels</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -279,47 +373,93 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Dimension</th>
-<th>What to inspect</th>
+<th>Label</th>
+<th>Use when…</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Question and scope</td>
-<td>Identifies the question and appropriate limits</td>
+<td>Supported</td>
+<td>Inspected evidence supports the claim within its stated scope.</td>
 </tr>
 <tr class="even">
-<td>Data and design</td>
-<td>Checks provenance, experimental units, and assumptions</td>
+<td>Incorrect</td>
+<td>A check demonstrates an error or contradiction.</td>
 </tr>
 <tr class="odd">
-<td>Verification</td>
-<td>Provides traceable checks and consistent outputs</td>
+<td>Not established</td>
+<td>Evidence is insufficient to decide.</td>
 </tr>
 <tr class="even">
-<td>Interpretation</td>
-<td>Connects claims to evidence and acknowledges uncertainty</td>
-</tr>
-<tr class="odd">
-<td>Feedback</td>
-<td>Explains consequences and gives actionable corrections</td>
-</tr>
-<tr class="even">
-<td>Reproducibility</td>
-<td>Records inputs, code, environment, and outputs</td>
+<td>Not applicable</td>
+<td>A criterion falls outside the task; give a reason.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>0:</strong> missing or materially incorrect. <strong>1:</strong> identifies a concern with little support. <strong>2:</strong> mostly correct with relevant evidence but incomplete checks or explanation. <strong>3:</strong> justified, traceable, and clear about limitations.</p>
-<p>A total out of 18 may summarize performance, but always report dimension-level feedback. A high total cannot compensate for a major uncorrected scientific error.</p>
+<p>For issues requiring action, assign <strong>Blocking</strong>, <strong>Major</strong>, or <strong>Minor</strong> according to scientific consequence. Use <strong>none</strong> when no correction is needed. Split statements that combine correct calculations with unsupported conclusions.</p>
 </section>
-<section id="issue-severity" class="level2">
-<h2 class="anchored" data-anchor-id="issue-severity">Issue severity</h2>
-<p>Record separately: critical (undermines the principal conclusion), major (materially changes a result or claim), minor (limited consequence), or not applicable. Justify the level in context.</p>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problem</th>
+<th>First check or action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Rscript</code> is not found</td>
+<td>Check whether R is installed and accessible from the terminal. Alternatively, use <code>source("scripts/R/&lt;script-name&gt;.R")</code> in an R session opened at the repository root, replacing the placeholder with the actual filename.</td>
+</tr>
+<tr class="even">
+<td>An input file cannot be opened</td>
+<td>Check your working directory and the extracted folder structure. In R, <code>getwd()</code> shows the current directory.</td>
+</tr>
+<tr class="odd">
+<td>An assertion fails</td>
+<td>Inspect the message and corresponding input. Do not remove the check merely to let the script continue.</td>
+</tr>
+<tr class="even">
+<td>Results differ from a reference</td>
+<td>Compare input versions, identifiers, denominators, and numeric precision. Save the discrepancy before editing anything.</td>
+</tr>
+<tr class="odd">
+<td>A chapter link cannot be resolved</td>
+<td>Confirm that both the link and <code>_quarto.yml</code> use the current filename. Microbiome is <code>04-microbiome-case.qmd</code>; RNA-seq is <code>05-rnaseq-case.qmd</code>.</td>
+</tr>
+<tr class="even">
+<td>Rendering produces no analysis outputs</td>
+<td>Run the verification scripts separately. Display-only code fences and <code>eval: false</code> keep analysis execution separate from book rendering.</td>
+</tr>
+</tbody>
+</table>
+<p>A genuine error may be in the input, environment, or supplied script. Document it before proposing a correction.</p>
 </section>
-<section id="templates" class="level2">
-<h2 class="anchored" data-anchor-id="templates">Templates</h2>
-<p>The project includes an evaluation report, evidence log, reproducibility checklist, and case authoring specifications.</p>
+<section id="reusable-templates" class="level2">
+<h2 class="anchored" data-anchor-id="reusable-templates">Reusable templates</h2>
+<p>The ABE-007 package provides:</p>
+<ul>
+<li><code>templates/independent-evaluation-report.qmd</code></li>
+<li><code>templates/independent-evidence-log.tsv</code></li>
+<li><code>templates/independent-self-assessment.md</code></li>
+</ul>
+<p>Copy them into your exercise output folder before editing. An evidence record should identify the claim, source location, check, observed result, judgment, consequence, and recommended action.</p>
+</section>
+<section id="sharing-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="sharing-checklist">Sharing checklist</h2>
+<p>Before sharing an evaluation, confirm that another reader can locate its evidence and distinguish:</p>
+<ul>
+<li>Synthetic teaching materials from research data.</li>
+<li>Supplied outputs from independently reproduced results.</li>
+<li>Confirmed errors from missing evidence.</li>
+<li>Your own work from assistance received.</li>
+</ul>
+<p>Include input versions or fingerprints, software details where relevant, and unresolved limitations. Consult <a href="./99-references.html">References</a> for sources supporting the case-study concepts.</p>
 
 
 </section>
@@ -728,13 +868,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./08-next-steps.html" class="pagination-link" aria-label="Review, reflection, and next steps">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Review, reflection, and next steps</span></span>
+      <a href="./08-next-steps.html" class="pagination-link" aria-label="Next Steps">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Next Steps</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./99-references.html" class="pagination-link" aria-label="References and further reading">
-        <span class="nav-page-text"><span class="chapter-title">References and further reading</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./99-references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

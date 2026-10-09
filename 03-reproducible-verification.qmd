@@ -1,24 +1,105 @@
-# Reproducible verification in R
+# Reproducible Verification {#sec-reproducible-verification}
 
-## Learning objective
-Make every verification step traceable.
+::: {.cdi-message}
+- **ID:** ABE-003
+- **Type:** Foundations and practical verification
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Repeatable checks and traceable evidence
+:::
 
-## Content to develop
-- Record input provenance and data dictionaries.
-- Record software versions, commands, and random seeds where relevant.
-- Compare independently obtained results with the supplied output.
-- Record discrepancies without silently modifying original evidence.
+## Turn a judgment into a check
 
-## Practice task
-Plan the checks needed to reproduce a supplied result. Case-specific executable checks will be added during development.
+A reproducible evaluation records enough detail for another reviewer to repeat a check and compare results. Start with a specific claim, identify the required inputs, and decide what result would support or contradict it.
+
+**Chapter outcome:** run a sample-matching check, inspect its outputs, and document a finding without changing the original evidence.
+
+This chapter extends the microbiome example from ABE-002. The same identifier checks are useful whenever measurements must be matched to sample metadata, including RNA-seq and other omics workflows.
+
+## Define the verification boundary
+
+Distinguish three activities in your report:
+
+| Activity | What you can claim |
+|---|---|
+| Inspect supplied files | You reviewed their contents. |
+| Run a targeted check | You independently checked a specified property or calculation. |
+| Rerun an analysis | You reproduced the stated workflow using the recorded inputs and settings. |
+
+None of these alone establishes biological validity. A sample-matching check cannot establish that the samples were collected appropriately or that the chosen statistical model is suitable.
+
+## Prepare the exercise
+
+Place `scripts/R/03-verify-sample-matching.R` in your repository. It uses base R and requires no additional packages or downloads. The synthetic identifiers are defined inside the script; no separate dataset is needed.
+
+The feature table identifiers are `S01`, `S02`, `S03`, and `S04`. The metadata identifiers are `S03`, `S01`, `S02`, and `S05`. Their order differs, and one identifier differs between the sets.
+
+**Simulated AI response:**
+
+> Both files contain four samples. Their rows can therefore be paired in the current order, and all samples are ready for analysis.
+
+Before running the script, predict which checks will pass. Read the script and identify where it defines inputs, checks identifiers, and writes evidence.
+
+## Run the verification
+
+Open a terminal in the repository root and run:
+
+```bash
+Rscript scripts/R/03-verify-sample-matching.R
+```
+
+If `Rscript` is unavailable in your terminal but R is installed, open an R session, set its working directory to the repository root, and run:
+
+```r
+source("scripts/R/03-verify-sample-matching.R")
+```
+
+The script creates `results/ch03/` and writes:
+
+| Output | Purpose |
+|---|---|
+| `input-identifiers.tsv` | Records the identifiers and order checked. |
+| `checks.tsv` | Records the result of each check. |
+| `sample-membership.tsv` | Shows which identifiers occur in each source. |
+| `session-info.txt` | Records the R environment used. |
+
+These files are overwritten on each run. Preserve a copy in a separately named folder before changing inputs. Keep the supplied script unchanged and save any experimental version under a different filename.
+
+## Interpret the evidence
+
+Open `checks.tsv` and `sample-membership.tsv`. A normal script completion means the checks ran; it does **not** mean that the data passed them.
+
+::: {.callout-tip collapse="true" title="Expected results and interpretation"}
+The identifiers are present and unique, so the first check passes. The identifier-set and order checks fail.
+
+`S04` occurs only in the feature table; `S05` occurs only in the metadata. Equal sample counts therefore do not establish matching identities. Reordering alone cannot resolve this mismatch, and renaming an identifier requires an authoritative mapping.
+
+The current-order pairing claim is incorrect. Record the mismatch as blocking for the intended four-sample analysis and request the sample manifest. The check identifies the discrepancy without establishing its cause.
+:::
+
+Matching sets and matching order are separate properties. When identifiers are unique and sets match, metadata can be reordered by identifier. This establishes alignment of labels, not proof that the labels describe the correct biological samples.
+
+## Record your verification
+
+Create `results/ch03/verification-note.md` with these headings:
+
+```markdown
+# ABE-003 verification note
+## Claim reviewed
+## Script and command used
+## Input identifiers and evidence files
+## Observed result
+## Judgment, priority, and recommended action
+## Limits of this check
+```
+
+Record the script version or Git commit when available. Link your finding to the output filenames and state that the exercise uses synthetic identifiers. If execution fails, record the error and what remains unchecked; do not substitute the expected answer for an observed result.
 
 ## Checkpoint
-Can another reader trace each conclusion to evidence and understand what remains uncertain?
 
-## Deliverable
-A verification plan and environment record.
+You are ready to continue when you can explain:
 
-::: {.callout-note}
-## Authoring status
-Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
-:::
+- Why equal sample counts do not establish sample matching.
+- Why matching identifiers and matching order require separate checks.
+- Which outputs support your finding and which questions remain unresolved.
+
+Retain your note and generated evidence. Continue to the [Microbiome Case](04-microbiome-case.qmd) to apply the framework to a scientific analysis.

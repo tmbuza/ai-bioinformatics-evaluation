@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Single-cell: annotation and uncertainty – Evaluating AI-Assisted Bioinformatics Analyses</title>
+<title>Single-cell: replication, annotation, and uncertainty – Evaluating AI-Assisted Bioinformatics Analyses</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -31,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./07-independent-evaluation.html" rel="next">
-<link href="./05-microbiome-case.html" rel="prev">
+<link href="./05-rnaseq-case.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-rnaseq-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./06-singlecell-case.html"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./06-singlecell-case.html"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,12 +172,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">A structured evaluation framework</span></a>
+  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluation Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible verification in R</span></a>
+  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible Verification</span></a>
   </div>
 </li>
       </ul>
@@ -158,17 +193,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
+  <a href="./04-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
+  <a href="./05-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a>
+  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
       </ul>
@@ -184,12 +219,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent evaluation and reporting</span></a>
+  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Review, reflection, and next steps</span></a>
+  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -205,12 +240,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Templates and evaluation rubric</span></a>
+  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References and further reading</span></a>
+  <a href="./99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
@@ -225,23 +262,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#learning-objective" id="toc-learning-objective" class="nav-link active" data-scroll-target="#learning-objective">Learning objective</a></li>
-  <li><a href="#case-specification" id="toc-case-specification" class="nav-link" data-scroll-target="#case-specification">Case specification</a></li>
-  <li><a href="#planned-evidence-package" id="toc-planned-evidence-package" class="nav-link" data-scroll-target="#planned-evidence-package">Planned evidence package</a></li>
-  <li><a href="#review-priorities" id="toc-review-priorities" class="nav-link" data-scroll-target="#review-priorities">Review priorities</a></li>
-  <li><a href="#learner-workflow" id="toc-learner-workflow" class="nav-link" data-scroll-target="#learner-workflow">Learner workflow</a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
-  <li><a href="#deliverable" id="toc-deliverable" class="nav-link" data-scroll-target="#deliverable">Deliverable</a></li>
-  <li><a href="#worked-explanation" id="toc-worked-explanation" class="nav-link" data-scroll-target="#worked-explanation">Worked explanation</a></li>
+  <li><a href="#your-evaluation-brief" id="toc-your-evaluation-brief" class="nav-link active" data-scroll-target="#your-evaluation-brief">Your evaluation brief</a></li>
+  <li><a href="#inventory-the-evidence" id="toc-inventory-the-evidence" class="nav-link" data-scroll-target="#inventory-the-evidence">Inventory the evidence</a></li>
+  <li><a href="#plan-an-independent-review" id="toc-plan-an-independent-review" class="nav-link" data-scroll-target="#plan-an-independent-review">Plan an independent review</a></li>
+  <li><a href="#verify-selected-properties" id="toc-verify-selected-properties" class="nav-link" data-scroll-target="#verify-selected-properties">Verify selected properties</a></li>
+  <li><a href="#distinguish-the-questions-being-answered" id="toc-distinguish-the-questions-being-answered" class="nav-link" data-scroll-target="#distinguish-the-questions-being-answered">Distinguish the questions being answered</a></li>
+  <li><a href="#submit-your-evaluation" id="toc-submit-your-evaluation" class="nav-link" data-scroll-target="#submit-your-evaluation">Submit your evaluation</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-rnaseq-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./06-singlecell-case.html"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./06-singlecell-case.html"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Single-cell: annotation and uncertainty</span></h1>
+<h1 class="title"><span id="sec-singlecell-case" class="quarto-section-identifier"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></span></h1>
 </div>
 
 
@@ -264,52 +299,149 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="learning-objective" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objective">Learning objective</h2>
-<p>Evaluate the scientific reasoning, reproducibility, and interpretation of a singlecell analysis.</p>
-</section>
-<section id="case-specification" class="level2">
-<h2 class="anchored" data-anchor-id="case-specification">Case specification</h2>
-<p><strong>Support level:</strong> Independent.</p>
-<p><strong>Planned scenario:</strong> A small synthetic single-cell study with donor metadata, cluster summaries, and marker evidence.</p>
-<p><strong>Evaluation question:</strong> How well do the supplied evidence and design support cell labels and group comparisons?</p>
-<p>This is an original case design. Data and scientific conclusions have not yet been generated or validated.</p>
-</section>
-<section id="planned-evidence-package" class="level2">
-<h2 class="anchored" data-anchor-id="planned-evidence-package">Planned evidence package</h2>
-<p>See <code>cases/singlecell/case-specification.md</code>. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.</p>
-</section>
-<section id="review-priorities" class="level2">
-<h2 class="anchored" data-anchor-id="review-priorities">Review priorities</h2>
+<div class="cdi-message">
 <ul>
-<li>Cells versus independent biological replicates</li>
-<li>Quality-control decisions and potential mixed populations</li>
-<li>Strength and specificity of annotation evidence</li>
-<li>Uncertainty and alternative interpretations</li>
+<li><strong>ID:</strong> ABE-006</li>
+<li><strong>Type:</strong> Independent case evaluation</li>
+<li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
+<li><strong>Theme:</strong> Donor-level evidence and cautious cell annotation</li>
 </ul>
+</div>
+<section id="your-evaluation-brief" class="level2">
+<h2 class="anchored" data-anchor-id="your-evaluation-brief">Your evaluation brief</h2>
+<p><strong>Does the supplied single-cell evidence support the response’s claims about treatment, cell identity, and analysis quality?</strong></p>
+<p>This original synthetic case contains 2,000 retained cells from four donors, with two donors per condition. Cell assignments and marker summaries are invented. No clinical outcome, randomization, raw expression matrix, or full analysis workflow is supplied.</p>
+<p>Your task is to decide which statements are supported, incorrect, or not established. Choose and justify your own checks before consulting the worked review.</p>
 </section>
-<section id="learner-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="learner-workflow">Learner workflow</h2>
-<ol type="1">
-<li>Read the question and inventory the supplied evidence.</li>
-<li>Extract claims from the supplied response.</li>
-<li>Mark each claim supported, incorrect, unsupported, or uncertain.</li>
-<li>Run or inspect the relevant verification checks.</li>
-<li>Update your judgment and explain any correction.</li>
-<li>Complete the evidence log and self-assess with the rubric.</li>
-</ol>
+<section id="inventory-the-evidence" class="level2">
+<h2 class="anchored" data-anchor-id="inventory-the-evidence">Inventory the evidence</h2>
+<p>Start with <code>cases/singlecell/README.md</code> and <code>cases/singlecell/simulated-response.md</code>.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File in <code>cases/singlecell/data/</code></th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>donors.tsv</code></td>
+<td>Donor identity and condition</td>
+</tr>
+<tr class="even">
+<td><code>cells.tsv</code></td>
+<td>Cell identity, donor identity, and assigned cluster</td>
+</tr>
+<tr class="odd">
+<td><code>marker-evidence.tsv</code></td>
+<td>Supplied detection percentages for three fictional markers in C1</td>
+</tr>
+<tr class="even">
+<td><code>teaching-marker-reference.tsv</code></td>
+<td>Expected marker combinations for two fictional candidate types</td>
+</tr>
+</tbody>
+</table>
+<p>The marker summaries are separate supplied evidence: they cannot be recalculated from a table containing only cell labels. The marker names and candidate types are teaching devices, not real biological annotations.</p>
 </section>
-<section id="checkpoint" class="level2">
-<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
-<p>Which conclusions survive verification, and which require correction or additional evidence?</p>
+<section id="plan-an-independent-review" class="level2">
+<h2 class="anchored" data-anchor-id="plan-an-independent-review">Plan an independent review</h2>
+<p>Create <code>results/ch06/evidence-log.tsv</code> using the ABE-002 fields. For each of the seven claims, specify the relevant evidence, your intended check, and the consequence if the claim is wrong.</p>
+<p>Consider the biological unit of replication, how unequal cell contributions affect summaries, whether annotation evidence distinguishes candidates, and which workflow claims require missing records.</p>
+<p>Write an initial conclusion before running code. Do not assume that every statement in the simulated response is wrong.</p>
 </section>
-<section id="deliverable" class="level2">
-<h2 class="anchored" data-anchor-id="deliverable">Deliverable</h2>
-<p>A case review using <code>templates/evaluation-report.qmd</code> and <code>templates/evidence-log.csv</code>.</p>
+<section id="verify-selected-properties" class="level2">
+<h2 class="anchored" data-anchor-id="verify-selected-properties">Verify selected properties</h2>
+<p>Run from the repository root:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/06-verify-singlecell.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or use an R session with the repository root as its working directory:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"scripts/R/06-verify-singlecell.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The script requires base R only. It validates cell-to-donor mappings, summarizes C1 proportions by donor and condition, and compares marker patterns under the exercise’s fictional reference. It performs no clustering, differential-expression test, or biological annotation validation.</p>
+<p>Inspect these outputs under <code>results/ch06/</code>:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Output</th>
+<th>Review purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>donor-summary.tsv</code></td>
+<td>Compare the number of cells and C1 proportion contributed by each donor.</td>
+</tr>
+<tr class="even">
+<td><code>condition-summary.tsv</code></td>
+<td>Contrast pooled proportions with unweighted donor means.</td>
+</tr>
+<tr class="odd">
+<td><code>teaching-marker-check.tsv</code></td>
+<td>Compare observed high-detection markers with each candidate pattern.</td>
+</tr>
+<tr class="even">
+<td><code>input-checksums.tsv</code>, <code>session-info.txt</code></td>
+<td>Record input fingerprints and software details.</td>
+</tr>
+</tbody>
+</table>
+<p>Outputs are overwritten on rerun. Preserve prior results before changing inputs. In this exercise, “high detection” means at least 50%; this is a teaching convention, not a recommended universal annotation threshold.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Verification status">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Verification status
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Reference tables were calculated independently with Python. The R script has not been executed in the authoring environment. Record your actual results and investigate discrepancies before accepting the expected values.</p>
+</div>
+</div>
 </section>
-<section id="worked-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="worked-explanation">Worked explanation</h2>
-<p>To be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.</p>
+<section id="distinguish-the-questions-being-answered" class="level2">
+<h2 class="anchored" data-anchor-id="distinguish-the-questions-being-answered">Distinguish the questions being answered</h2>
+<p>A pooled proportion describes all retained cells combined. An unweighted donor mean gives each donor equal weight. Neither summary alone establishes a population-level treatment effect.</p>
+<p>For comparisons across donors, cells from one donor must not be treated as independent donor replicates. <a href="https://doi.org/10.1038/s41467-021-25960-2">Squair et al.&nbsp;(2021)</a> demonstrate why accounting for biological replication matters in single-cell differential-expression analysis. This case checks replication and descriptive proportions; it does not implement a differential-expression method.</p>
+<p>Similarly, a marker shared by two candidates does not distinguish them. Evaluate the full supplied pattern and state the limits of a provisional label. Missing QC records leave quality claims unverified; they do not prove that QC failed.</p>
+</section>
+<section id="submit-your-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="submit-your-evaluation">Submit your evaluation</h2>
+<p>Write <code>results/ch06/evaluation-report.md</code> with:</p>
+<ul>
+<li>The question and scope of your review.</li>
+<li>Checks performed, evidence locations, and prioritized findings.</li>
+<li>A corrected interpretation of proportions and annotation evidence.</li>
+<li>Specific requests for missing information and remaining uncertainty.</li>
+</ul>
+<p>Explain whether the pooled and donor-level summaries answer the same question. Identify at least one statement worth retaining.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Self-check after completing your report">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Self-check after completing your report
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>C1 proportions by donor are 20%, 80%, 80%, and 20%. Each condition has an unweighted donor mean of 50%, but pooled proportions are 74% for controls and 26% for treated cells because donors contribute unequal numbers of cells. Equal means here do not demonstrate biological equivalence.</p>
+<p>M1 is shared by both fictional candidates. The combined pattern favors a provisional Type_B-like label within the exercise. It does not establish a real cell identity.</p>
+<p>Compare all seven judgments with <code>cases/singlecell/worked-review.md</code>. Revise your report where evidence warrants it and explain your changes.</p>
+</div>
+</div>
+</div>
+<p>Continue to <a href="./07-independent-evaluation.html">Independent Evaluation</a> to bring the framework and reporting skills together.</p>
 
 
 </section>
@@ -718,13 +850,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./05-microbiome-case.html" class="pagination-link" aria-label="Microbiome: methods, evidence, and claims">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></span>
+      <a href="./05-rnaseq-case.html" class="pagination-link" aria-label="RNA-seq: design, results, and interpretation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./07-independent-evaluation.html" class="pagination-link" aria-label="Independent evaluation and reporting">
-        <span class="nav-page-text"><span class="chapter-title">Independent evaluation and reporting</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07-independent-evaluation.html" class="pagination-link" aria-label="Independent Evaluation">
+        <span class="nav-page-text"><span class="chapter-title">Independent Evaluation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

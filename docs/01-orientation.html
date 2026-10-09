@@ -137,12 +137,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">A structured evaluation framework</span></a>
+  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluation Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible verification in R</span></a>
+  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible Verification</span></a>
   </div>
 </li>
       </ul>
@@ -158,17 +158,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
+  <a href="./04-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
+  <a href="./05-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a>
+  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
       </ul>
@@ -184,12 +184,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent evaluation and reporting</span></a>
+  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Review, reflection, and next steps</span></a>
+  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -205,12 +205,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Templates and evaluation rubric</span></a>
+  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References and further reading</span></a>
+  <a href="./99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
@@ -241,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-orientation.html">Evaluation Foundations</a></li><li class="breadcrumb-item"><a href="./01-orientation.html"><span class="chapter-title">Orientation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Orientation</span></h1>
+<h1 class="title"><span id="sec-orientation" class="quarto-section-identifier"><span class="chapter-title">Orientation</span></span></h1>
 </div>
 
 
@@ -264,10 +266,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="cdi-message">
+<ul>
+<li><strong>ID:</strong> ABE-001</li>
+<li><strong>Type:</strong> Foundations and guided exercise</li>
+<li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
+<li><strong>Theme:</strong> Evaluating evidence and communicating scientific judgment</li>
+</ul>
+</div>
 <section id="the-reviewers-role" class="level2">
 <h2 class="anchored" data-anchor-id="the-reviewers-role">The reviewer’s role</h2>
 <p>An AI-assisted bioinformatics analysis can include code, tables, figures, and explanations. Your role is to assess whether these elements agree and whether the evidence supports the scientific conclusion.</p>
-<p>Review the work at three levels:</p>
+<p>These checks apply across microbiome, RNA-seq, single-cell, proteomics, and GWAS analyses, with the methods assessed in their specific context. Review the work at three levels:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -312,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Response:</strong> the explanation or conclusions being evaluated.</li>
 </ul>
 <p>Missing material limits what you can establish. If only a results table is available, you can inspect its contents, but you cannot claim to have reproduced the underlying analysis.</p>
-<p>Pay attention to AI-specific problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.</p>
+<p>When reviewing AI-assisted work, look for problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.</p>
 </section>
 <section id="a-first-evaluation" class="level2">
 <h2 class="anchored" data-anchor-id="a-first-evaluation">A first evaluation</h2>
@@ -378,7 +388,7 @@ Worked answer
 <p>The means are correct: <code>(10 + 12) / 2 = 11</code> and <code>(14 + 16) / 2 = 15</code>.</p>
 <p>The percentage increase is <code>100 × (15 − 11) / 11</code>, approximately <strong>36.4%</strong>, so the stated 50% is an arithmetic error.</p>
 <p>The table alone does not establish a treatment effect or biological importance. We need information about what was measured, how groups were assigned, whether samples are independent, and the uncertainty and biological context of the comparison. We also cannot infer statistical significance from the supplied material.</p>
-<p><strong>Corrected conclusion:</strong> “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 units, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”</p>
+<p><strong>Corrected conclusion:</strong> “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 on the reported measurement scale, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”</p>
 </div>
 </div>
 </div>
@@ -422,7 +432,7 @@ Worked answer
 </section>
 <section id="checkpoint" class="level2">
 <h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
-<p>Create <code>results/01-orientation-review.md</code> and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.</p>
+<p>Create the <code>results/</code> folder if needed, then create <code>results/01-orientation-review.md</code> and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.</p>
 <p>Before continuing, confirm that your review:</p>
 <ul>
 <li>Preserves the correct calculation.</li>
@@ -430,7 +440,7 @@ Worked answer
 <li>Identifies the unsupported claim without inventing missing evidence.</li>
 <li>States what you checked and what remains unresolved.</li>
 </ul>
-<p>Continue to <strong>Evaluation Framework</strong> to apply consistent criteria across larger analyses.</p>
+<p>Continue to <a href="./02-evaluation-framework.html">Evaluation Framework</a> to apply consistent criteria across larger analyses.</p>
 
 
 </section>
@@ -844,8 +854,8 @@ Worked answer
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./02-evaluation-framework.html" class="pagination-link" aria-label="A structured evaluation framework">
-        <span class="nav-page-text"><span class="chapter-title">A structured evaluation framework</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./02-evaluation-framework.html" class="pagination-link" aria-label="Evaluation Framework">
+        <span class="nav-page-text"><span class="chapter-title">Evaluation Framework</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

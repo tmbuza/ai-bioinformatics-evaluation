@@ -1,24 +1,85 @@
-# Review, reflection, and next steps
+# Next Steps {#sec-next-steps}
 
-## Learning objective
-Identify remaining skill gaps and present your work accurately.
-
-## Content to develop
-- Revisit judgments that changed after verification.
-- Use the rubric to identify specific practice needs.
-- Label portfolio work as a synthetic educational case.
-- Disclose AI assistance and distinguish independent work from guided corrections.
-
-## Practice task
-Write a short reflection explaining one corrected judgment and one unresolved limitation.
-
-## Checkpoint
-Can another reader trace each conclusion to evidence and understand what remains uncertain?
-
-## Deliverable
-A reflection and a concise portfolio description.
-
-::: {.callout-note}
-## Authoring status
-Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+::: {.cdi-message}
+- **ID:** ABE-008
+- **Type:** Reflection and professional development
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Continued practice and demonstrable evaluation skills
 :::
+
+## Take stock of your evidence
+
+You have practised inspecting claims, performing targeted checks, and communicating scientific judgments. The next step is to identify which skills your completed work demonstrates and which need further practice.
+
+Review your ABE-007 report and self-assessment. Select one finding you handled well and one you revised substantially. Explain what made the first defensible and what changed your reasoning in the second.
+
+**Chapter outcome:** prepare a clear description of your evaluation work and a focused development plan.
+
+## Choose your next learning need
+
+Use difficulties encountered during the exercises to choose your next task.
+
+| If you struggled with… | Practise next | Evidence of progress |
+|---|---|---|
+| Identifying samples and replication | Reconstruct a sample-to-participant map and check repeated observations. | A verified metadata summary and explanation of the experimental unit. |
+| Study design and statistical interpretation | Review a comparison, its assumptions, and the conclusions it permits. | A justified design critique with appropriate limitations. |
+| Running verification code | Repeat a small check from a clean session and document inputs and commands. | Reproducible outputs and an execution record. |
+| Biological interpretation | Compare a claim with its supporting results and domain references. | A corrected claim that states uncertainty. |
+| Communicating findings | Rewrite a long review around its most consequential issues. | A concise report with traceable evidence and specific actions. |
+
+Choose one priority at a time. Completing another exercise is most useful when you can explain what improved.
+
+## Extend the scientific scope
+
+Microbiome and RNA-seq provide substantial opportunities for deeper practice. You can also apply the framework to single-cell analysis, proteomics, GWAS, or another field in which you have suitable preparation.
+
+Use the relevant CDI guide to strengthen the underlying analysis skills:
+
+- [Microbiome Analysis System](https://microbiome.complexdatainsights.com/)
+- [RNA-Seq Analysis System](https://rnaseq.complexdatainsights.com/)
+- [Single-Cell Analysis System](https://singlecell.complexdatainsights.com/)
+- [Proteomics Analysis System](https://proteomics.complexdatainsights.com/)
+- [GWAS Analysis System](https://gwas.complexdatainsights.com/)
+
+Start with one bounded question, such as whether metadata support a comparison or whether a reported result matches its code. Expand your review as your domain knowledge grows. The framework provides consistent questions; each method still requires its own scientific checks.
+
+For practice beyond this guide, use original teaching materials or openly available data and code with suitable permissions. Record provenance and distinguish the original analysis from any errors you introduce for an exercise.
+
+## Present a portfolio example
+
+Select one completed evaluation and package it so another person can understand the question, inspect your checks, and assess your judgment.
+
+| Portfolio component | What to include |
+|---|---|
+| Short overview | The question, teaching context, and your contribution. |
+| Evaluation report | Supported findings, corrections, priorities, and limitations. |
+| Evidence | Inputs or permitted source links, verification code or calculations, and outputs. |
+| Reproduction notes | Commands, software details, and input versions where available. |
+| Reflection | Changes made after review and remaining learning needs. |
+
+Label synthetic data and simulated AI responses clearly. Distinguish a targeted verification exercise from a complete analytical pipeline. State whether you inspected supplied results, independently recalculated them, or reran a workflow.
+
+A credible description might be:
+
+> Evaluated a synthetic AI-assisted microbiome analysis by checking sample structure, recalculating relative abundances, and reviewing the biological claims. Produced an evidence log and corrected interpretation, with documented limitations and disclosure of assistance.
+
+Adapt this description to work you actually completed. Preserve CDI attribution and disclose any assistance used. Check permissions before sharing externally sourced data or code.
+
+## Apply the skills in different settings
+
+The same evidence-based review process can support research discussions, teaching, peer feedback, and scientific AI evaluation tasks. Tailor your report to the reader’s question while keeping its evidence and limitations explicit.
+
+For an external assessment or project, follow its specific rules on independent work, AI assistance, confidentiality, and reporting. This guide is an independent learning resource; completion does not establish employer approval, certification, project access, or income.
+
+## Make a short development plan
+
+Create `results/08-development-plan.md` and answer:
+
+1. Which evaluation skill can I now demonstrate, and where is the evidence?
+2. Which limitation in my work matters most?
+3. What specific practice task will address it?
+4. What output will show improvement, and when will I review it?
+
+Keep the plan to one page. Return to your evidence after the next task and revise the plan based on what you can demonstrate.
+
+Use the [Appendix](99-appendix.qmd) for supporting reference material and the [References](99-references.qmd) for the guide’s bibliography.

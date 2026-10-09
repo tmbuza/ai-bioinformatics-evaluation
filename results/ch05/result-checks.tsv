@@ -1,0 +1,7 @@
+gene_id	log2FoldChange	pvalue	BH_adjusted	passes_BH_0.05	fold_change
+G1	1	0.001	0.006	TRUE	2
+G2	-1	0.01	0.03	TRUE	0.5
+G3	2	0.03	0.06	FALSE	4
+G4	0.2	0.04	0.06	FALSE	1.14869835499704
+G5	-0.3	0.2	0.24	FALSE	0.812252396356236
+G6	0	0.8	0.8	FALSE	1

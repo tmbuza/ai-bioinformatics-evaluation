@@ -1,0 +1,7 @@
+sample_id	(Intercept)	batchB2	conditiontreated
+S1	1	0	0
+S2	1	0	0
+S3	1	0	0
+S4	1	1	1
+S5	1	1	1
+S6	1	1	1

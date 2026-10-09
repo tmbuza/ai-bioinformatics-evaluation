@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./06-singlecell-case.html" rel="next">
-<link href="./04-rnaseq-case.html" rel="prev">
+<link href="./05-rnaseq-case.html" rel="next">
+<link href="./03-reproducible-verification.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-rnaseq-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./05-microbiome-case.html"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./04-microbiome-case.html"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,12 +172,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">A structured evaluation framework</span></a>
+  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Evaluation Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible verification in R</span></a>
+  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible Verification</span></a>
   </div>
 </li>
       </ul>
@@ -158,17 +193,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
+  <a href="./04-microbiome-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-microbiome-case.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
+  <a href="./05-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a>
+  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
       </ul>
@@ -184,12 +219,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent evaluation and reporting</span></a>
+  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Review, reflection, and next steps</span></a>
+  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -205,12 +240,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Templates and evaluation rubric</span></a>
+  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References and further reading</span></a>
+  <a href="./99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
@@ -225,23 +262,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#learning-objective" id="toc-learning-objective" class="nav-link active" data-scroll-target="#learning-objective">Learning objective</a></li>
-  <li><a href="#case-specification" id="toc-case-specification" class="nav-link" data-scroll-target="#case-specification">Case specification</a></li>
-  <li><a href="#planned-evidence-package" id="toc-planned-evidence-package" class="nav-link" data-scroll-target="#planned-evidence-package">Planned evidence package</a></li>
-  <li><a href="#review-priorities" id="toc-review-priorities" class="nav-link" data-scroll-target="#review-priorities">Review priorities</a></li>
-  <li><a href="#learner-workflow" id="toc-learner-workflow" class="nav-link" data-scroll-target="#learner-workflow">Learner workflow</a></li>
-  <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
-  <li><a href="#deliverable" id="toc-deliverable" class="nav-link" data-scroll-target="#deliverable">Deliverable</a></li>
-  <li><a href="#worked-explanation" id="toc-worked-explanation" class="nav-link" data-scroll-target="#worked-explanation">Worked explanation</a></li>
+  <li><a href="#the-evaluation-question" id="toc-the-evaluation-question" class="nav-link active" data-scroll-target="#the-evaluation-question">The evaluation question</a></li>
+  <li><a href="#inspect-the-evidence-package" id="toc-inspect-the-evidence-package" class="nav-link" data-scroll-target="#inspect-the-evidence-package">Inspect the evidence package</a></li>
+  <li><a href="#make-an-initial-judgment" id="toc-make-an-initial-judgment" class="nav-link" data-scroll-target="#make-an-initial-judgment">Make an initial judgment</a></li>
+  <li><a href="#verify-the-descriptive-results" id="toc-verify-the-descriptive-results" class="nav-link" data-scroll-target="#verify-the-descriptive-results">Verify the descriptive results</a></li>
+  <li><a href="#interpret-what-changed" id="toc-interpret-what-changed" class="nav-link" data-scroll-target="#interpret-what-changed">Interpret what changed</a></li>
+  <li><a href="#deliverable-and-checkpoint" id="toc-deliverable-and-checkpoint" class="nav-link" data-scroll-target="#deliverable-and-checkpoint">Deliverable and checkpoint</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-rnaseq-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./05-microbiome-case.html"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-microbiome-case.html">Original Case Studies</a></li><li class="breadcrumb-item"><a href="./04-microbiome-case.html"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></h1>
+<h1 class="title"><span id="sec-microbiome-case" class="quarto-section-identifier"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></span></h1>
 </div>
 
 
@@ -264,52 +299,130 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="learning-objective" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objective">Learning objective</h2>
-<p>Evaluate the scientific reasoning, reproducibility, and interpretation of a microbiome analysis.</p>
-</section>
-<section id="case-specification" class="level2">
-<h2 class="anchored" data-anchor-id="case-specification">Case specification</h2>
-<p><strong>Support level:</strong> Partially guided.</p>
-<p><strong>Planned scenario:</strong> A synthetic microbial community study with a feature table, taxonomy, sample metadata, and repeated observations.</p>
-<p><strong>Evaluation question:</strong> Do the analytical choices support the reported community differences?</p>
-<p>This is an original case design. Data and scientific conclusions have not yet been generated or validated.</p>
-</section>
-<section id="planned-evidence-package" class="level2">
-<h2 class="anchored" data-anchor-id="planned-evidence-package">Planned evidence package</h2>
-<p>See <code>cases/microbiome/case-specification.md</code>. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.</p>
-</section>
-<section id="review-priorities" class="level2">
-<h2 class="anchored" data-anchor-id="review-priorities">Review priorities</h2>
+<div class="cdi-message">
 <ul>
-<li>Sample alignment and filtering decisions</li>
-<li>Experimental unit and repeated observations</li>
-<li>Choice of transformation and comparison</li>
-<li>Limits of relative-abundance and causal claims</li>
+<li><strong>ID:</strong> ABE-004</li>
+<li><strong>Type:</strong> Guided case study</li>
+<li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
+<li><strong>Theme:</strong> Microbial community evidence and defensible interpretation</li>
 </ul>
+</div>
+<section id="the-evaluation-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-evaluation-question">The evaluation question</h2>
+<p><strong>Do the supplied data support the AI response’s claims about a change in the microbiome?</strong></p>
+<p>You will review a synthetic study with four participants, each sampled before and after a dietary change. There is no untreated comparison group, absolute microbial-load measurement, or health outcome. All counts and taxonomic labels are invented teaching materials.</p>
+<p>Your task is to verify descriptive results and identify the limits of the conclusions. This is a focused evaluation exercise, not a complete microbiome analysis pipeline.</p>
 </section>
-<section id="learner-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="learner-workflow">Learner workflow</h2>
+<section id="inspect-the-evidence-package" class="level2">
+<h2 class="anchored" data-anchor-id="inspect-the-evidence-package">Inspect the evidence package</h2>
+<p>Read <code>cases/microbiome/README.md</code>, then inspect:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File under <code>cases/microbiome/</code></th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>data/feature-counts.tsv</code></td>
+<td>Read counts for three features across eight samples</td>
+</tr>
+<tr class="even">
+<td><code>data/sample-metadata.tsv</code></td>
+<td>Sample identity, participant identity, and visit</td>
+</tr>
+<tr class="odd">
+<td><code>data/taxonomy.tsv</code></td>
+<td>Fictional genus labels</td>
+</tr>
+<tr class="even">
+<td><code>simulated-response.md</code></td>
+<td>Six claims to evaluate</td>
+</tr>
+<tr class="odd">
+<td><code>reference/</code></td>
+<td>Independently calculated expected tables</td>
+</tr>
+<tr class="even">
+<td><code>worked-review.md</code></td>
+<td>Worked judgments and corrected interpretation</td>
+</tr>
+</tbody>
+</table>
+<p>The verification script is <code>scripts/R/04-verify-microbiome.R</code>. Keep original inputs unchanged. Metadata rows are intentionally arranged differently from count columns, so alignment must use identifiers.</p>
+</section>
+<section id="make-an-initial-judgment" class="level2">
+<h2 class="anchored" data-anchor-id="make-an-initial-judgment">Make an initial judgment</h2>
+<p>Read the simulated response before opening the reference tables or worked review. It claims that the samples are independent, reports changes in F1, and concludes that the dietary change improved health.</p>
+<p>Create <code>results/ch04/evidence-log.tsv</code> using the ABE-002 fields. Split statements that combine a valid calculation with an unsupported interpretation into separate findings.</p>
+<p>For each claim, ask:</p>
 <ol type="1">
-<li>Read the question and inventory the supplied evidence.</li>
-<li>Extract claims from the supplied response.</li>
-<li>Mark each claim supported, incorrect, unsupported, or uncertain.</li>
-<li>Run or inspect the relevant verification checks.</li>
-<li>Update your judgment and explain any correction.</li>
-<li>Complete the evidence log and self-assess with the rubric.</li>
+<li>What evidence would establish it?</li>
+<li>Can the supplied files answer the question?</li>
+<li>What can I check directly, and what remains unresolved?</li>
 </ol>
 </section>
-<section id="checkpoint" class="level2">
-<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
-<p>Which conclusions survive verification, and which require correction or additional evidence?</p>
+<section id="verify-the-descriptive-results" class="level2">
+<h2 class="anchored" data-anchor-id="verify-the-descriptive-results">Verify the descriptive results</h2>
+<p>From the repository root, run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scripts/R/04-verify-microbiome.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Alternatively, from an R session whose working directory is the repository root:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"scripts/R/04-verify-microbiome.R"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The script needs base R only. It validates identifiers and counts, aligns metadata, checks that each participant has one observation per visit, and calculates per-sample percentages and paired changes. It performs no significance test.</p>
+<p>Inspect these files in <code>results/ch04/</code>:</p>
+<ul>
+<li><code>sample-summary.tsv</code>: total reads, F1 reads, and F1 percentage by sample.</li>
+<li><code>paired-changes.tsv</code>: before and after percentages for each participant.</li>
+<li><code>input-checksums.tsv</code> and <code>session-info.txt</code>: input fingerprints and software details.</li>
+</ul>
+<p>Outputs are overwritten on rerun. Preserve earlier outputs before experimenting. Compare numeric values and identifiers with the expected tables; harmless formatting differences do not imply different results.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Verification status">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Verification status
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The supplied reference tables were independently calculated with Python from the input files. The R script has not been executed in the authoring environment. Record your own execution results; if a check fails, investigate it before accepting the expected answer.</p>
+</div>
+</div>
 </section>
-<section id="deliverable" class="level2">
-<h2 class="anchored" data-anchor-id="deliverable">Deliverable</h2>
-<p>A case review using <code>templates/evaluation-report.qmd</code> and <code>templates/evidence-log.csv</code>.</p>
+<section id="interpret-what-changed" class="level2">
+<h2 class="anchored" data-anchor-id="interpret-what-changed">Interpret what changed</h2>
+<p>Read counts and relative abundance answer different questions. A relative abundance is a feature’s share of the measured community; it does not establish its absolute quantity. See <a href="https://doi.org/10.3389/fmicb.2017.02224">Gloor et al.&nbsp;(2017)</a> for the compositional nature of microbiome data.</p>
+<p>Check the denominator used in every percentage. Also distinguish the number of samples from the number of participants: two visits from one participant do not create two independent participants.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Worked interpretation">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Worked interpretation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There are eight samples from four participants. Sample identifiers match, but row order differs.</p>
+<p>Mean F1 read count rises from 22.5 to 65 while total reads per sample rise from 100 to 200. Mean F1 relative abundance rises from 22.5% to 32.5%: <strong>10 percentage points</strong>, or approximately <strong>44.4% relative to the before mean</strong>. Every participant has a 10-percentage-point increase.</p>
+<p>These are descriptive results for synthetic data. They do not establish an absolute microbial increase, a causal dietary effect, statistical significance, or improved health. Consult <code>cases/microbiome/worked-review.md</code> for judgments on all six claims.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="worked-explanation" class="level2">
-<h2 class="anchored" data-anchor-id="worked-explanation">Worked explanation</h2>
-<p>To be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.</p>
+<section id="deliverable-and-checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="deliverable-and-checkpoint">Deliverable and checkpoint</h2>
+<p>Write <code>results/ch04/evaluation-report.md</code> with the question, checks performed, prioritized findings, corrected conclusion, and remaining limitations. Link to your evidence log and output files.</p>
+<p>Before continuing, confirm that you preserved supported results, accounted for paired observations, used the correct percentage language, and removed claims requiring evidence that is absent.</p>
+<p>Continue to the <a href="./05-rnaseq-case.html">RNA-seq Case</a>, where you will apply the framework with less guidance.</p>
 
 
 </section>
@@ -718,13 +831,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./04-rnaseq-case.html" class="pagination-link" aria-label="RNA-seq: design, results, and interpretation">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></span>
+      <a href="./03-reproducible-verification.html" class="pagination-link" aria-label="Reproducible Verification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Reproducible Verification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./06-singlecell-case.html" class="pagination-link" aria-label="Single-cell: annotation and uncertainty">
-        <span class="nav-page-text"><span class="chapter-title">Single-cell: annotation and uncertainty</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-rnaseq-case.html" class="pagination-link" aria-label="RNA-seq: design, results, and interpretation">
+        <span class="nav-page-text"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

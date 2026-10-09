@@ -1,7 +1,7 @@
 # Preface {#sec-preface .unnumbered}
 
 ::: {.cdi-message}
-- **ID:** ABE-00
+- **ID:** ABE-000
 - **Type:** Guide preface
 - **Audience:** Researchers, learners, educators, and bioinformatics practitioners
 - **Theme:** Scientific reasoning, reproducibility, and evidence-based AI evaluation

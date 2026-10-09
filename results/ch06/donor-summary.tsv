@@ -1,0 +1,5 @@
+donor_id	condition	n_cells	n_C1	C1_percent
+D1	control	100	20	20
+D2	control	900	720	80
+D3	treated	100	80	80
+D4	treated	900	180	20

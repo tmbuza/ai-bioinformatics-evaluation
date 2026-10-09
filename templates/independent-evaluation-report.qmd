@@ -1,0 +1,39 @@
+---
+title: "Independent Bioinformatics Evaluation"
+author: "Your name"
+format: html
+execute:
+  eval: false
+---
+
+# Evaluation scope
+
+State the question, teaching-case source, and limits of your review.
+
+# Evidence and verification
+
+List input files or table locations, checks performed, tools, formulas or commands, and software versions where relevant. Distinguish supplied outputs from results you reproduced.
+
+# Findings
+
+| Finding ID | Claim or decision | Judgment | Priority | Evidence location | Recommended action |
+|---|---|---|---|---|---|
+| F01 | | | | | |
+
+Use Supported, Incorrect, Not established, or Not applicable. Priorities are Blocking, Major, Minor, or none when no correction is needed. Split mixed claims.
+
+# Corrected conclusion
+
+Write a short conclusion proportional to the evidence.
+
+# Missing evidence and next actions
+
+Prioritize specific requests and explain what each would resolve.
+
+# Reproducibility and assistance
+
+Record input versions, checksums or Git commit if available; environment details; and any assistance used. Identify synthetic teaching materials clearly.
+
+# Reflection and revisions
+
+Preserve your initial judgment. After self-review, explain what changed and why. State one skill to strengthen next.

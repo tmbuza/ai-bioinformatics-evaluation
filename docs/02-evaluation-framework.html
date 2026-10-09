@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A structured evaluation framework – Evaluating AI-Assisted Bioinformatics Analyses</title>
+<title>Evaluation Framework – Evaluating AI-Assisted Bioinformatics Analyses</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-orientation.html">Evaluation Foundations</a></li><li class="breadcrumb-item"><a href="./02-evaluation-framework.html"><span class="chapter-title">A structured evaluation framework</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-orientation.html">Evaluation Foundations</a></li><li class="breadcrumb-item"><a href="./02-evaluation-framework.html"><span class="chapter-title">Evaluation Framework</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -137,12 +137,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">A structured evaluation framework</span></a>
+  <a href="./02-evaluation-framework.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Evaluation Framework</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible verification in R</span></a>
+  <a href="./03-reproducible-verification.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Reproducible Verification</span></a>
   </div>
 </li>
       </ul>
@@ -158,17 +158,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
+  <a href="./04-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-microbiome-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Microbiome: methods, evidence, and claims</span></a>
+  <a href="./05-rnaseq-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">RNA-seq: design, results, and interpretation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: annotation and uncertainty</span></a>
+  <a href="./06-singlecell-case.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Single-cell: replication, annotation, and uncertainty</span></a>
   </div>
 </li>
       </ul>
@@ -184,12 +184,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent evaluation and reporting</span></a>
+  <a href="./07-independent-evaluation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Independent Evaluation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Review, reflection, and next steps</span></a>
+  <a href="./08-next-steps.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Next Steps</span></a>
   </div>
 </li>
       </ul>
@@ -205,12 +205,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Templates and evaluation rubric</span></a>
+  <a href="./99-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./99-references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References and further reading</span></a>
+  <a href="./99-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
@@ -225,20 +227,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#learning-objective" id="toc-learning-objective" class="nav-link active" data-scroll-target="#learning-objective">Learning objective</a></li>
-  <li><a href="#content-to-develop" id="toc-content-to-develop" class="nav-link" data-scroll-target="#content-to-develop">Content to develop</a></li>
-  <li><a href="#practice-task" id="toc-practice-task" class="nav-link" data-scroll-target="#practice-task">Practice task</a></li>
+  <li><a href="#use-consistent-criteria" id="toc-use-consistent-criteria" class="nav-link active" data-scroll-target="#use-consistent-criteria">Use consistent criteria</a></li>
+  <li><a href="#the-evaluation-rubric" id="toc-the-evaluation-rubric" class="nav-link" data-scroll-target="#the-evaluation-rubric">The evaluation rubric</a></li>
+  <li><a href="#assign-a-judgment" id="toc-assign-a-judgment" class="nav-link" data-scroll-target="#assign-a-judgment">Assign a judgment</a></li>
+  <li><a href="#prioritize-issues-by-consequence" id="toc-prioritize-issues-by-consequence" class="nav-link" data-scroll-target="#prioritize-issues-by-consequence">Prioritize issues by consequence</a></li>
+  <li><a href="#keep-an-evidence-log" id="toc-keep-an-evidence-log" class="nav-link" data-scroll-target="#keep-an-evidence-log">Keep an evidence log</a></li>
+  <li><a href="#practice-matching-samples" id="toc-practice-matching-samples" class="nav-link" data-scroll-target="#practice-matching-samples">Practice: matching samples</a></li>
   <li><a href="#checkpoint" id="toc-checkpoint" class="nav-link" data-scroll-target="#checkpoint">Checkpoint</a></li>
-  <li><a href="#deliverable" id="toc-deliverable" class="nav-link" data-scroll-target="#deliverable">Deliverable</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-orientation.html">Evaluation Foundations</a></li><li class="breadcrumb-item"><a href="./02-evaluation-framework.html"><span class="chapter-title">A structured evaluation framework</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-orientation.html">Evaluation Foundations</a></li><li class="breadcrumb-item"><a href="./02-evaluation-framework.html"><span class="chapter-title">Evaluation Framework</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">A structured evaluation framework</span></h1>
+<h1 class="title"><span id="sec-evaluation-framework" class="quarto-section-identifier"><span class="chapter-title">Evaluation Framework</span></span></h1>
 </div>
 
 
@@ -261,44 +265,202 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="learning-objective" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objective">Learning objective</h2>
-<p>Apply one framework consistently across all cases.</p>
-</section>
-<section id="content-to-develop" class="level2">
-<h2 class="anchored" data-anchor-id="content-to-develop">Content to develop</h2>
+<div class="cdi-message">
 <ul>
-<li>Inspect the question and intended scope.</li>
-<li>Check data, design, methods, and assumptions.</li>
-<li>Verify code, outputs, and reported quantities.</li>
-<li>Assess biological interpretation and uncertainty.</li>
-<li>Explain corrections and their consequences.</li>
+<li><strong>ID:</strong> ABE-002</li>
+<li><strong>Type:</strong> Foundations and guided exercise</li>
+<li><strong>Audience:</strong> Researchers, learners, educators, and bioinformatics practitioners</li>
+<li><strong>Theme:</strong> Consistent judgments, evidence records, and actionable feedback</li>
 </ul>
+</div>
+<section id="use-consistent-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="use-consistent-criteria">Use consistent criteria</h2>
+<p>A useful evaluation explains both <strong>what you concluded</strong> and <strong>how the evidence supports that judgment</strong>. Apply this framework across bioinformatics, adapting each check to the question, data, and method.</p>
+<p><strong>Chapter outcome:</strong> build an evidence log and prioritize findings using a shared rubric.</p>
 </section>
-<section id="practice-task" class="level2">
-<h2 class="anchored" data-anchor-id="practice-task">Practice task</h2>
-<p>Use the rubric and evidence log to assess one claim; distinguish the quality of your review from the severity of the analytical error.</p>
+<section id="the-evaluation-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="the-evaluation-rubric">The evaluation rubric</h2>
+<p>Begin by stating the question under review in one sentence. Then examine these six areas.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Area</th>
+<th>Review question</th>
+<th>Evidence to inspect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Question and scope</td>
+<td>Does the analysis address the stated question?</td>
+<td>Task description, comparison, and intended outcome</td>
+</tr>
+<tr class="even">
+<td>Data and provenance</td>
+<td>Are the inputs identifiable and suitable?</td>
+<td>Data source, sample identifiers, metadata, and exclusions</td>
+</tr>
+<tr class="odd">
+<td>Design and methods</td>
+<td>Do the design and analytical choices support the comparison?</td>
+<td>Biological replication, model specification, assumptions, and parameters</td>
+</tr>
+<tr class="even">
+<td>Code and results</td>
+<td>Do the implemented steps and outputs match the explanation?</td>
+<td>Scripts, execution records, tables, and figures</td>
+</tr>
+<tr class="odd">
+<td>Interpretation</td>
+<td>Are claims proportional to the evidence?</td>
+<td>Effect estimates, uncertainty, limitations, and biological context</td>
+</tr>
+<tr class="even">
+<td>Reporting</td>
+<td>Can another reviewer trace and repeat the relevant checks?</td>
+<td>File paths, commands, versions, references, and decision records</td>
+</tr>
+</tbody>
+</table>
+<p>Record distinct findings separately: a correct calculation and a misreported value need different judgments.</p>
 </section>
-<section id="checkpoint" class="level2">
-<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
-<p>Can another reader trace each conclusion to evidence and understand what remains uncertain?</p>
+<section id="assign-a-judgment" class="level2">
+<h2 class="anchored" data-anchor-id="assign-a-judgment">Assign a judgment</h2>
+<p>Label each claim or decision according to the evidence inspected.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Judgment</th>
+<th>Meaning</th>
+<th>Appropriate response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Supported</td>
+<td>The inspected evidence supports the statement within its stated scope.</td>
+<td>Retain it and identify the supporting evidence.</td>
+</tr>
+<tr class="even">
+<td>Incorrect</td>
+<td>A check demonstrates an error or contradiction.</td>
+<td>Explain the error and provide a justified correction.</td>
+</tr>
+<tr class="odd">
+<td>Not established</td>
+<td>The evidence is missing or insufficient to decide.</td>
+<td>State what is unresolved and request a specific check or source.</td>
+</tr>
+<tr class="even">
+<td>Not applicable</td>
+<td>The criterion falls outside the defined task.</td>
+<td>Explain briefly why it does not apply.</td>
+</tr>
+</tbody>
+</table>
+<p>“Supported” does not mean universally true. A description may be supported for a supplied teaching dataset without establishing a general biological conclusion.</p>
+<p>Avoid combining these labels into an average score. Several correct details cannot compensate for an error that undermines the main conclusion.</p>
 </section>
-<section id="deliverable" class="level2">
-<h2 class="anchored" data-anchor-id="deliverable">Deliverable</h2>
-<p>A scored review supported by an evidence log.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<section id="prioritize-issues-by-consequence" class="level2">
+<h2 class="anchored" data-anchor-id="prioritize-issues-by-consequence">Prioritize issues by consequence</h2>
+<p>Assign a priority to findings that need action. Keep this separate from the judgment label: missing evidence can be as consequential as a demonstrated error.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Priority</th>
+<th>Consequence</th>
+<th>Suggested action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blocking</td>
+<td>The central result or conclusion cannot currently be relied on.</td>
+<td>Resolve before using the conclusion.</td>
+</tr>
+<tr class="even">
+<td>Major</td>
+<td>A substantial part of the analysis or interpretation needs revision.</td>
+<td>Correct or investigate before final reporting.</td>
+</tr>
+<tr class="odd">
+<td>Minor</td>
+<td>Clarity or reporting needs improvement without changing the supported conclusion.</td>
+<td>Amend the relevant detail.</td>
+</tr>
+</tbody>
+</table>
+<p>These priorities are defined for this guide. Justify them by explaining how each issue affects the analysis or conclusion.</p>
+</section>
+<section id="keep-an-evidence-log" class="level2">
+<h2 class="anchored" data-anchor-id="keep-an-evidence-log">Keep an evidence log</h2>
+<p>Create the <code>results/</code> folder if needed, then create <code>results/02-evidence-log.tsv</code> with the following column names. You can use a spreadsheet editor or a plain-text editor; separate columns with tabs when saving as TSV.</p>
+<pre class="text"><code>finding_id  area    claim_or_decision   evidence    check_performed observation judgment    priority    recommended_action</code></pre>
+<p>Give evidence a precise location, such as a filename, table row, figure panel, or code section. Describe the check you actually performed. Use <code>none</code> for priority when no corrective action is needed.</p>
+<p>A concise entry might read:</p>
+<blockquote class="blockquote">
+<p><strong>F01 — Code and results:</strong> The response reports a 50% increase. Recalculation from the supplied means gives approximately 36.4%. Judgment: incorrect. Priority: major because it changes the reported magnitude. Action: correct the percentage and identify group A as the reference.</p>
+</blockquote>
+<p>If you have not run a script, write “inspected code” rather than “reproduced result.” This distinction keeps your review auditable.</p>
+</section>
+<section id="practice-matching-samples" class="level2">
+<h2 class="anchored" data-anchor-id="practice-matching-samples">Practice: matching samples</h2>
+<p>In this original microbiome teaching example, the intended workflow uses all four samples. The following identifiers are supplied as excerpts; no separate data files are needed for this exercise.</p>
+<ul>
+<li>The microbial feature-count table has sample columns <code>S01</code>, <code>S02</code>, <code>S03</code>, and <code>S04</code>.</li>
+<li>The metadata contains <code>S01</code>, <code>S02</code>, <code>S03</code>, and <code>S05</code>.</li>
+<li>No mapping between <code>S04</code> and <code>S05</code> is supplied.</li>
+<li>A simulated AI response states: “All four sample identifiers match, so the files are ready for analysis.”</li>
+</ul>
+<p>Add two findings to your evidence log:</p>
+<ol type="1">
+<li>Evaluate the statement that all identifiers match.</li>
+<li>Evaluate whether it would be justified to rename <code>S05</code> to <code>S04</code> immediately.</li>
+</ol>
+<p>For each, record a judgment, priority, and recommended action before opening the explanation.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Worked explanation">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Authoring status
+Worked explanation
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.</p>
+<p><strong>Finding 1:</strong> The matching claim is incorrect. Only <code>S01</code>, <code>S02</code>, and <code>S03</code> occur in both lists. Treat this as blocking for the intended four-sample workflow because the supplied information cannot establish the identity of the remaining sample. Request the sample manifest or another authoritative mapping.</p>
+<p><strong>Finding 2:</strong> Renaming <code>S05</code> to <code>S04</code> is not established as a valid correction. This is also blocking for the intended four-sample workflow. A typographical error is possible, but the identifiers could represent different samples. Resolve their identities before modifying metadata or selecting samples for analysis.</p>
+<p>The key distinction is between detecting a mismatch, which the evidence permits, and deciding its cause, which requires more information.</p>
 </div>
 </div>
+</div>
+</section>
+<section id="checkpoint" class="level2">
+<h2 class="anchored" data-anchor-id="checkpoint">Checkpoint</h2>
+<p>Your completed log should let another reviewer locate the evidence, understand each judgment, and carry out the recommended action. Check that you have:</p>
+<ul>
+<li>Separated demonstrated errors from unresolved questions.</li>
+<li>Assigned priorities based on scientific consequences.</li>
+<li>Proposed corrections without inventing missing information.</li>
+</ul>
+<p>Continue to <a href="./03-reproducible-verification.html">Reproducible Verification</a> to document and run checks systematically.</p>
 
 
 </section>
@@ -712,8 +874,8 @@ Authoring status
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-reproducible-verification.html" class="pagination-link" aria-label="Reproducible verification in R">
-        <span class="nav-page-text"><span class="chapter-title">Reproducible verification in R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./03-reproducible-verification.html" class="pagination-link" aria-label="Reproducible Verification">
+        <span class="nav-page-text"><span class="chapter-title">Reproducible Verification</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

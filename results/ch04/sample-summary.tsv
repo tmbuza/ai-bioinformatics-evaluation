@@ -1,0 +1,9 @@
+sample_id	participant_id	visit	total_reads	F1_reads	F1_percent
+S01	P01	before	100	20	20
+S02	P01	after	200	60	30
+S03	P02	before	100	25	25
+S04	P02	after	200	70	35
+S05	P03	before	100	15	15
+S06	P03	after	200	50	25
+S07	P04	before	100	30	30
+S08	P04	after	200	80	40

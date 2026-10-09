@@ -1,29 +1,84 @@
-# Templates and evaluation rubric
+# Appendix {.unnumbered #sec-appendix}
 
-## Claim labels
-- **Supported:** evidence supports the claim within its stated scope.
-- **Incorrect:** evidence or a reproducible check contradicts the claim.
-- **Unsupported:** necessary evidence is absent.
-- **Uncertain:** available evidence leaves meaningful ambiguity.
+::: {.cdi-message}
+- **ID:** ABE-009
+- **Type:** Practical reference
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Verification commands, evidence records, and troubleshooting
+:::
 
-## Review quality rubric
-Score each dimension from 0 to 3. Use these scores for feedback, not as a validated certification threshold.
+## Run the verification scripts
 
-| Dimension | What to inspect |
+Run these commands from the repository root. The supplied scripts use base R; no additional R packages are required for these exercises.
+
+```bash
+Rscript scripts/R/03-verify-sample-matching.R
+Rscript scripts/R/04-verify-microbiome.R
+Rscript scripts/R/05-verify-rnaseq.R
+Rscript scripts/R/06-verify-singlecell.R
+```
+
+Run one script at a time and inspect its outputs before continuing. These are targeted verification exercises, not complete omics pipelines.
+
+| Chapter | Output folder | Main evidence |
+|---|---|---|
+| ABE-003 | `results/ch03/` | Identifier checks and sample membership |
+| ABE-004 | `results/ch04/` | Per-sample summaries and paired changes |
+| ABE-005 | `results/ch05/` | Design rank and illustrative result checks |
+| ABE-006 | `results/ch06/` | Donor proportions, pooled summaries, and fictional marker checks |
+| ABE-007 | `results/ch07/` | Independent report, evidence log, and calculation records |
+
+ABE-007 has no supplied verification script: choose your own tool and retain the calculations. ABE-008 records your development plan in `results/08-development-plan.md`.
+
+## Understand the outputs
+
+A script completing successfully means its instructions ran. Some exercises deliberately report failed checks, such as mismatched identifiers or a rank-deficient design. Read the findings before deciding whether an analysis is usable.
+
+The scripts overwrite their named outputs on rerun. Preserve previous results before changing inputs. Keep original teaching files separate from experimental copies, and document any modification.
+
+Reference tables for ABE-004 through ABE-006 were calculated independently with Python. The R scripts were not executed in the authoring environment. Record your own observed results and software details; expected tables are comparison aids, not proof of an R execution.
+
+## Evaluation labels
+
+| Label | Use when… |
 |---|---|
-| Question and scope | Identifies the question and appropriate limits |
-| Data and design | Checks provenance, experimental units, and assumptions |
-| Verification | Provides traceable checks and consistent outputs |
-| Interpretation | Connects claims to evidence and acknowledges uncertainty |
-| Feedback | Explains consequences and gives actionable corrections |
-| Reproducibility | Records inputs, code, environment, and outputs |
+| Supported | Inspected evidence supports the claim within its stated scope. |
+| Incorrect | A check demonstrates an error or contradiction. |
+| Not established | Evidence is insufficient to decide. |
+| Not applicable | A criterion falls outside the task; give a reason. |
 
-**0:** missing or materially incorrect. **1:** identifies a concern with little support. **2:** mostly correct with relevant evidence but incomplete checks or explanation. **3:** justified, traceable, and clear about limitations.
+For issues requiring action, assign **Blocking**, **Major**, or **Minor** according to scientific consequence. Use **none** when no correction is needed. Split statements that combine correct calculations with unsupported conclusions.
 
-A total out of 18 may summarize performance, but always report dimension-level feedback. A high total cannot compensate for a major uncorrected scientific error.
+## Troubleshooting
 
-## Issue severity
-Record separately: critical (undermines the principal conclusion), major (materially changes a result or claim), minor (limited consequence), or not applicable. Justify the level in context.
+| Problem | First check or action |
+|---|---|
+| `Rscript` is not found | Check whether R is installed and accessible from the terminal. Alternatively, use `source("scripts/R/<script-name>.R")` in an R session opened at the repository root, replacing the placeholder with the actual filename. |
+| An input file cannot be opened | Check your working directory and the extracted folder structure. In R, `getwd()` shows the current directory. |
+| An assertion fails | Inspect the message and corresponding input. Do not remove the check merely to let the script continue. |
+| Results differ from a reference | Compare input versions, identifiers, denominators, and numeric precision. Save the discrepancy before editing anything. |
+| A chapter link cannot be resolved | Confirm that both the link and `_quarto.yml` use the current filename. Microbiome is `04-microbiome-case.qmd`; RNA-seq is `05-rnaseq-case.qmd`. |
+| Rendering produces no analysis outputs | Run the verification scripts separately. Display-only code fences and `eval: false` keep analysis execution separate from book rendering. |
 
-## Templates
-The project includes an evaluation report, evidence log, reproducibility checklist, and case authoring specifications.
+A genuine error may be in the input, environment, or supplied script. Document it before proposing a correction.
+
+## Reusable templates
+
+The ABE-007 package provides:
+
+- `templates/independent-evaluation-report.qmd`
+- `templates/independent-evidence-log.tsv`
+- `templates/independent-self-assessment.md`
+
+Copy them into your exercise output folder before editing. An evidence record should identify the claim, source location, check, observed result, judgment, consequence, and recommended action.
+
+## Sharing checklist
+
+Before sharing an evaluation, confirm that another reader can locate its evidence and distinguish:
+
+- Synthetic teaching materials from research data.
+- Supplied outputs from independently reproduced results.
+- Confirmed errors from missing evidence.
+- Your own work from assistance received.
+
+Include input versions or fingerprints, software details where relevant, and unresolved limitations. Consult [References](99-references.qmd) for sources supporting the case-study concepts.

@@ -1,10 +1,17 @@
-# Orientation
+# Orientation {#sec-orientation}
+
+::: {.cdi-message}
+- **ID:** ABE-001
+- **Type:** Foundations and guided exercise
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Evaluating evidence and communicating scientific judgment
+:::
 
 ## The reviewer’s role
 
 An AI-assisted bioinformatics analysis can include code, tables, figures, and explanations. Your role is to assess whether these elements agree and whether the evidence supports the scientific conclusion.
 
-Review the work at three levels:
+These checks apply across microbiome, RNA-seq, single-cell, proteomics, and GWAS analyses, with the methods assessed in their specific context. Review the work at three levels:
 
 | Level | Question | Example check |
 |---|---|---|
@@ -27,7 +34,7 @@ Before judging a response, identify the scientific question and inventory what y
 
 Missing material limits what you can establish. If only a results table is available, you can inspect its contents, but you cannot claim to have reproduced the underlying analysis.
 
-Pay attention to AI-specific problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.
+When reviewing AI-assisted work, look for problems such as code that disagrees with its explanation, references that cannot be verified, or claims about checks that were never performed. Apply the same evidence standards to human-written and AI-assisted work.
 
 ## A first evaluation
 
@@ -64,7 +71,7 @@ The percentage increase is `100 × (15 − 11) / 11`, approximately **36.4%**, s
 
 The table alone does not establish a treatment effect or biological importance. We need information about what was measured, how groups were assigned, whether samples are independent, and the uncertainty and biological context of the comparison. We also cannot infer statistical significance from the supplied material.
 
-**Corrected conclusion:** “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 units, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”
+**Corrected conclusion:** “In this teaching table, the mean measurement is 11 in group A and 15 in group B, a difference of 4 on the reported measurement scale, or approximately 36.4% relative to group A. These values describe the supplied observations. The available evidence does not establish causation or biological importance.”
 :::
 
 ## Write feedback that supports action
@@ -81,7 +88,7 @@ Notice the distinction between **incorrect** and **not established**. The percen
 
 ## Checkpoint
 
-Create `results/01-orientation-review.md` and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.
+Create the `results/` folder if needed, then create `results/01-orientation-review.md` and record your corrected conclusion plus the three findings above in your own words. This is your first review artifact; no analysis script is required for this exercise.
 
 Before continuing, confirm that your review:
 
@@ -90,4 +97,4 @@ Before continuing, confirm that your review:
 - Identifies the unsupported claim without inventing missing evidence.
 - States what you checked and what remains unresolved.
 
-Continue to **Evaluation Framework** to apply consistent criteria across larger analyses.
+Continue to [Evaluation Framework](02-evaluation-framework.qmd) to apply consistent criteria across larger analyses.

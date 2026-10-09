@@ -2,8 +2,8 @@ project:
   type: book
   output-dir: docs
 
-bibliography: library/references.bib
-date: 2026-10-08
+bibliography: [library/references.bib, library/abe-references.bib]
+date: 2026-10-09
 date-format: "MMM YYYY"
 
 book:
@@ -22,13 +22,14 @@ book:
         - 03-reproducible-verification.qmd
     - part: "Original Case Studies"
       chapters:
-        - 04-rnaseq-case.qmd
-        - 05-microbiome-case.qmd
+        - 04-microbiome-case.qmd
+        - 05-rnaseq-case.qmd
         - 06-singlecell-case.qmd
     - part: "Independent Practice"
       chapters:
         - 07-independent-evaluation.qmd
         - 08-next-steps.qmd
+        
   appendices:
     - 99-appendix.qmd
     - 99-references.qmd
@@ -50,6 +51,7 @@ format:
 
 execute:
   echo: true
+  eval: false
   warning: false
   message: false
   freeze: auto

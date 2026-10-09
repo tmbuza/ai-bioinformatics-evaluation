@@ -1,39 +1,97 @@
-# Single-cell: annotation and uncertainty
+# Single-cell: replication, annotation, and uncertainty {#sec-singlecell-case}
 
-## Learning objective
-Evaluate the scientific reasoning, reproducibility, and interpretation of a singlecell analysis.
+::: {.cdi-message}
+- **ID:** ABE-006
+- **Type:** Independent case evaluation
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Donor-level evidence and cautious cell annotation
+:::
 
-## Case specification
-**Support level:** Independent.
+## Your evaluation brief
 
-**Planned scenario:** A small synthetic single-cell study with donor metadata, cluster summaries, and marker evidence.
+**Does the supplied single-cell evidence support the response’s claims about treatment, cell identity, and analysis quality?**
 
-**Evaluation question:** How well do the supplied evidence and design support cell labels and group comparisons?
+This original synthetic case contains 2,000 retained cells from four donors, with two donors per condition. Cell assignments and marker summaries are invented. No clinical outcome, randomization, raw expression matrix, or full analysis workflow is supplied.
 
-This is an original case design. Data and scientific conclusions have not yet been generated or validated.
+Your task is to decide which statements are supported, incorrect, or not established. Choose and justify your own checks before consulting the worked review.
 
-## Planned evidence package
-See `cases/singlecell/case-specification.md`. The completed package will contain a data dictionary, input data, supplied response, code, output tables, and an independently verified reference analysis.
+## Inventory the evidence
 
-## Review priorities
-- Cells versus independent biological replicates
-- Quality-control decisions and potential mixed populations
-- Strength and specificity of annotation evidence
-- Uncertainty and alternative interpretations
+Start with `cases/singlecell/README.md` and `cases/singlecell/simulated-response.md`.
 
-## Learner workflow
-1. Read the question and inventory the supplied evidence.
-2. Extract claims from the supplied response.
-3. Mark each claim supported, incorrect, unsupported, or uncertain.
-4. Run or inspect the relevant verification checks.
-5. Update your judgment and explain any correction.
-6. Complete the evidence log and self-assess with the rubric.
+| File in `cases/singlecell/data/` | Contents |
+|---|---|
+| `donors.tsv` | Donor identity and condition |
+| `cells.tsv` | Cell identity, donor identity, and assigned cluster |
+| `marker-evidence.tsv` | Supplied detection percentages for three fictional markers in C1 |
+| `teaching-marker-reference.tsv` | Expected marker combinations for two fictional candidate types |
 
-## Checkpoint
-Which conclusions survive verification, and which require correction or additional evidence?
+The marker summaries are separate supplied evidence: they cannot be recalculated from a table containing only cell labels. The marker names and candidate types are teaching devices, not real biological annotations.
 
-## Deliverable
-A case review using `templates/evaluation-report.qmd` and `templates/evidence-log.csv`.
+## Plan an independent review
 
-## Worked explanation
-To be authored after the reference workflow and expected outputs have been verified. Include valid reasoning as well as errors, and discuss defensible alternative interpretations.
+Create `results/ch06/evidence-log.tsv` using the ABE-002 fields. For each of the seven claims, specify the relevant evidence, your intended check, and the consequence if the claim is wrong.
+
+Consider the biological unit of replication, how unequal cell contributions affect summaries, whether annotation evidence distinguishes candidates, and which workflow claims require missing records.
+
+Write an initial conclusion before running code. Do not assume that every statement in the simulated response is wrong.
+
+## Verify selected properties
+
+Run from the repository root:
+
+```bash
+Rscript scripts/R/06-verify-singlecell.R
+```
+
+Or use an R session with the repository root as its working directory:
+
+```r
+source("scripts/R/06-verify-singlecell.R")
+```
+
+The script requires base R only. It validates cell-to-donor mappings, summarizes C1 proportions by donor and condition, and compares marker patterns under the exercise’s fictional reference. It performs no clustering, differential-expression test, or biological annotation validation.
+
+Inspect these outputs under `results/ch06/`:
+
+| Output | Review purpose |
+|---|---|
+| `donor-summary.tsv` | Compare the number of cells and C1 proportion contributed by each donor. |
+| `condition-summary.tsv` | Contrast pooled proportions with unweighted donor means. |
+| `teaching-marker-check.tsv` | Compare observed high-detection markers with each candidate pattern. |
+| `input-checksums.tsv`, `session-info.txt` | Record input fingerprints and software details. |
+
+Outputs are overwritten on rerun. Preserve prior results before changing inputs. In this exercise, “high detection” means at least 50%; this is a teaching convention, not a recommended universal annotation threshold.
+
+::: {.callout-note title="Verification status"}
+Reference tables were calculated independently with Python. The R script has not been executed in the authoring environment. Record your actual results and investigate discrepancies before accepting the expected values.
+:::
+
+## Distinguish the questions being answered
+
+A pooled proportion describes all retained cells combined. An unweighted donor mean gives each donor equal weight. Neither summary alone establishes a population-level treatment effect.
+
+For comparisons across donors, cells from one donor must not be treated as independent donor replicates. [Squair et al. (2021)](https://doi.org/10.1038/s41467-021-25960-2) demonstrate why accounting for biological replication matters in single-cell differential-expression analysis. This case checks replication and descriptive proportions; it does not implement a differential-expression method.
+
+Similarly, a marker shared by two candidates does not distinguish them. Evaluate the full supplied pattern and state the limits of a provisional label. Missing QC records leave quality claims unverified; they do not prove that QC failed.
+
+## Submit your evaluation
+
+Write `results/ch06/evaluation-report.md` with:
+
+- The question and scope of your review.
+- Checks performed, evidence locations, and prioritized findings.
+- A corrected interpretation of proportions and annotation evidence.
+- Specific requests for missing information and remaining uncertainty.
+
+Explain whether the pooled and donor-level summaries answer the same question. Identify at least one statement worth retaining.
+
+::: {.callout-tip collapse="true" title="Self-check after completing your report"}
+C1 proportions by donor are 20%, 80%, 80%, and 20%. Each condition has an unweighted donor mean of 50%, but pooled proportions are 74% for controls and 26% for treated cells because donors contribute unequal numbers of cells. Equal means here do not demonstrate biological equivalence.
+
+M1 is shared by both fictional candidates. The combined pattern favors a provisional Type_B-like label within the exercise. It does not establish a real cell identity.
+
+Compare all seven judgments with `cases/singlecell/worked-review.md`. Revise your report where evidence warrants it and explain your changes.
+:::
+
+Continue to [Independent Evaluation](07-independent-evaluation.qmd) to bring the framework and reporting skills together.

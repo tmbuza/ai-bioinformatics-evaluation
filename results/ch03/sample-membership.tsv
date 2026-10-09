@@ -1,0 +1,6 @@
+sample_id	in_feature_table	in_metadata
+S01	TRUE	TRUE
+S02	TRUE	TRUE
+S03	TRUE	TRUE
+S04	TRUE	FALSE
+S05	FALSE	TRUE

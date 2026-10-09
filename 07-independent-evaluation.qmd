@@ -1,24 +1,77 @@
-# Independent evaluation and reporting
+# Independent Evaluation {#sec-independent-evaluation}
 
-## Learning objective
-Produce an evaluation that another analyst can inspect and reproduce.
-
-## Content to develop
-- Use the single-cell case as the final independent task.
-- Complete your first review before consulting worked explanations.
-- Link each judgment to a check, output, or authoritative source.
-- Separate verified findings from untested concerns.
-
-## Practice task
-Copy templates/evaluation-report.qmd into your working folder and complete it alongside the evidence log.
-
-## Checkpoint
-Can another reader trace each conclusion to evidence and understand what remains uncertain?
-
-## Deliverable
-A final report, evidence log, verification scripts, and relevant outputs.
-
-::: {.callout-note}
-## Authoring status
-Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
+::: {.cdi-message}
+- **ID:** ABE-007
+- **Type:** Independent assignment and self-assessment
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** An evidence-based review from question to final report
 :::
+
+## Your assignment
+
+Complete a review of an unfamiliar simulated AI response using the framework developed in this guide. You will choose the checks, prioritize the findings, and write a corrected scientific conclusion.
+
+The supplied assignment uses a new synthetic microbiome example. Its purpose is to test transferable evaluation skills: checking denominators, identifying replication, separating measurements from claims, and documenting uncertainty.
+
+**Outcome:** a concise evaluation report supported by an evidence log and repeatable checks.
+
+## Start with the brief
+
+Read `cases/independent/brief.md`. It contains the scenario, complete six-sample table, six response statements, and submission requirements. No external dataset or paid AI account is needed.
+
+Do not open `cases/independent/self-review.md` until you have saved your initial report. A calculator, spreadsheet, or short script is sufficient. Choose the tool you can use reliably and retain enough detail for another person to repeat your calculations.
+
+This is an independent practice task, not a formal assessment of eligibility for employment or specialist projects.
+
+## Prepare your review files
+
+Create `results/ch07/` and copy these templates into it:
+
+| Supplied template | Save your working copy as |
+|---|---|
+| `templates/independent-evaluation-report.qmd` | `results/ch07/evaluation-report.qmd` |
+| `templates/independent-evidence-log.tsv` | `results/ch07/evidence-log.tsv` |
+| `templates/independent-self-assessment.md` | `results/ch07/self-assessment.md` |
+
+The templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.
+
+## Carry out the evaluation
+
+Work through the task without relying on a prewritten verification script:
+
+1. **Define the scope.** State the question and identify what the supplied evidence can address.
+2. **Extract claims.** Separate observations, calculations, analytical decisions, and biological conclusions.
+3. **Verify.** Complete at least two quantitative checks and record formulas, commands, or calculation notes.
+4. **Judge.** Apply the ABE-002 labels and justify priorities by scientific consequence.
+5. **Communicate.** Retain supported statements, explain corrections, and specify the evidence needed for unresolved claims.
+
+Write your initial judgment before using optional AI assistance. If you use assistance later, record its role and verify any suggestions adopted. Do not represent assisted work as an unaided assessment.
+
+## Keep the report focused
+
+Aim for approximately **500–800 words**, excluding the evidence table and calculation records. Include the scope, main findings, corrected conclusion, and limitations. A longer report is useful only when it adds necessary evidence or explanation.
+
+Every consequential finding should identify a claim, point to evidence, explain its scientific impact, and recommend a specific action. Avoid repeating the same limitation in several sections.
+
+Your corrected conclusion should be understandable without opening the full evidence log. Your supporting files should allow a reviewer to verify how you reached it.
+
+## Review and revise
+
+Save an initial copy, such as `evaluation-report-initial.qmd`, before opening the self-review. Compare your reasoning and calculations, then complete the self-assessment rubric.
+
+Use **Ready** when the criterion is supported by your work and **Revise** when it needs attention. These labels are formative; they do not certify competence. Resolve numerical errors and issues that could change the central conclusion before finalizing the report.
+
+If your judgment differs from the worked review, return to the evidence and explain the difference. Reasonable wording or priority choices can vary; unsupported conclusions still require correction.
+
+## Final checkpoint
+
+Your completed submission should contain:
+
+- An initial report and a revised final report.
+- An evidence log covering all six response statements.
+- Calculation records or scripts for your quantitative checks.
+- A self-assessment and a short explanation of revisions.
+
+Label the work as a synthetic CDI teaching exercise if you share it in a portfolio. Describe your own contribution and retain relevant attribution.
+
+Continue to [Next Steps](08-next-steps.qmd) to plan further practice and present your evaluation work professionally.

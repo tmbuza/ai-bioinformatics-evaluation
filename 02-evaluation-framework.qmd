@@ -1,25 +1,106 @@
-# A structured evaluation framework
+# Evaluation Framework {#sec-evaluation-framework}
 
-## Learning objective
-Apply one framework consistently across all cases.
+::: {.cdi-message}
+- **ID:** ABE-002
+- **Type:** Foundations and guided exercise
+- **Audience:** Researchers, learners, educators, and bioinformatics practitioners
+- **Theme:** Consistent judgments, evidence records, and actionable feedback
+:::
 
-## Content to develop
-- Inspect the question and intended scope.
-- Check data, design, methods, and assumptions.
-- Verify code, outputs, and reported quantities.
-- Assess biological interpretation and uncertainty.
-- Explain corrections and their consequences.
+## Use consistent criteria
 
-## Practice task
-Use the rubric and evidence log to assess one claim; distinguish the quality of your review from the severity of the analytical error.
+A useful evaluation explains both **what you concluded** and **how the evidence supports that judgment**. Apply this framework across bioinformatics, adapting each check to the question, data, and method.
+
+**Chapter outcome:** build an evidence log and prioritize findings using a shared rubric.
+
+## The evaluation rubric
+
+Begin by stating the question under review in one sentence. Then examine these six areas.
+
+| Area | Review question | Evidence to inspect |
+|---|---|---|
+| Question and scope | Does the analysis address the stated question? | Task description, comparison, and intended outcome |
+| Data and provenance | Are the inputs identifiable and suitable? | Data source, sample identifiers, metadata, and exclusions |
+| Design and methods | Do the design and analytical choices support the comparison? | Biological replication, model specification, assumptions, and parameters |
+| Code and results | Do the implemented steps and outputs match the explanation? | Scripts, execution records, tables, and figures |
+| Interpretation | Are claims proportional to the evidence? | Effect estimates, uncertainty, limitations, and biological context |
+| Reporting | Can another reviewer trace and repeat the relevant checks? | File paths, commands, versions, references, and decision records |
+
+Record distinct findings separately: a correct calculation and a misreported value need different judgments.
+
+## Assign a judgment
+
+Label each claim or decision according to the evidence inspected.
+
+| Judgment | Meaning | Appropriate response |
+|---|---|---|
+| Supported | The inspected evidence supports the statement within its stated scope. | Retain it and identify the supporting evidence. |
+| Incorrect | A check demonstrates an error or contradiction. | Explain the error and provide a justified correction. |
+| Not established | The evidence is missing or insufficient to decide. | State what is unresolved and request a specific check or source. |
+| Not applicable | The criterion falls outside the defined task. | Explain briefly why it does not apply. |
+
+“Supported” does not mean universally true. A description may be supported for a supplied teaching dataset without establishing a general biological conclusion.
+
+Avoid combining these labels into an average score. Several correct details cannot compensate for an error that undermines the main conclusion.
+
+## Prioritize issues by consequence
+
+Assign a priority to findings that need action. Keep this separate from the judgment label: missing evidence can be as consequential as a demonstrated error.
+
+| Priority | Consequence | Suggested action |
+|---|---|---|
+| Blocking | The central result or conclusion cannot currently be relied on. | Resolve before using the conclusion. |
+| Major | A substantial part of the analysis or interpretation needs revision. | Correct or investigate before final reporting. |
+| Minor | Clarity or reporting needs improvement without changing the supported conclusion. | Amend the relevant detail. |
+
+These priorities are defined for this guide. Justify them by explaining how each issue affects the analysis or conclusion.
+
+## Keep an evidence log
+
+Create the `results/` folder if needed, then create `results/02-evidence-log.tsv` with the following column names. You can use a spreadsheet editor or a plain-text editor; separate columns with tabs when saving as TSV.
+
+```text
+finding_id	area	claim_or_decision	evidence	check_performed	observation	judgment	priority	recommended_action
+```
+
+Give evidence a precise location, such as a filename, table row, figure panel, or code section. Describe the check you actually performed. Use `none` for priority when no corrective action is needed.
+
+A concise entry might read:
+
+> **F01 — Code and results:** The response reports a 50% increase. Recalculation from the supplied means gives approximately 36.4%. Judgment: incorrect. Priority: major because it changes the reported magnitude. Action: correct the percentage and identify group A as the reference.
+
+If you have not run a script, write “inspected code” rather than “reproduced result.” This distinction keeps your review auditable.
+
+## Practice: matching samples
+
+In this original microbiome teaching example, the intended workflow uses all four samples. The following identifiers are supplied as excerpts; no separate data files are needed for this exercise.
+
+- The microbial feature-count table has sample columns `S01`, `S02`, `S03`, and `S04`.
+- The metadata contains `S01`, `S02`, `S03`, and `S05`.
+- No mapping between `S04` and `S05` is supplied.
+- A simulated AI response states: “All four sample identifiers match, so the files are ready for analysis.”
+
+Add two findings to your evidence log:
+
+1. Evaluate the statement that all identifiers match.
+2. Evaluate whether it would be justified to rename `S05` to `S04` immediately.
+
+For each, record a judgment, priority, and recommended action before opening the explanation.
+
+::: {.callout-tip collapse="true" title="Worked explanation"}
+**Finding 1:** The matching claim is incorrect. Only `S01`, `S02`, and `S03` occur in both lists. Treat this as blocking for the intended four-sample workflow because the supplied information cannot establish the identity of the remaining sample. Request the sample manifest or another authoritative mapping.
+
+**Finding 2:** Renaming `S05` to `S04` is not established as a valid correction. This is also blocking for the intended four-sample workflow. A typographical error is possible, but the identifiers could represent different samples. Resolve their identities before modifying metadata or selecting samples for analysis.
+
+The key distinction is between detecting a mismatch, which the evidence permits, and deciding its cause, which requires more information.
+:::
 
 ## Checkpoint
-Can another reader trace each conclusion to evidence and understand what remains uncertain?
 
-## Deliverable
-A scored review supported by an evidence log.
+Your completed log should let another reviewer locate the evidence, understand each judgment, and carry out the recommended action. Check that you have:
 
-::: {.callout-note}
-## Authoring status
-Chapter outline ready. Add a worked example, learner instructions, verified outputs where applicable, and a collapsible explanation before release.
-:::
+- Separated demonstrated errors from unresolved questions.
+- Assigned priorities based on scientific consequences.
+- Proposed corrections without inventing missing information.
+
+Continue to [Reproducible Verification](03-reproducible-verification.qmd) to document and run checks systematically.
