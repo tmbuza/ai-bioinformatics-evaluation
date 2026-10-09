@@ -1,9 +1,3 @@
----
-bibliography: library/abe-references.bib
-nocite: |
-  @abe-gloor2017, @abe-deseq2-vignette, @abe-squair2021
----
-
 # References {.unnumbered #sec-references}
 
 ::: {.cdi-message}

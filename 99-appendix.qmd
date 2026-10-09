@@ -82,3 +82,9 @@ Before sharing an evaluation, confirm that another reader can locate its evidenc
 - Your own work from assistance received.
 
 Include input versions or fingerprints, software details where relevant, and unresolved limitations. Consult [References](99-references.qmd) for sources supporting the case-study concepts.
+
+## Scientific foundations
+
+- **Microbiome interpretation:** Relative abundance describes composition and does not directly establish absolute microbial quantities [@abe-gloor2017].
+- **RNA-seq study design:** Complete confounding prevents separate estimation of batch and condition effects [@abe-deseq2-vignette].
+- **Single-cell replication:** Comparisons across conditions must account for biological replication rather than treating cells from the same donor as independent biological replicates [@abe-squair2021].

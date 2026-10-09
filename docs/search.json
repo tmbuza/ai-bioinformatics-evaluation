@@ -728,11 +728,22 @@
     ]
   },
   {
+    "objectID": "99-appendix.html#scientific-foundations",
+    "href": "99-appendix.html#scientific-foundations",
+    "title": "Appendix",
+    "section": "Scientific foundations",
+    "text": "Scientific foundations\n\nMicrobiome interpretation: Relative abundance describes composition and does not directly establish absolute microbial quantities (Gloor et al. 2017).\nRNA-seq study design: Complete confounding prevents separate estimation of batch and condition effects (Analyzing RNA-seq Data with DESeq2 n.d.).\nSingle-cell replication: Comparisons across conditions must account for biological replication rather than treating cells from the same donor as independent biological replicates (Squair et al. 2021).\n\n\n\n\n\nAnalyzing RNA-seq Data with DESeq2. n.d. Bioconductor. Accessed October 9, 2026. https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.\n\n\nGloor, Gregory B., Jean M. Macklaim, Vera Pawlowsky-Glahn, and Juan J. Egozcue. 2017. “Microbiome Datasets Are Compositional: And This Is Not Optional.” Frontiers in Microbiology 8: 2224. https://doi.org/10.3389/fmicb.2017.02224.\n\n\nSquair, Jordan W., Matthieu Gautier, Claudia Kathe, Mark A. Anderson, Nicholas D. James, Thomas H. Hutson, Remi Hudelle, et al. 2021. “Confronting False Discoveries in Single-Cell Differential Expression.” Nature Communications 12: 5692. https://doi.org/10.1038/s41467-021-25960-2.",
+    "crumbs": [
+      "Appendices",
+      "Appendix"
+    ]
+  },
+  {
     "objectID": "99-references.html",
     "href": "99-references.html",
     "title": "References",
     "section": "",
-    "text": "ID: ABE-010\nType: References\nAudience: Researchers, learners, educators, and bioinformatics practitioners\nTheme: Scientific sources supporting the evaluation cases\n\n\nThese sources support the case-study concepts. The synthetic datasets, simulated responses, and evaluation exercises are original teaching materials; they are not datasets from these publications.\n\n\nAnalyzing RNA-seq Data with DESeq2. n.d. Bioconductor. Accessed October 9, 2026. https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.\n\n\nGloor, Gregory B., Jean M. Macklaim, Vera Pawlowsky-Glahn, and Juan J. Egozcue. 2017. “Microbiome Datasets Are Compositional: And This Is Not Optional.” Frontiers in Microbiology 8: 2224. https://doi.org/10.3389/fmicb.2017.02224.\n\n\nSquair, Jordan W., Matthieu Gautier, Claudia Kathe, Mark A. Anderson, Nicholas D. James, Thomas H. Hutson, Remi Hudelle, et al. 2021. “Confronting False Discoveries in Single-Cell Differential Expression.” Nature Communications 12: 5692. https://doi.org/10.1038/s41467-021-25960-2.",
+    "text": "ID: ABE-010\nType: References\nAudience: Researchers, learners, educators, and bioinformatics practitioners\nTheme: Scientific sources supporting the evaluation cases\n\n\nThese sources support the case-study concepts. The synthetic datasets, simulated responses, and evaluation exercises are original teaching materials; they are not datasets from these publications.\n\n\nAnalyzing RNA-seq Data with\nDESeq2. n.d. Bioconductor. Accessed October 9, 2026.\nhttps://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html.\n\n\nGloor, Gregory B., Jean M. Macklaim, Vera Pawlowsky-Glahn, and Juan J.\nEgozcue. 2017. “Microbiome Datasets Are Compositional: And This Is\nNot Optional.” Frontiers in Microbiology 8: 2224. https://doi.org/10.3389/fmicb.2017.02224.\n\n\nSquair, Jordan W., Matthieu Gautier, Claudia Kathe, Mark A. Anderson,\nNicholas D. James, Thomas H. Hutson, Remi Hudelle, et al. 2021.\n“Confronting False Discoveries in Single-Cell Differential\nExpression.” Nature Communications 12: 5692. https://doi.org/10.1038/s41467-021-25960-2.",
     "crumbs": [
       "Appendices",
       "References"
