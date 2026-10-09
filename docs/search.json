@@ -677,7 +677,7 @@
     "href": "09-independent-evaluation.html#prepare-your-review-files",
     "title": "Independent Evaluation",
     "section": "Prepare your review files",
-    "text": "Prepare your review files\nCreate results/ch09/ and copy these templates into it:\n\n\n\n\n\n\n\nSupplied template\nSave your working copy as\n\n\n\n\ntemplates/independent-evaluation-report.qmd\nresults/ch09/evaluation-report.qmd\n\n\ntemplates/independent-evidence-log.tsv\nresults/ch09/evidence-log.tsv\n\n\ntemplates/independent-self-assessment.md\nresults/ch09/self-assessment.md\n\n\n\nThe templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.",
+    "text": "Prepare your review files\nCreate results/ch07/ and copy these templates into it:\n\n\n\n\n\n\n\nSupplied template\nSave your working copy as\n\n\n\n\ntemplates/independent-evaluation-report.qmd\nresults/ch07/evaluation-report.qmd\n\n\ntemplates/independent-evidence-log.tsv\nresults/ch07/evidence-log.tsv\n\n\ntemplates/independent-self-assessment.md\nresults/ch07/self-assessment.md\n\n\n\nThe templates are deliberately brief. Replace prompts with your own findings, and keep the supplied originals available for reuse. The report can remain a QMD source file; a separate rendered report is optional and is not part of the book’s chapter list.",
     "crumbs": [
       "Independent Practice",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Independent Evaluation</span>"
