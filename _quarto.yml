@@ -1,64 +1,35 @@
 project:
   type: book
   output-dir: docs
-
-bibliography: [library/references.bib, library/abe-references.bib, library/abe-additional-references.bib]
-date: 2026-10-09
-date-format: "MMM YYYY"
-
 book:
-  title: "Evaluating AI-Assisted Bioinformatics Analyses"
-  subtitle: "Scientific reasoning, reproducibility, and evidence-based feedback"
-  author: "Complex Data Insights"
-  site-url: https://ai-bioinformatics.complexdatainsights.com/
-
+  title: "AI-Assisted Microbiome Analysis"
+  subtitle: "From microbiome data to an output you understand and can defend"
+  author: "Teresia Mrema Buza | Complex Data Insights"
   chapters:
     - index.qmd
-    - 00-preface.qmd
-
-    - part: "Evaluation Foundations"
+    - examples/community-comparison/00-start-here.qmd
+    - part: "Explore the example"
       chapters:
-        - 01-orientation.qmd
-        - 02-evaluation-framework.qmd
-        - 03-reproducible-verification.qmd
-
-    - part: "Original Case Studies"
+        - examples/community-comparison/01-see-the-result.qmd
+        - examples/community-comparison/example-report.qmd
+        - examples/community-comparison/02-meet-the-data.qmd
+    - part: "Prepare and analyse"
       chapters:
-        - 04-microbiome-case.qmd
-        - 05-rnaseq-case.qmd
-        - 06-singlecell-case.qmd
-        - 07-proteomics-case.qmd
-        - 08-gwas-case.qmd
-
-    - part: "Independent Practice"
+        - examples/community-comparison/03-check-the-inputs.qmd
+        - examples/community-comparison/04-run-the-analysis.qmd
+    - part: "Verify and share"
       chapters:
-        - 09-independent-evaluation.qmd
-        - 10-next-steps.qmd
-        
+        - examples/community-comparison/05-verify-and-explain.qmd
+        - examples/community-comparison/06-export-the-report.qmd
   appendices:
-    - 99-appendix.qmd
-    - 99-references.qmd
-
-
+    - examples/community-comparison/99-appendix.qmd
 format:
   html:
+    theme: cosmo
+    css: styles.css
     toc: true
-    toc-depth: 3
+    code-copy: true
     number-sections: false
-    number-depth: 2
-    smooth-scroll: true
-    anchor-sections: true
-    link-external-icon: true
-    css: assets/css/cdi.css
-    code-fold: true
-    mermaid:
-      theme: forest
-
 execute:
-  echo: true
   eval: false
-  warning: false
-  message: false
-  freeze: auto
-  working-dir: .
-
+date: 2026-10-14
